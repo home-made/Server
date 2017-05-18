@@ -1,8 +1,13 @@
-let express = require('express');
-let parser = require('body-parser');
-let db = require('./db/index.js');
+const express = require("express");
+const parser = require("body-parser");
+const k = require("./knexfile");
+const Knex = require("knex");
+const Model = require("objection").Model;
 
-let app = express();
+const knex = Knex(k);
+Model.knex(knex);
+
+const app = express();
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 
