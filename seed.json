@@ -1,0 +1,5 @@
+{
+	"undefined": "postgres://admin:homemade@aws-us-east-1-portal.4.dblayer.com:19480/compose",
+	"dev": "postgres://admin:homemade@aws-us-east-1-portal.4.dblayer.com:19480/compose",
+	"prod": "postgres://admin:homemade@aws-us-east-1-portal.4.dblayer.com:19480/compose"
+}
