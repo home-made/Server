@@ -1,0 +1,35 @@
+[
+  {
+    "cuisineType": "Italian",
+    "name": "Meat Eater Pizza",
+    "description": "Pepperoni pizza with sausage, and ham.",
+    "dishImage": "https://pizzanova.com/wp-content/uploads/2016/06/PN_Classic_MeatSupreme_1920x1440.jpg",
+    "dishImages": ["https://pizzanova.com/wp-content/uploads/2016/06/PN_Classic_MeatSupreme_1920x1440.jpg"],
+    "chefId": "1",
+    "allergies": "none",
+    "cashDonation": 12,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Japanese",
+    "name": "Spicy Tuna Rolls",
+    "description": "Spicy tuna rolled in seaweed wrap and white rice.",
+    "dishImage": "https://i.ytimg.com/vi/zF3TOfktwd4/hqdefault.jpg",
+    "dishImages": ["https://i.ytimg.com/vi/zF3TOfktwd4/hqdefault.jpg"],
+    "chefId": "2",
+    "allergies": "none",
+    "cashDonation": 20,
+    "quantity": 4
+  },
+  {
+    "cuisineType": "American",
+    "name": "Andouille Sausage Hot Dog",
+    "description": "Andouille Sausage Hot Dog",
+    "dishImage": "http://www.seriouseats.com/recipes/assets_c/2011/09/20110913-127355-dinner-tonight-andouille-sandwich-thumb-625xauto-187390.jpg",
+    "dishImages": ["http://www.seriouseats.com/recipes/assets_c/2011/09/20110913-127355-dinner-tonight-andouille-sandwich-thumb-625xauto-187390.jpg"],
+    "chefId": "3",
+    "allergies": "none",
+    "cashDonation": 7,
+    "quantity": 2
+  }
+]
