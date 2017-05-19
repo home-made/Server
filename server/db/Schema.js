@@ -10,13 +10,14 @@ var UserSchema = new Schema({
     likes: { type: Array, default: void 0 },
     profileUrl: String,
     isChef: Boolean,
-    location: [ { geo_lng: String, geo_lng: String } ],
+    location: [ { geo_lat: String, geo_lng: String } ],
     score: Number,
     dishes: [{type: Schema.ObjectId, ref: 'Dish'}]
 })
 
 var ActiveDishSchema = new Schema({
     cuisineType: String,
+    name: String,
     description: String,
     dishImage: String,
     dishImages: { type: Array, default: void 0 },
@@ -28,7 +29,10 @@ var ActiveDishSchema = new Schema({
 
 var InactiveDishSchema = new Schema({
     cuisineType: String,
+    name: String,
     description: String,
+    dishImage: String,
+    dishImages: { type: Array, default: void 0 },
     chefId:[{type:Schema.ObjectId, ref: 'User'}],
     allergies: { type: Array, default: void 0 },
     cashDonation: Number,
