@@ -1,5 +1,5 @@
 {
-	"undefined": "postgres://admin:homemade@aws-us-east-1-portal.4.dblayer.com:19480/compose",
-	"dev": "postgres://admin:homemade@aws-us-east-1-portal.4.dblayer.com:19480/compose",
-	"prod": "postgres://admin:homemade@aws-us-east-1-portal.4.dblayer.com:19480/compose"
+	"undefined": "mongodb://homemade2:homemade@aws-us-west-2-portal.2.dblayer.com:16033/admin?ssl=true",
+	"dev": "mongodb://homemade2:homemade@aws-us-west-2-portal.2.dblayer.com:16033/admin?ssl=true",
+	"prod": "mongodb://homemade2:homemade@aws-us-west-2-portal.2.dblayer.com:16033/admin?ssl=true"
 }
