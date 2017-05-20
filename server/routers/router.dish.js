@@ -4,10 +4,13 @@ const dishController = require("../controllers/controller.dish");
 const chefController = require("../controllers/controller.chef");
 const orderController = require("../controllers/controller.order");
 const reviewController = require("../controllers/controller.review");
-
+console.log(userController);
 ////////////////////////USER FUNCTIONS//////////////////////
+//create new user
+Router.post("/user/:userId", userController.createUser);
+
 //manage profile
-Router.put("user/:userId", userController.updateUser);
+Router.put("/user/:userId", userController.updateUser);
 
 //get chef + dishes
 Router.get("/chef/:chefId", chefController.getChefDetails);

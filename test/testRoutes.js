@@ -16,6 +16,15 @@ describe('Routes', function() {
       });
   });
 
+  it('should post a user profile on /user/:userId PUT', function(done) {
+    chai.request(server)
+      .put('/user/:userId')
+      .end(function(err, res){
+        res.should.have.status(200);
+        done();
+      });
+  });
+
   it('should list chef + dishes on /chef/:chefId GET', function(done) {
     chai.request(server)
       .get('/chef/:chefId')
