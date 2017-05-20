@@ -1,20 +1,38 @@
 [
   {
-    "chefId": "",
+    "chefId": "7564fjasdif",
+    "customerId": "axncmufid745",
     "cart": [3],
-    "cashTotal": "Pepperoni pizza with sausage, and ham.",
-    "reviewId": "https://pizzanova.com/wp-content/uploads/2016/06/PN_Classic_MeatSupreme_1920x1440.jpg"
+    "status": 2,
+    "cashTotal": 15
   },
   {
-    "chefId": "Japanese",
+    "chefId": "fdscnxvj234",
+    "customerId": "858723wrte",
     "cart": [2],
-    "cashTotal": "Spicy tuna rolled in seaweed wrap and white rice.",
-    "reviewId": "https://i.ytimg.com/vi/zF3TOfktwd4/hqdefault.jpg"
+    "status": 1,
+    "cashTotal": 5
   },
   {
-    "chefId": "American",
+    "chefId": "fdscnxvj234",
+    "customerId": "axncmufid745",
     "cart": [1],
-    "cashTotal": "Andouille Sausage Hot Dog",
-    "reviewId": "http://www.seriouseats.com/recipes/assets_c/2011/09/20110913-127355-dinner-tonight-andouille-sandwich-thumb-625xauto-187390.jpg"
+    "status": 0,
+    "cashTotal": 12
+  },
+
+  {
+    "chefId": "fdscnxvj234",
+    "customerId": "858723wrte",
+    "cart": [5],
+    "status": 3,
+    "cashTotal": 4
+  },
+  {
+    "chefId": "fdscnxvj234",
+    "customerId": "axncmufid745",
+    "cart": [7],
+    "status": 3,
+    "cashTotal": 7
   }
 ]
