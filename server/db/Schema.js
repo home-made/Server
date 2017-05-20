@@ -12,7 +12,6 @@ var UserSchema = new Schema({
   bio: String,
   status: String,
   phoneNumber: String,
-  status: String,
   likes: [Number],
   profileUrl: String,
   isChef: Boolean,
@@ -25,7 +24,7 @@ var DishSchema = new Schema({
   name: String,
   description: String,
   dishImages: [String],
-  chefId: [{ type: Schema.ObjectId, ref: "User" }],
+  chefId: String,
   allergies: [String],
   cashDonation: Number,
   isActive: Boolean,
@@ -33,8 +32,8 @@ var DishSchema = new Schema({
 });
 
 var OrderSchema = new Schema({
-  chefId: [{ type: Schema.ObjectId, ref: "User" }],
-  customerId: [{ type: Schema.ObjectId, ref: "User" }],
+  chefId: String,
+  customerId: String,
   cart: [Number],
   status: Number,
   date: { type: Date, default: Date.now },
@@ -73,3 +72,12 @@ module.exports = {
   ChefReview: ChefReview,
   CustomerReview: CustomerReview,
 };
+
+/*
+OrderSchema Status Codes
+0: pending
+1: accepted
+2: completed
+3: canceled
+  
+*/

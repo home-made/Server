@@ -1,0 +1,68 @@
+[
+  {
+    "cuisineType": "Chinese",
+    "name": "Dumplings",
+    "description": "Minced meat and chopped vegetables wrapped into a thin piece of dough skin.",
+    "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/02/39/2d/21/chinese-dumplings-with.jpg"],
+    "chefId": "7564fjasdif",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Indian",
+    "name": "Samosas",
+    "description": "Baked dish with a savoury filling,",
+    "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/0c/d6/28/29/taj-mahal-authentic-indian.jpg"],
+    "chefId": "fdscnxvj234",
+    "allergies": ["Pine Nuts"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Mexican",
+    "name": "Tacos",
+    "description": "Meat with tortilla",
+    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"],
+    "chefId": "7564fjasdif",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Italian",
+    "name": "Meat Eater Pizza",
+    "description": "Pepperoni pizza with sausage, and ham.",
+    "dishImages": ["https://pizzanova.com/wp-content/uploads/2016/06/PN_Classic_MeatSupreme_1920x1440.jpg"],
+    "chefId": "fdscnxvj234",
+    "allergies": ["none"],
+    "cashDonation": 12,
+    "isActive": false,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Japanese",
+    "name": "Spicy Tuna Rolls",
+    "description": "Spicy tuna rolled in seaweed wrap and white rice.",
+    "dishImages": ["https://i.ytimg.com/vi/zF3TOfktwd4/hqdefault.jpg"],
+    "chefId": "fjlasdf754",
+    "allergies": ["none"],
+    "cashDonation": 20,
+    "isActive": false,
+    "quantity": 4
+  },
+  {
+    "cuisineType": "American",
+    "name": "Andouille Sausage Hot Dog",
+    "description": "Andouille Sausage Hot Dog",
+    "dishImages": ["http://www.seriouseats.com/recipes/assets_c/2011/09/20110913-127355-dinner-tonight-andouille-sandwich-thumb-625xauto-187390.jpg"],
+    "chefId": "7564fjasdif",
+    "allergies": ["none"],
+    "cashDonation": 7,
+    "isActive": false,
+    "quantity": 2
+  }
+]
