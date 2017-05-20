@@ -14,9 +14,10 @@ Router.put("/user/:userId", userController.updateUser);
 
 //get chef + dishes
 Router.get("/chef/:chefId", chefController.getChefDetails);
+Router.get("/chef/", chefController.findChefs);
 
 //manage/update profile
-Router.put("/chef/:chefId", chefController.updateChef);
+// Router.put("/chef/:chefId", chefController.updateChef);
 
 ////////////////////////CHEF FUNCTIONS//////////////////////
 
@@ -24,19 +25,23 @@ Router.put("/chef/:chefId", chefController.updateChef);
 Router.post("/dish/add", dishController.addDish);
 
 //update a dish
-Router.put("/dish/:id", dishController.updateDish);
+Router.put("/dish", dishController.updateDish);
+
+//update a dish
+Router.delete("/dish", dishController.deleteDish);
 
 ////////////////////////ORDERS//////////////////////
-//get active orders
-Router.get("/orders/:id", orderController.getActiveOrders);
 
-//get inactive orders
-Router.get("/orders/all/:id", orderController.getAllOrders);
+//get pending orders
+Router.get("/orders/0/:id", orderController.getPendingOrders);
+// //get accepted orders
+Router.get("/orders/1/:id", orderController.getAcceptedOrders);
+// //get completed orders
+Router.get("/orders/2/:id", orderController.getCompletedOrders);
+// //get cancelled orders
+Router.get("/orders/3/:id", orderController.getCancelledOrders);
 
-//get list of pending requests
-Router.get("/orders/", orderController.getOrders);
-
-//chef manage order- accept,deny,mark as complete
+//chef update order- accept,deny,mark as complete
 Router.put("/orders/", orderController.updateOrder);
 
 //post new order request
@@ -46,10 +51,14 @@ Router.post("/orders/", orderController.postNewOrder);
 //find chefs by style
 Router.get("/chef/style/:id", chefController.findChefs);
 
-//get chef or user reviews
-Router.get("/review/:type/:id", reviewController.getReviews);
+////////////////////////REVIEW//////////////////////
+//get chef(0) or user(1) reviews
+Router.get("/reviews/0/:id", reviewController.getChefReviews);
 
-//post chef or customer review
-Router.post("/review/:type/:id", reviewController.postReview);
+Router.get("/reviews/1/:id", reviewController.getUserReviews);
+
+//post chef(0) or user(1)  review
+Router.post("/reviews/1/:id", reviewController.postChefReview);
+Router.post("/reviews/0/:id", reviewController.postUserReview);
 
 module.exports = Router;

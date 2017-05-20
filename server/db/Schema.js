@@ -15,7 +15,7 @@ var UserSchema = new Schema({
   likes: [Number],
   profileUrl: String,
   isChef: Boolean,
-  location: [{ geo_lat: String, geo_lng: String }],
+  location: { geo_lat: String, geo_lng: String, address: String },
   rating: Number
 });
 
@@ -42,16 +42,18 @@ var OrderSchema = new Schema({
 
 var CustomerReviewSchema = new Schema({
   reviewText: String,
-  reviewerId: [{ type: Schema.ObjectId, ref: "User" }],
-  revieweeId: [{ type: Schema.ObjectId, ref: "User" }],
-  orderId: [{ type: Schema.ObjectId, ref: "Order" }]
+  reviewerId: String,
+  revieweeId: String,
+  score: Number,
+  orderId: String,
 });
 
 var ChefReviewSchema = new Schema({
   reviewText: String,
-  reviewerId: [{ type: Schema.ObjectId, ref: "User" }],
-  revieweeId: [{ type: Schema.ObjectId, ref: "User" }],
-  orderId: [{ type: Schema.ObjectId, ref: "Order" }]
+  reviewerId: String,
+  revieweeId: String,
+  score: Number,
+  orderId: String,
 });
 
 DishSchema.plugin(autoIncrement.plugin, 'Dish');
@@ -59,11 +61,11 @@ OrderSchema.plugin(autoIncrement.plugin, 'Order');
 CustomerReviewSchema.plugin(autoIncrement.plugin, 'CustomerReview');
 ChefReviewSchema.plugin(autoIncrement.plugin, 'ChefReview');
 
-var User = connection.model("User", UserSchema);
-var Dish = connection.model("Dish", DishSchema);
-var Order = connection.model("Order", OrderSchema);
-var CustomerReview = connection.model("CustomerReview", CustomerReviewSchema);
-var ChefReview = connection.model("ChefReview", ChefReviewSchema);
+const User = connection.model("User", UserSchema);
+const Dish = connection.model("Dish", DishSchema);
+const Order = connection.model("Order", OrderSchema);
+const CustomerReview = connection.model("CustomerReview", CustomerReviewSchema);
+const ChefReview = connection.model("ChefReview", ChefReviewSchema);
 
 module.exports = {
   User: User,
