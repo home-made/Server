@@ -37,7 +37,7 @@ var OrderSchema = new Schema({
   cart: [Number],
   status: Number,
   date: { type: Date, default: Date.now },
-  cashTotal: Number,
+  cashTotal: Number
 });
 
 var CustomerReviewSchema = new Schema({
@@ -45,7 +45,7 @@ var CustomerReviewSchema = new Schema({
   reviewerId: String,
   revieweeId: String,
   score: Number,
-  orderId: String,
+  orderId: String
 });
 
 var ChefReviewSchema = new Schema({
@@ -53,13 +53,13 @@ var ChefReviewSchema = new Schema({
   reviewerId: String,
   revieweeId: String,
   score: Number,
-  orderId: String,
+  orderId: String
 });
 
-DishSchema.plugin(autoIncrement.plugin, 'Dish');
-OrderSchema.plugin(autoIncrement.plugin, 'Order');
-CustomerReviewSchema.plugin(autoIncrement.plugin, 'CustomerReview');
-ChefReviewSchema.plugin(autoIncrement.plugin, 'ChefReview');
+DishSchema.plugin(autoIncrement.plugin, "Dish");
+OrderSchema.plugin(autoIncrement.plugin, "Order");
+CustomerReviewSchema.plugin(autoIncrement.plugin, "CustomerReview");
+ChefReviewSchema.plugin(autoIncrement.plugin, "ChefReview");
 
 const User = connection.model("User", UserSchema);
 const Dish = connection.model("Dish", DishSchema);
@@ -72,7 +72,7 @@ module.exports = {
   Dish: Dish,
   Order: Order,
   ChefReview: ChefReview,
-  CustomerReview: CustomerReview,
+  CustomerReview: CustomerReview
 };
 
 /*
