@@ -1,66 +1,75 @@
-const Schema = require('mongoose').Schema;
-const mongoose = require('mongoose');
+require("dotenv").load();
+const Schema = require("mongoose").Schema, mongoose = require("mongoose");
+autoIncrement = require("mongoose-auto-increment");
+
+var connection = mongoose.createConnection(process.env.DATABASE_URL);
+autoIncrement.initialize(connection);
 
 var UserSchema = new Schema({
-    authId:String,
-    firstName: String,
-    lastName: String,
-    bio: String,
-    status: String,
-    likes: { type: Array, default: void 0 },
-    profileUrl: String,
-    isChef: Boolean,
-    location: [ { geo_lat: String, geo_lng: String } ],
-    score: Number,
-    dishes: [{type: Schema.ObjectId, ref: 'Dish'}]
-})
+  authId: String,
+  firstName: String,
+  lastName: String,
+  bio: String,
+  status: String,
+  phoneNumber: String,
+  status: String,
+  likes: [Number],
+  profileUrl: String,
+  isChef: Boolean,
+  location: [{ geo_lat: String, geo_lng: String }],
+  rating: Number
+});
 
-var ActiveDishSchema = new Schema({
-    cuisineType: String,
-    name: String,
-    description: String,
-    dishImage: String,
-    dishImages: { type: Array, default: void 0 },
-    chefId:[{type:Schema.ObjectId, ref: 'User'}],
-    allergies: { type: Array, default: void 0 },
-    cashDonation: Number,
-    quantity: Number,
-})
-
-var InactiveDishSchema = new Schema({
-    cuisineType: String,
-    name: String,
-    description: String,
-    dishImage: String,
-    dishImages: { type: Array, default: void 0 },
-    chefId:[{type:Schema.ObjectId, ref: 'User'}],
-    allergies: { type: Array, default: void 0 },
-    cashDonation: Number,
-    quantity: Number,
-})
+var DishSchema = new Schema({
+  cuisineType: String,
+  name: String,
+  description: String,
+  dishImages: [String],
+  chefId: [{ type: Schema.ObjectId, ref: "User" }],
+  allergies: [String],
+  cashDonation: Number,
+  isActive: Boolean,
+  quantity: Number
+});
 
 var OrderSchema = new Schema({
-    chefId: [{type:Schema.ObjectId, ref: 'User'}],
-    cart: { type: Array, default: void 0 },
-    cashTotal: Number,
-    reviewId: [{type:Schema.ObjectId, ref: 'Review'}],
-})
+  chefId: [{ type: Schema.ObjectId, ref: "User" }],
+  customerId: [{ type: Schema.ObjectId, ref: "User" }],
+  cart: [Number],
+  status: Number,
+  date: { type: Date, default: Date.now },
+  cashTotal: Number,
+});
 
-var ReviewSchema = new Schema({
-    reviewText: String,
-    userId: [{type:Schema.ObjectId, ref: 'User'}],
-})
+var CustomerReviewSchema = new Schema({
+  reviewText: String,
+  reviewerId: [{ type: Schema.ObjectId, ref: "User" }],
+  revieweeId: [{ type: Schema.ObjectId, ref: "User" }],
+  orderId: [{ type: Schema.ObjectId, ref: "Order" }]
+});
 
-var User = mongoose.model('User', UserSchema);
-var ActiveDish = mongoose.model('ActiveDish', ActiveDishSchema);
-var Order = mongoose.model('Order', OrderSchema);
-var InactiveDish = mongoose.model('InactiveDish', InactiveDishSchema);
-var Review = mongoose.model('Review',ReviewSchema);
+var ChefReviewSchema = new Schema({
+  reviewText: String,
+  reviewerId: [{ type: Schema.ObjectId, ref: "User" }],
+  revieweeId: [{ type: Schema.ObjectId, ref: "User" }],
+  orderId: [{ type: Schema.ObjectId, ref: "Order" }]
+});
+
+DishSchema.plugin(autoIncrement.plugin, 'Dish');
+OrderSchema.plugin(autoIncrement.plugin, 'Order');
+CustomerReviewSchema.plugin(autoIncrement.plugin, 'CustomerReview');
+ChefReviewSchema.plugin(autoIncrement.plugin, 'ChefReview');
+
+var User = connection.model("User", UserSchema);
+var Dish = connection.model("Dish", DishSchema);
+var Order = connection.model("Order", OrderSchema);
+var CustomerReview = connection.model("CustomerReview", CustomerReviewSchema);
+var ChefReview = connection.model("ChefReview", ChefReviewSchema);
 
 module.exports = {
-    'User': User,
-    'ActiveDish': ActiveDish,
-    'Order': Order,
-    'InactiveDish': InactiveDish,
-    'Review': Review,
-}
+  User: User,
+  Dish: Dish,
+  Order: Order,
+  ChefReview: ChefReview,
+  CustomerReview: CustomerReview,
+};
