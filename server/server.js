@@ -17,3 +17,5 @@ app.use(require('./routers/router.dish'));
 app.use(parser.urlencoded({ extended: true }));
 
 app.listen(3000, console.log("Listening on 3000"));
+
+module.exports = app;
