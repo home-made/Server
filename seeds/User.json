@@ -9,7 +9,7 @@
     "likes": [0],
     "profileUrl": "http://www.luke.com",
     "isChef": true,
-    "location": [ { "geo_lat": "somewhere", "geo_lng": "somewhere" } ],
+    "location": { "geo_lat": "somewhere", "geo_lng": "somewhere" },
     "score": 0,
     "dishes": []
   },
@@ -24,7 +24,7 @@
     "likes": [0],
     "profileUrl": "http://www.leia.com",
     "isChef": true,
-    "location": [ { "geo_lat": "somewhere", "geo_lng": "somewhere" } ],
+    "location": { "geo_lat": "somewhere", "geo_lng": "somewhere" },
     "score": 0,
     "dishes": []
   },
@@ -39,7 +39,7 @@
     "likes": [0],
     "profileUrl": "http://www.han.com",
     "isChef": true,
-    "location": [ { "geo_lat": "somewhere", "geo_lng": "somewhere" } ],
+    "location": { "geo_lat": "somewhere", "geo_lng": "somewhere" },
     "score": 0,
     "dishes": []
   },
@@ -53,7 +53,7 @@
     "likes": [0],
     "profileUrl": "http://www.vader.com",
     "isChef": false,
-    "location": [ { "geo_lat": "somewhere", "geo_lng": "somewhere" } ],
+    "location": { "geo_lat": "somewhere", "geo_lng": "somewhere", "address":"6060 center ln" },
     "score": 0,
     "dishes": []
   },
@@ -67,7 +67,7 @@
     "likes": [0],
     "profileUrl": "http://www.yoda.com",
     "isChef": true,
-    "location": [ { "geo_lat": "somewhere", "geo_lng": "somewhere" } ],
+    "location": { "geo_lat": "somewhere", "geo_lng": "somewhere", "address":"14238 castle blvd." },
     "score": 0,
     "dishes": []
   }

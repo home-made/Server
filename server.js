@@ -1,4 +1,6 @@
+require("dotenv").load();
 const express = require("express");
+
 const parser = require("body-parser");
 const db = require(".mv git log/db/db");
 const {
@@ -12,5 +14,4 @@ const {
 const app = express();
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
-
-app.listen(3000, console.log("Listening on 3000"));
+app.listen(process.env.PORT, console.log(`Listening on ${process.env.PORT}`));
