@@ -1,6 +1,6 @@
-// var UserData = require('./seeds/User.json');
+var UserData = require('./seeds/User.json');
 var ActiveData = require('./seeds/ActiveDish.json');
-// var InactiveData = require('./seeds/Inactive.json');
+var InactiveData = require('./seeds/InactiveDish.json');
 // var OrderData = require('./seeds/Order.json');
 // var ReviewData = require('./seeds/Review.json');
 
@@ -14,29 +14,11 @@ require('dotenv').load();
 var mongoose = require('mongoose');
 var mongoDB = process.env.DATABASE_URL;
 
+var dbCounter = 0;
 
-var seedDatabase = () => {
-
-  mongoose.connect(mongoDB);
-  var db = mongoose.connection;
-
-  db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-  
-  db.on('connected', function() {
-    console.log('Successfully connected to DB!');
-  });
-
-  var dbCounter = 0;
-
-  var closeDB = () => {
-    db.close(function(){
-      console.log("The connection to the database has been terminated.");
-    });
-  };
-
-
-
-  //drop user collection
+var startSeed = () => {
+   //drop user collection
+  console.log("Starting to drop old Users")
   User.remove({}, function(err, deletedUsers){
     if(err) {
       console.log('There was a problem deleting the users from the database. ', err);
@@ -224,7 +206,30 @@ var seedDatabase = () => {
       dbCounter === 18 ? closeDB() : dbCounter++; 
     });
   });
+}
+var seedDatabase = () => {
 
+  mongoose.connect(mongoDB);
+  var db = mongoose.connection;
+
+  db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+  
+  db.on('connected', function() {
+    console.log('Successfully connected to DB!');
+    startSeed();
+  });
+
+ 
+
+  var closeDB = () => {
+    db.close(function(){
+      console.log("The connection to the database has been terminated.");
+    });
+  };
+
+
+
+ 
 };
 
 
