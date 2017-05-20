@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require('path')
+const path = require("path");
 const parser = require("body-parser");
 const db = require("./db/db");
 const {
@@ -8,11 +8,11 @@ const {
   Order,
   InactiveDish,
   Review
-} = require("./db/Schema")
+} = require("./db/Schema");
 
 const app = express();
 app.use(parser.json());
-app.use(require('./routers/router.dish'));
+app.use(require("./routers/router.dish"));
 
 app.use(parser.urlencoded({ extended: true }));
 
