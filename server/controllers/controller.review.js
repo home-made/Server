@@ -1,43 +1,33 @@
-const { CustomerReview, ChefReview, User } = require("../db/Schema");
+const { User } = require("../db/Schema");
 
 exports.getChefReviews = (req, res) => {
-  ChefReview.find({ revieweeId: req.params.id }, (err, reviews) => {
-    var users = [];
-    var answer = reviews.forEach((curr, inx) => {
-      User.find({ authId: curr.reviewerId }, (err, user) => {
-        users.push(user);
-        if (inx === reviews.length - 1) {
-          res.send({ reviews: reviews, users: users });
-        }
-      });
+  var id = req.params.id
+  User.find({ authId: id }, (err, user) => {
+    res.send(user[0].chefReviews)
     });
-  });
 };
 
 exports.getUserReviews = (req, res) => {
-  CustomerReview.find({ revieweeId: req.params.id }, (err, reviews) => {
-    var users = [];
-    var answer = reviews.forEach((curr, inx) => {
-      User.find({ authId: curr.reviewerId }, (err, user) => {
-        users.push(user);
-        if (inx === reviews.length - 1) {
-          res.send({ reviews: reviews, users: users });
-        }
-      });
+  var id = req.params.id
+  User.find({ authId: id }, (err, user) => {
+    res.send(user[0].customerReviews)
     });
-  });
 };
 
 exports.postUserReview = (req, res) => {
-  CustomerReview.create(req.body, (err, review) => {
-    res.send(review);
-  });
-  // res.send("post review big fella");
+  var id = req.params.id
+  User.find({ authId: id }, (err, user) => {
+    if(err) return res.send(err)
+    user[0].customerReviews.push(req.body);
+    res.send(user[0]);
+  })
 };
 
 exports.postChefReview = (req, res) => {
-  ChefReview.create(req.body, (err, review) => {
-    res.send(review);
-  });
-  // res.send("post review big fella");
+  var id = req.params.id
+  User.find({ authId: id }, (err, user) => {
+    if(err) return res.send(err)
+    user[0].chefReviews.push(req.body);
+    res.send(user[0]);
+  })
 };

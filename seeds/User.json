@@ -8,11 +8,34 @@
     "phoneNumber": "233-876-0001",
     "likes": [0],
     "profileUrl": "http://www.luke.com",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4.25,
+        "orderId": "4"
+      }],
+    "chefReviews": [{
+        "reviewText": "chef had that bomb lit",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef sky was a decent cook",
+        "reviewerId": "fdscnxvj234",
+        "score": 4.25,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": "4"
+      }],
     "isChef": true,
-    "location": { "geo_lat": "somewhere", "geo_lng": "somewhere" },
-    "score": 0,
-    "dishes": []
-  },
+    "location": { "geo_lat": 75.3, "geo_lng": 65.34 },
+    "score": 0
+    },
 
   {
     "authId": "fjlasdf754",
@@ -23,10 +46,11 @@
     "phoneNumber": "123-345-0986",
     "likes": [0],
     "profileUrl": "http://www.leia.com",
+    "customerReviews" : [],
+    "chefReviews": [],
     "isChef": true,
-    "location": { "geo_lat": "somewhere", "geo_lng": "somewhere" },
-    "score": 0,
-    "dishes": []
+    "location": { "geo_lat": 45.12, "geo_lng": 96.6 },
+    "score": 0
   },
 
   {
@@ -38,10 +62,11 @@
     "phoneNumber": "456-234-0934",
     "likes": [0],
     "profileUrl": "http://www.han.com",
-    "isChef": true,
-    "location": { "geo_lat": "somewhere", "geo_lng": "somewhere" },
-    "score": 0,
-    "dishes": []
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": false,
+    "location": { "geo_lat": 321.1, "geo_lng": 34.34 },
+    "score": 0
   },
   {
     "authId": "axncmufid745",
@@ -53,9 +78,15 @@
     "likes": [0],
     "profileUrl": "http://www.vader.com",
     "isChef": false,
-    "location": { "geo_lat": "somewhere", "geo_lng": "somewhere", "address":"6060 center ln" },
-    "score": 0,
-    "dishes": []
+    "customerReviews" : [{
+      "reviewText": "customer was lit",
+      "reviewerId": "7564fjasdif",
+      "score": 4,
+      "orderId": 1
+    }],
+    "chefReviews" : [],
+    "location": { "geo_lat": 23, "geo_lng": 123.23, "address":"6060 center ln" },
+    "score": 0
   },
   {
     "authId": "858723wrte",
@@ -66,9 +97,10 @@
     "phoneNumber": "129-009-2564",
     "likes": [0],
     "profileUrl": "http://www.yoda.com",
+    "customerReviews" : [],
+    "chefReviews": [],
     "isChef": true,
-    "location": { "geo_lat": "somewhere", "geo_lng": "somewhere", "address":"14238 castle blvd." },
-    "score": 0,
-    "dishes": []
+    "location": { "geo_lat": 13.1, "geo_lng": 34.12, "address":"14238 castle blvd." },
+    "score": 0
   }
 ]

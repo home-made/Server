@@ -1,14 +1,10 @@
 var UserData = require("./seeds/User.json");
 var DishData = require("./seeds/Dish.json");
 var OrderData = require("./seeds/Order.json");
-var CustomerReviewData = require("./seeds/CustomerReview.json");
-var ChefReviewData = require("./seeds/ChefReview.json");
-
 var User = require("./server/db/Schema.js").User;
 var Dish = require("./server/db/Schema.js").Dish;
 var Order = require("./server/db/Schema.js").Order;
-var CustomerReview = require("./server/db/Schema.js").CustomerReview;
-var ChefReview = require("./server/db/Schema.js").ChefReview;
+
 require("dotenv").load();
 
 var mongoose = require("mongoose");
@@ -88,56 +84,7 @@ var seedData = () => {
                 "The order data was successfully seeded to the Database. ",
                 newDB
               );
-              console.log("Starting to drop old Customer Review");
-              CustomerReview.remove({}, function(err, deletedOrders) {
-                if (err) {
-                  console.log(
-                    "There was a problem deleting the old orders from the database. ",
-                    err
-                  );
-                }
-
-                CustomerReview.create(CustomerReviewData, function(
-                  error,
-                  newDB
-                ) {
-                  if (error) {
-                    console.log(
-                      "Order seed data couldn't be saved to the Database. ",
-                      error
-                    );
-                  }
-                  // console.log(CustomerReviewData)
-                  console.log(
-                    "The order data was successfully seeded to the Database. ",
-                    newDB
-                  );
-                  ChefReview.remove({}, function(err, deletedOrders) {
-                    if (err) {
-                      console.log(
-                        "There was a problem deleting the old orders from the database. ",
-                        err
-                      );
-                    }
-
-                    ChefReview.create(ChefReviewData, function(error, newDB) {
-                      if (error) {
-                        console.log(
-                          "Order seed data couldn't be saved to the Database. ",
-                          error
-                        );
-                      }
-                      // console.log(CustomerReviewData)
-                      console.log(
-                        "The order data was successfully seeded to the Database. ",
-                        newDB
-                      );
-                      closeDB();
-                      // exit();
-                    });
-                  });
-                });
-              });
+                  closeDB();
             });
           });
         });
