@@ -1,22 +1,20 @@
 var chai = require("chai");
 var chaiHttp = require("chai-http");
-// var server = require("../server/server.js");
 var should = chai.should();
 chai.use(chaiHttp);
 require("dotenv").load();
 var server = process.env.SERVER || require("../server/server.js");
-console.log(server);
 
 describe("Routes", function() {
   it("should update a user profile on /user/:userId PUT", function(done) {
-    chai.request(server).put("/user/7564fjasdif").end(function(err, res) {
+    chai.request(server).put("/user/").end(function(err, res) {
       res.should.have.status(200);
       done();
     });
   });
 
   it("should post a user profile on /user/:userId POST", function(done) {
-    chai.request(server).post("/user/7564fjasdif").end(function(err, res) {
+    chai.request(server).post("/user/").end(function(err, res) {
       res.should.have.status(200);
       done();
     });
@@ -24,7 +22,6 @@ describe("Routes", function() {
 
   it("should list chef + dishes on /chef/:chefId GET", function(done) {
     chai.request(server).get("/chef/7564fjasdif").end(function(err, res) {
-      console.log(res);
       res.should.have.status(200);
       done();
     });
@@ -123,7 +120,7 @@ describe("Routes", function() {
   it("should post a new user review on /review/:type POST", function(done) {
     chai
       .request(server)
-      .post("/reviews/1/hf", {
+      .post("/reviews/1/7564fjasdif", {
         reviewText: "customer was lit",
         reviewerId: "7564fjasdif",
         revieweeId: "axncmufid745",
@@ -139,7 +136,7 @@ describe("Routes", function() {
   it("should post a new chef review on /review/:type POST", function(done) {
     chai
       .request(server)
-      .post("/reviews/0/7", {
+      .post("/reviews/0/7564fjasdif", {
         reviewText: "chef had that bomb lit",
         reviewerId: "axncmufid745",
         revieweeId: "858723wrte",

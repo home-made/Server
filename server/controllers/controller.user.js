@@ -17,7 +17,6 @@ exports.createUser = (req, res) => {
   User.create(user, (err, user) => {
     res.send(user);
   });
-  // res.send("create user");
 };
 
 exports.getUser = (req, res) => {
