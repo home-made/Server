@@ -14,8 +14,10 @@ var UserSchema = new Schema({
   phoneNumber: String,
   likes: [Number],
   profileUrl: String,
+  customerReviews: [],
+  chefReviews: [],
   isChef: Boolean,
-  location: { geo_lat: String, geo_lng: String, address: String },
+  location: { geo_lat: Number, geo_lng: Number, address: String },
   rating: Number
 });
 
@@ -40,39 +42,39 @@ var OrderSchema = new Schema({
   cashTotal: Number
 });
 
-var CustomerReviewSchema = new Schema({
-  reviewText: String,
-  reviewerId: String,
-  revieweeId: String,
-  score: Number,
-  orderId: String
-});
+// var CustomerReviewSchema = new Schema({
+//   reviewText: String,
+//   reviewerId: String,
+//   revieweeId: String,
+//   score: Number,
+//   orderId: Number
+// });
 
-var ChefReviewSchema = new Schema({
-  reviewText: String,
-  reviewerId: String,
-  revieweeId: String,
-  score: Number,
-  orderId: String
-});
+// var ChefReviewSchema = new Schema({
+//   reviewText: String,
+//   reviewerId: String,
+//   revieweeId: String,
+//   score: Number,
+//   orderId: Number
+// });
 
 DishSchema.plugin(autoIncrement.plugin, "Dish");
 OrderSchema.plugin(autoIncrement.plugin, "Order");
-CustomerReviewSchema.plugin(autoIncrement.plugin, "CustomerReview");
-ChefReviewSchema.plugin(autoIncrement.plugin, "ChefReview");
+// CustomerReviewSchema.plugin(autoIncrement.plugin, "CustomerReview");
+// ChefReviewSchema.plugin(autoIncrement.plugin, "ChefReview");
 
 const User = connection.model("User", UserSchema);
 const Dish = connection.model("Dish", DishSchema);
 const Order = connection.model("Order", OrderSchema);
-const CustomerReview = connection.model("CustomerReview", CustomerReviewSchema);
-const ChefReview = connection.model("ChefReview", ChefReviewSchema);
+// const CustomerReview = connection.model("CustomerReview", CustomerReviewSchema);
+// const ChefReview = connection.model("ChefReview", ChefReviewSchema);
 
 module.exports = {
   User: User,
   Dish: Dish,
   Order: Order,
-  ChefReview: ChefReview,
-  CustomerReview: CustomerReview
+//   ChefReview: ChefReview,
+//   CustomerReview: CustomerReview
 };
 
 /*

@@ -1,6 +1,7 @@
-const { Order } = require("../db/Schema");
+const { Order, User } = require("../db/Schema");
 
 exports.updateOrder = (req, res) => {
+  console.log("updateOrder");
   var query = { chefId: req.body.chefId };
   Order.findOneAndUpdate(query, req.body, { new: true }, (err, order) => {
     res.send(order);
@@ -8,30 +9,58 @@ exports.updateOrder = (req, res) => {
 };
 
 exports.getPendingOrders = (req, res) => {
-  console.log(req.params.id);
+  console.log("getPendingOrders");
+  var results = [];
   Order.find({ chefId: req.params.id, status: 0 }, (err, orders) => {
-    res.send(orders);
+    results.push(orders);
+    orders.forEach((order, ind) => {
+      User.find({ authId: order.chefId }, (err, user) => {
+        results.push(user);
+        if (ind === orders.length - 1) res.send(results);
+      });
+    });
   });
 };
 
 exports.getAcceptedOrders = (req, res) => {
-  console.log(req.params.id);
+  console.log("getAcceptedOrders");
+  var results = [];
   Order.find({ chefId: req.params.id, status: 1 }, (err, orders) => {
-    res.send(orders);
+    results.push(orders);
+    orders.forEach((order, ind) => {
+      User.find({ authId: order.chefId }, (err, user) => {
+        results.push(user);
+        if (ind === orders.length - 1) res.send(results);
+      });
+    });
   });
 };
 
 exports.getCompletedOrders = (req, res) => {
-  console.log(req.params.id);
+  console.log("getCompletedOrders");
+  var results = [];
   Order.find({ chefId: req.params.id, status: 2 }, (err, orders) => {
-    res.send(orders);
+    results.push(orders);
+    orders.forEach((order, ind) => {
+      User.find({ authId: order.chefId }, (err, user) => {
+        results.push(user);
+        if (ind === orders.length - 1) res.send(results);
+      });
+    });
   });
 };
 
 exports.getCancelledOrders = (req, res) => {
   console.log(req.params.id);
+  var results = [];
   Order.find({ chefId: req.params.id, status: 3 }, (err, orders) => {
-    res.send(orders);
+    results.push(orders);
+    orders.forEach((order, ind) => {
+      User.find({ authId: order.chefId }, (err, user) => {
+        results.push(user);
+        if (ind === orders.length - 1) res.send(results);
+      });
+    });
   });
 };
 

@@ -7,10 +7,10 @@ const reviewController = require("../controllers/controller.review");
 console.log(userController);
 ////////////////////////USER FUNCTIONS//////////////////////
 //create new user
-Router.post("/user/:userId", userController.createUser);
+Router.post("/user/", userController.createUser);
 
 //manage profile
-Router.put("/user/:userId", userController.updateUser);
+Router.put("/user/", userController.updateUser);
 
 //get chef + dishes
 Router.get("/chef/:chefId", chefController.getChefDetails);
@@ -58,7 +58,8 @@ Router.get("/reviews/0/:id", reviewController.getChefReviews);
 Router.get("/reviews/1/:id", reviewController.getUserReviews);
 
 //post chef(0) or user(1)  review
-Router.post("/reviews/1", reviewController.postChefReview);
-Router.post("/reviews/0", reviewController.postUserReview);
+Router.post("/reviews/0/:id", reviewController.postChefReview);
+Router.post("/reviews/1/:id", reviewController.postUserReview);
+
 
 module.exports = Router;
