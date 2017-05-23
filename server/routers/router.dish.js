@@ -4,7 +4,7 @@ const dishController = require("../controllers/controller.dish");
 const chefController = require("../controllers/controller.chef");
 const orderController = require("../controllers/controller.order");
 const reviewController = require("../controllers/controller.review");
-console.log(userController);
+
 ////////////////////////USER FUNCTIONS//////////////////////
 //create new user
 Router.post("/user/", userController.createUser);
@@ -49,7 +49,7 @@ Router.post("/orders/", orderController.postNewOrder);
 
 ////////////////////////USER//////////////////////
 //find chefs by style
-Router.get("/chef/style/:id", chefController.findChefs);
+Router.get("/chef/style/:styleId", chefController.findChefsByStyle);
 
 ////////////////////////REVIEW//////////////////////
 //get chef(0) or user(1) reviews
@@ -60,5 +60,6 @@ Router.get("/reviews/1/:id", reviewController.getUserReviews);
 //post chef(0) or user(1)  review
 Router.post("/reviews/0/:id", reviewController.postChefReview);
 Router.post("/reviews/1/:id", reviewController.postUserReview);
+
 
 module.exports = Router;
