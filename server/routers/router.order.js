@@ -2,7 +2,6 @@ const Router = require("express").Router();
 
 const orderController = require("../controllers/controller.order");
 
-
 ////////////////////////ORDERS//////////////////////
 
 //get pending orders

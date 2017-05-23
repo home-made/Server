@@ -54,6 +54,7 @@ exports.getCancelledOrders = (req, res) => {
   console.log(req.params.id);
   var results = [];
   Order.find({ chefId: req.params.id, status: 3 }, (err, orders) => {
+    if(orders.length ===0) return res.send(orders)
     results.push(orders);
     orders.forEach((order, ind) => {
       User.find({ authId: order.chefId }, (err, user) => {
