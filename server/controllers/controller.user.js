@@ -1,6 +1,5 @@
 const { User, CustomerReview, ChefReview } = require("../db/Schema");
 exports.updateUser = (req, res) => {
-  // res.send("update user");
   var updatedUser = req.body;
   User.findOneAndUpdate(
     { authId: updatedUser.authId },
@@ -21,12 +20,16 @@ exports.createUser = (req, res) => {
 
 exports.getUser = (req, res) => {
   var user = req.body;
-  console.log("getUser");
-  var results = [];
-  User.find({ authId: req.params.id}, (err, user) => {
-    results.push(user);
-      Reviews.find({ authId: order.chefId }, (err, user) => {
-        results.push(user);
+  var userRes = [];
+  User.find({ authId: req.params.id })
+    .then(user => {
+      Reviews.find({ authId: order.chefId }).then(reviews => {
+        userRes.push(user);
+        userRes.push(reviews);
+        res.send(userRes);
       });
+    })
+    .catch(err => {
+      console.log(err);
     });
-  };
+};
