@@ -26,7 +26,6 @@ exports.updateChef = (req, res) => {
 };
 
 exports.findChefs = (req, res) => {
-  // var chefId =req.params.chefId;
   console.log(req.body);
   User.find({ "location.geo_lat": "somewhere" })
     .then(user => {
@@ -38,8 +37,6 @@ exports.findChefs = (req, res) => {
 };
 
 exports.findChefsByStyle = (req, res) => {
-  // var chefId =req.params.chefId;
-  var chefs = [];
   console.log(req.body);
   Dish.find({
     isActive: true,

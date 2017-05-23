@@ -11,6 +11,7 @@ const {
 } = require("./db/Schema");
 
 const app = express();
+
 app.use(parser.json());
 app.use(require("./routers/router.dish"));
 app.use(require("./routers/router.user"));
@@ -18,8 +19,15 @@ app.use(require("./routers/router.order"));
 app.use(require("./routers/router.chef"));
 app.use(require("./routers/router.review"));
 
-
 app.use(parser.urlencoded({ extended: true }));
+
+app.use((err, req, res, next) => {
+  if (err) {
+    res.status(err.statusCode || err.status || 500).send(err.data || err.message || {});
+  } else {
+    next();
+  }
+})
 
 app.listen(3000, console.log("Listening on 3000"));
 
