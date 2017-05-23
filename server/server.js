@@ -13,6 +13,11 @@ const {
 const app = express();
 app.use(parser.json());
 app.use(require("./routers/router.dish"));
+app.use(require("./routers/router.user"));
+app.use(require("./routers/router.order"));
+app.use(require("./routers/router.chef"));
+app.use(require("./routers/router.review"));
+
 
 app.use(parser.urlencoded({ extended: true }));
 

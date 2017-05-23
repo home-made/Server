@@ -17,10 +17,11 @@ exports.deleteDish = (req, res) => {
 };
 
 exports.addDish = (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   var dish = new Dish(req.body);
   dish.save((err, dish) => {
     if (err) return console.log(err);
+    console.log('dish added',dish)
     res.send(dish);
   });
 };
