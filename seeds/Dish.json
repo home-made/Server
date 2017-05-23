@@ -1,6 +1,6 @@
 [
   {
-    "cuisineType": "Chinese",
+    "cuisineType": "Mexican",
     "name": "Dumplings",
     "description": "Minced meat and chopped vegetables wrapped into a thin piece of dough skin.",
     "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/02/39/2d/21/chinese-dumplings-with.jpg"],
@@ -11,7 +11,7 @@
     "quantity": 1
   },
   {
-    "cuisineType": "Indian",
+    "cuisineType": "Mexican",
     "name": "Samosas",
     "description": "Baked dish with a savoury filling,",
     "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/0c/d6/28/29/taj-mahal-authentic-indian.jpg"],
