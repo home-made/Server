@@ -1,6 +1,6 @@
 [
   {
-    "authId": "7564fjasdif",
+    "authId": "7564fjasdif", 
     "firstName": "Luke",
     "lastName": "Skywalker",
     "bio": "Just a farm boy from Tattoine.",
@@ -64,7 +64,7 @@
     "profileUrl": "http://www.han.com",
     "customerReviews" : [],
     "chefReviews": [],
-    "isChef": false,
+    "isChef": true,
     "location": { "geo_lat": 321.1, "geo_lng": 34.34 },
     "score": 0
   },

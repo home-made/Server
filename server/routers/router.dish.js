@@ -7,7 +7,7 @@ Router.post("/dish/add", dishController.addDish);
 //update a dish
 Router.put("/dish", dishController.updateDish);
 
-//update a dish
+//delete a dish
 Router.delete("/dish", dishController.deleteDish);
 
 module.exports = Router;
