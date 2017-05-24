@@ -27,6 +27,19 @@ exports.updateChef = (req, res) => {
 
 exports.findChefs = (req, res) => {
   console.log(req.body);
+  /*
+    For testing
+
+    User.find({})
+    .then(user => {
+      res.send(user);
+    })
+    .catch(err => {
+      res.send(err);
+    });
+  */
+
+
   User.find({ "location.geo_lat": "somewhere" })
     .then(user => {
       res.send(user);
