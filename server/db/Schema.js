@@ -42,13 +42,12 @@ var OrderSchema = new Schema({
   cashTotal: Number
 });
 
-// var CustomerReviewSchema = new Schema({
-//   reviewText: String,
-//   reviewerId: String,
-//   revieweeId: String,
-//   score: Number,
-//   orderId: Number
-// });
+var ReviewSchema = new Schema({
+  reviewText: String,
+  reviewerId: String,
+  score: Number,
+  orderId: Number
+});
 
 // var ChefReviewSchema = new Schema({
 //   reviewText: String,

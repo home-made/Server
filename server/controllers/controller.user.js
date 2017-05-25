@@ -1,4 +1,5 @@
 const { User, CustomerReview, ChefReview } = require("../db/Schema");
+
 exports.updateUser = (req, res) => {
   // res.send("update user");
   var updatedUser = req.body;
