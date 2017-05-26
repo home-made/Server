@@ -6,8 +6,44 @@ require("dotenv").load();
 var server = process.env.SERVER || require("../server/server.js");
 
 describe("Routes", function() {
-  it("should update a user profile on /user/:userId PUT", function(done) {
-    chai.request(server).put("/user/").end(function(err, res) {
+  it("should update a user profile on /user/ PUT", function(done) {
+    chai.request(server).put("/user/",  {
+    "authId": "7564fjasdif",
+    "firstName": "Luke",
+    "lastName": "Skywalker",
+    "bio": "Just a farm boy from Tattoine.",
+    "status": "I'm a great cook with a lighsaber",
+    "phoneNumber": "233-876-0001",
+    "likes": [0],
+    "profileUrl": "http://www.luke.com",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4.25,
+        "orderId": "4"
+      }],
+    "chefReviews": [{
+        "reviewText": "chef had that bomb lit",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef sky was a decent cook",
+        "reviewerId": "fdscnxvj234",
+        "score": 4.25,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": "4"
+      }],
+    "isChef": true,
+    "location": { "geo_lat": 75.3, "geo_lng": 65.34 },
+    "score": 0
+    }).end(function(err, res) {
       res.should.have.status(200);
       done();
     });
@@ -104,20 +140,27 @@ describe("Routes", function() {
   it("should list chefs with matching cuisine type on /chef/style/:id GET", function(
     done
   ) {
-    chai.request(server).get("/chef/style/:id").end(function(err, res) {
+    chai.request(server).get("/chef/style/Mexican").end(function(err, res) {
       res.should.have.status(200);
       done();
     });
   });
 
-  it("should list reviews on /review/style/:id GET", function(done) {
-    chai.request(server).get("/chef/style/:id").end(function(err, res) {
+  it("should list chef reviews on /reviews/0/:id GET", function(done) {
+    chai.request(server).get("/reviews/0/7564fjasdif").end(function(err, res) {
       res.should.have.status(200);
       done();
     });
   });
 
-  it("should post a new user review on /review/:type POST", function(done) {
+  it("should list user reviews on /reviews/1/:id GET", function(done) {
+    chai.request(server).get("/reviews/1/7564fjasdif").end(function(err, res) {
+      res.should.have.status(200);
+      done();
+    });
+  });
+
+  it("should post a new user review on /reviews/1/:id POST", function(done) {
     chai
       .request(server)
       .post("/reviews/1/7564fjasdif", {

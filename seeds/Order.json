@@ -3,21 +3,21 @@
     "chefId": "7564fjasdif",
     "customerId": "axncmufid745",
     "cart": [3],
-    "status": 2,
+    "status": 0,
     "cashTotal": 15
   },
   {
     "chefId": "fdscnxvj234",
     "customerId": "858723wrte",
     "cart": [2],
-    "status": 1,
+    "status": 0,
     "cashTotal": 5
   },
   {
     "chefId": "fdscnxvj234",
     "customerId": "axncmufid745",
     "cart": [1],
-    "status": 0,
+    "status": 2,
     "cashTotal": 12
   },
 

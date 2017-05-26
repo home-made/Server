@@ -1,6 +1,6 @@
 [
   {
-    "authId": "7564fjasdif",
+    "authId": "7564fjasdif", 
     "firstName": "Luke",
     "lastName": "Skywalker",
     "bio": "Just a farm boy from Tattoine.",
@@ -33,7 +33,7 @@
         "orderId": "4"
       }],
     "isChef": true,
-    "location": { "geo_lat": 75.3, "geo_lng": 65.34 },
+    "location": { "geo_lat": 33.9210313, "geo_lng":  -118.4183891 },
     "score": 0
     },
 
@@ -49,7 +49,7 @@
     "customerReviews" : [],
     "chefReviews": [],
     "isChef": true,
-    "location": { "geo_lat": 45.12, "geo_lng": 96.6 },
+    "location": { "geo_lat": 33.9620653, "geo_lng": -118.3689844 },
     "score": 0
   },
 
@@ -64,8 +64,8 @@
     "profileUrl": "http://www.han.com",
     "customerReviews" : [],
     "chefReviews": [],
-    "isChef": false,
-    "location": { "geo_lat": 321.1, "geo_lng": 34.34 },
+    "isChef": true,
+    "location": { "geo_lat": 33.9911192, "geo_lng": -118.3979346 },
     "score": 0
   },
   {
@@ -85,7 +85,7 @@
       "orderId": 1
     }],
     "chefReviews" : [],
-    "location": { "geo_lat": 23, "geo_lng": 123.23, "address":"6060 center ln" },
+    "location": { "geo_lat": 34.0628019, "geo_lng": -118.1236872, "address":"6060 center ln" },
     "score": 0
   },
   {
@@ -100,7 +100,7 @@
     "customerReviews" : [],
     "chefReviews": [],
     "isChef": true,
-    "location": { "geo_lat": 13.1, "geo_lng": 34.12, "address":"14238 castle blvd." },
+    "location": { "geo_lat": 34.0617777, "geo_lng": -118.1360685, "address":"14238 castle blvd." },
     "score": 0
   }
 ]
