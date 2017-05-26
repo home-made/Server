@@ -1,5 +1,7 @@
 const { Dish } = require("../db/Schema");
-const s3 = require('s3');
+var redis = require('redis');
+var client = require('redis-connection');
+const AWS = require('aws-sdk')
 
 // Amazon s3 config
 const s3 = new AWS.S3(({ params: { Bucket: 'homemadedishes' } }));
@@ -30,7 +32,11 @@ exports.updateDish = (req, res) => {
   var query = { _id: req.body._id };
   Dish.findOneAndUpdate(query, req.body, { new: true })
     .then(dish => {
-      res.send(dish);
+      client.get('dish',(err,data) =>{
+        console.log(data)
+        res.send(data)
+      })
+      // res.send(dish);
     })
     .catch(err => {
       console.log(err);
@@ -50,13 +56,14 @@ exports.deleteDish = (req, res) => {
 
 exports.addDish = (req, res) => {
   var dish = new Dish(req.body);
-  dish
-    .save()
+  dish.save()
     .then(dish => {
       console.log("dish added", dish);
+      client.hmset('dish', dish, ()=> console.log('saved'));
       res.send(dish);
     })
     .catch(err => {
       console.log(err);
     });
+
 };
