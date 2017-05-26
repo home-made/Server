@@ -16,6 +16,7 @@ const {
 // client.set('dish', 'dish', ()=> console.log('saved'));
 
 const app = express();
+
 app.use(parser.json());
 app.use(require("./routers/router.dish"));
 app.use(require("./routers/router.user"));
@@ -30,6 +31,16 @@ app.use(parser.urlencoded({ extended: true }));
 client.on('connect', function() {
     console.log('redis connected');
 });
+
+app.use(parser.urlencoded({ extended: true }));
+
+app.use((err, req, res, next) => {
+  if (err) {
+    res.status(err.statusCode || err.status || 500).send(err.data || err.message || {});
+  } else {
+    next();
+  }
+})
 
 app.listen(3000, console.log("Listening on 3000"));
 
