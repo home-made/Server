@@ -36,6 +36,20 @@ exports.findChefs = (req, res) => {
     });
 };
 
+
+exports.findChefsTest = (req, res) => {
+  //for testing map
+  console.log(req.body);
+  User.find({})
+    .then(user => {
+      res.send(user);
+    })
+    .catch(err => {
+      res.send(err);
+    });    
+};
+
+
 exports.findChefsByStyle = (req, res) => {
   console.log(req.body);
   Dish.find({
