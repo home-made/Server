@@ -3,16 +3,16 @@ const { User, Dish } = require("../db/Schema");
 exports.getChefDetails = (req, res) => {
   var chefId = req.params.chefId;
   console.log(chefId);
-  var results = []
+  var results = [];
   User.find({ authId: chefId, isChef: true }, (err, user) => {
     if (err) return res.send(err);
-    results.push(user)
+    results.push(user);
     // console.log(user)
-    Dish.find({chefId: user[0].authId}, (err,dish) =>{
-      console.log(dish)
-       results.push(dish)
-      res.send(results)
-    })
+    Dish.find({ chefId: user[0].authId }, (err, dish) => {
+      console.log(dish);
+      results.push(dish);
+      res.send(results);
+    });
   });
 };
 
