@@ -19,4 +19,6 @@ Router.put("/orders/", orderController.updateOrder);
 //post new order request
 Router.post("/orders/", orderController.postNewOrder);
 
+Router.get("/orders/", orderController.getAllOrders);
+
 module.exports = Router;

@@ -126,8 +126,31 @@ exports.getCancelledOrders = (req, res) => {
 };
 
 exports.postNewOrder = (req, res) => {
+  console.log("the req.body inside postNewOrder is ", req.body)
+
   var order = new Order(req.body);
   order.save().then(order => {
     res.send(order);
   });
+
+ 
+};
+
+
+exports.getAllOrders = (req, res) => {
+  Order.find({})
+    .then(allOrders =>{
+      res.send(allOrders);
+    })
+    .catch(err => {
+      res.send("Could not find the orders");
+    })
+
+/*
+  var order = new Order(req.body);
+  order.save().then(order => {
+    res.send(order);
+  });
+
+*/  
 };
