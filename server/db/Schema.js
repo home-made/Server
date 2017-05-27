@@ -36,19 +36,18 @@ var DishSchema = new Schema({
 var OrderSchema = new Schema({
   chefId: String,
   customerId: String,
-  cart: [Number],
+  cart: {},
   status: Number,
   date: { type: Date, default: Date.now },
   cashTotal: Number
 });
 
-// var CustomerReviewSchema = new Schema({
-//   reviewText: String,
-//   reviewerId: String,
-//   revieweeId: String,
-//   score: Number,
-//   orderId: Number
-// });
+var ReviewSchema = new Schema({
+  reviewText: String,
+  reviewerId: String,
+  score: Number,
+  orderId: Number
+});
 
 // var ChefReviewSchema = new Schema({
 //   reviewText: String,

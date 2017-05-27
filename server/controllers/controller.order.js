@@ -11,6 +11,7 @@ exports.updateOrder = (req, res) => {
 //returning [[array of order],chef object]
 exports.getPendingOrders = (req, res) => {
   console.log("getPendingOrders");
+  console.log(req.params.id);
   var results = [];
   Order.find({ chefId: req.params.id, status: 0 })
     .then(orders => {
