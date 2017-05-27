@@ -2,21 +2,21 @@
   {
     "chefId": "7564fjasdif",
     "customerId": "axncmufid745",
-    "cart": [3],
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
     "status": 0,
     "cashTotal": 15
   },
   {
     "chefId": "fdscnxvj234",
     "customerId": "858723wrte",
-    "cart": [2],
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
     "status": 0,
     "cashTotal": 5
   },
   {
     "chefId": "fdscnxvj234",
     "customerId": "axncmufid745",
-    "cart": [1],
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
     "status": 2,
     "cashTotal": 12
   },
@@ -24,15 +24,58 @@
   {
     "chefId": "fdscnxvj234",
     "customerId": "858723wrte",
-    "cart": [5],
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
     "status": 3,
     "cashTotal": 4
   },
   {
     "chefId": "fdscnxvj234",
     "customerId": "axncmufid745",
-    "cart": [7],
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
     "status": 3,
     "cashTotal": 7
+  }, 
+  {
+    "chefId": "facebook|10209561963947713",
+    "customerId": "axncmufid745",
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "status": 0,
+    "cashTotal": 7
+  },
+  {
+    "chefId": "facebook|10209561963947713",
+    "customerId": "axncmufid745",
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "status": 0,
+    "cashTotal": 7
+  },
+  {
+    "chefId": "facebook|10209561963947713",
+    "customerId": "axncmufid745",
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "status": 2,
+    "cashTotal": 7
+  },
+  {
+    "chefId": "facebook|10209561963947713",
+    "customerId": "axncmufid745",
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "status": 2,
+    "cashTotal": 7
+  },
+  {
+    "chefId": "facebook|10209561963947713",
+    "customerId": "axncmufid745",
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "status": 1,
+    "cashTotal": 7
+  },
+  {
+    "chefId": "facebook|10209561963947713",
+    "customerId": "axncmufid745",
+    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "status": 1,
+    "cashTotal": 7
   }
+
 ]
