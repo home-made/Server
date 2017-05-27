@@ -1,6 +1,6 @@
 const { Dish } = require("../db/Schema");
 var redis = require('redis');
-var client = require('redis-connection');
+// var client = require('redis-connection');
 const AWS = require('aws-sdk')
 
 // Amazon s3 config

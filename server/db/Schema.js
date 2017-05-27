@@ -36,7 +36,7 @@ var DishSchema = new Schema({
 var OrderSchema = new Schema({
   chefId: String,
   customerId: String,
-  cart: [Number],
+  cart: {},
   status: Number,
   date: { type: Date, default: Date.now },
   cashTotal: Number
