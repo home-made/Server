@@ -1,4 +1,5 @@
 const { Order, User } = require("../db/Schema");
+const SendMessage = require('../../utils/SendMessage');
 
 exports.updateOrder = (req, res) => {
   console.log("updateOrder");
@@ -155,3 +156,23 @@ exports.getAllOrders = (req, res) => {
 
 */  
 };
+
+//test route for sending nodemailer message
+//delete in final app version.
+exports.acceptOrder = (req, res) => {
+
+  SendMessage("Luke Skywalker", "jaimemendozadev@gmail.com", "Your Order Has Been Accepted!", "Your order has been accepted by the Chef you requested. Your order amount comes to $22. The chef's address has been attached to this email for your to pick up your food. Enjoy!");
+  res.send("An email confirmation has been sent to you");
+
+
+}
+
+
+/*
+OrderSchema Status Codes
+0: pending
+1: accepted
+2: completed
+3: canceled
+  
+*/

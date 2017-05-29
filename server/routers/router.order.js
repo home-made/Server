@@ -21,4 +21,9 @@ Router.post("/orders/", orderController.postNewOrder);
 
 Router.get("/orders/", orderController.getAllOrders);
 
+
+//test route
+Router.put("/orders/1/:id", orderController.acceptOrder);
+
+
 module.exports = Router;
