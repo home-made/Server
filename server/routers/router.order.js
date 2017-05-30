@@ -16,6 +16,8 @@ Router.get("/orders/3/:id", orderController.getCancelledOrders);
 //chef update order- accept,deny,mark as complete
 Router.put("/orders/", orderController.updateOrder);
 
+Router.get("/orders/:id", orderController.getCustomerOrders);
+
 //post new order request
 Router.post("/orders/", orderController.postNewOrder);
 

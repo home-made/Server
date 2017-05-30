@@ -1,6 +1,7 @@
 require("dotenv").load();
 const Schema = require("mongoose").Schema, mongoose = require("mongoose");
 autoIncrement = require("mongoose-auto-increment");
+const findOneOrCreate = require("mongoose-find-one-or-create");
 
 var connection = mongoose.createConnection(process.env.DATABASE_URL);
 autoIncrement.initialize(connection);
@@ -57,6 +58,8 @@ var ReviewSchema = new Schema({
 //   orderId: Number
 // });
 
+
+UserSchema.plugin(findOneOrCreate);
 DishSchema.plugin(autoIncrement.plugin, "Dish");
 OrderSchema.plugin(autoIncrement.plugin, "Order");
 // CustomerReviewSchema.plugin(autoIncrement.plugin, "CustomerReview");

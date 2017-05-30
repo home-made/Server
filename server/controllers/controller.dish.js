@@ -59,7 +59,7 @@ exports.addDish = (req, res) => {
   dish.save()
     .then(dish => {
       console.log("dish added", dish);
-      client.hmset('dish', dish, ()=> console.log('saved'));
+      // client.hmset('dish', dish, ()=> console.log('saved'));
       res.send(dish);
     })
     .catch(err => {

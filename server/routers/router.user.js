@@ -3,7 +3,7 @@ const userController = require("../controllers/controller.user");
 
 ////////////////////////USER FUNCTIONS//////////////////////
 //create new user
-Router.post("/user/", userController.createUser);
+Router.post("/user/:id", userController.createUser);
 
 //manage profile
 Router.put("/user/", userController.updateUser);
