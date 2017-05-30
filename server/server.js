@@ -4,7 +4,7 @@ const path = require("path");
 const parser = require("body-parser");
 const db = require("./db/db");
 var redis = require('redis');
-var client = require('redis-connection')('subscriber'); // require & connect 
+// var client = require('redis-connection')('subscriber'); // require & connect 
 const {
   User,
   ActiveDish,
@@ -40,9 +40,9 @@ app.use(require("./routers/router.review"));
 // console.log(http)
 app.use(parser.urlencoded({ extended: true }));
 
-client.on('connect', function() {
-    console.log('redis connected');
-});
+// client.on('connect', function() {
+//     console.log('redis connected');
+// });
 
 app.use(parser.urlencoded({ extended: true }));
 
