@@ -132,3 +132,19 @@ exports.postNewOrder = (req, res) => {
     res.send(order);
   });
 };
+
+exports.getCustomerOrders = (req, res) => {
+  Order.find({$or:[{customerId: req.params.id, status:0},{customerId: req.params.id, status:1}] })
+    .then(allOrders =>{
+      res.send(allOrders);
+    })
+    .catch(err => {
+      res.send("Could not find the orders");
+    })
+/*
+  var order = new Order(req.body);
+  order.save().then(order => {
+    res.send(order);
+  });
+*/  
+};
