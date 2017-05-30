@@ -19,4 +19,11 @@ Router.put("/orders/", orderController.updateOrder);
 //post new order request
 Router.post("/orders/", orderController.postNewOrder);
 
+Router.get("/orders/", orderController.getAllOrders);
+
+
+//test route
+Router.put("/orders/1/:id", orderController.acceptOrder);
+
+
 module.exports = Router;

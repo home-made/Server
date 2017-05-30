@@ -80,7 +80,7 @@
     "customerReviews" : [],
     "chefReviews": [],
     "isChef": true,
-    "location": { "geo_lat": 33.9911192, "geo_lng": -118.3979346 },
+    "location": { "geo_lat": 33.9911192, "geo_lng": -118 },
     "score": 0
   },
   {
