@@ -4,15 +4,22 @@ var client = require('redis-connection');
 exports.getChefDetails = (req, res) => {
   var chefId = req.params.chefId;
   console.log(chefId);
-  var results = [];
-  User.find({ authId: chefId, isChef: true }, (err, user) => {
-    if (err) return res.send(err);
-    results.push(user);
-    // console.log(user)
-    Dish.find({ chefId: user[0].authId }, (err, dish) => {
-      console.log(dish);
-      results.push(dish);
-      res.send(results);
+  var chef = [];
+  User.find({ authId: chefId, isChef: true }).then(user => {
+    console.log(user);
+    Dish.find({ chefId: user[0].authId }).then(dishes => {
+      console.log(dishes);
+      chef.push(user[0]);
+      chef.push(dishes);
+      var reviewsUsers = user[0].chefReviews.map(curr => {
+        console.log('curr is ',curr)
+        return {authId: curr.reviewerId}
+      })
+      User.find({$or:reviewsUsers}).then(reviewers => {
+        console.log(reviewers)
+        chef.push(reviewers)
+        res.send(chef);
+      })
     });
   });
 };
