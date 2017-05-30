@@ -6,9 +6,9 @@ exports.getChefDetails = (req, res) => {
   console.log("Chef controller about to fetch details for id: ", chefId);
   var chef = [];
   User.find({ authId: chefId, isChef: true }).then(user => {
-    console.log("SUCCESSFULLY FOUND USER:", user);
+    console.log("SUCCESSFULLY FOUND USER");
     Dish.find({ chefId: user[0].authId }).then(dishes => {
-      console.log("SUCCESSFULLY FOUND DISHES", dishes);
+      console.log("SUCCESSFULLY FOUND DISHES");
       chef.push(user[0]);
       chef.push(dishes);
       var reviewsUsers = user[0].chefReviews.map(curr => {

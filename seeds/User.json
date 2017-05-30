@@ -68,21 +68,7 @@
     "location": { "geo_lat": 33.9911192, "geo_lng": -118.3979346 },
     "score": 0
   },
-  {
-    "authId": "facebook|10209561963947713",
-    "firstName": "David",
-    "lastName": "Susan",
-    "bio": "Scruffy looking scoundrel and smuggler.",
-    "status": "I'm both a great cook and a great shot.",
-    "phoneNumber": "456-234-0934",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.9911192, "geo_lng": -118 },
-    "score": 0
-  },
+
   {
     "authId": "axncmufid745",
     "firstName": "Darth",
