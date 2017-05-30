@@ -16,7 +16,19 @@ const {
 // client.set('dish', 'dish', ()=> console.log('saved'));
 
 const app = express();
+const http = require('http').createServer(app);
+const io = require('socket.io')(http)
 
+io.on('connection', (socket) => {
+  console.log('a user connected')
+  io.emit('fresh', ('hi from server'))
+  io.on('message', (socket) => {
+    console.log(socket)
+  })
+})
+io.on('disconnect', (socket) => {
+  console.log('disconnect')
+})
 app.use(parser.json());
 app.use(require("./routers/router.dish"));
 app.use(require("./routers/router.user"));
@@ -25,7 +37,7 @@ app.use(require("./routers/router.chef"));
 app.use(require("./routers/router.review"));
 
 
-
+// console.log(http)
 app.use(parser.urlencoded({ extended: true }));
 
 client.on('connect', function() {
@@ -42,6 +54,6 @@ app.use((err, req, res, next) => {
   }
 })
 
-app.listen(3000, console.log("Listening on 3000"));
+http.listen(3000, console.log("Listening on 3000"));
 
 module.exports = app
