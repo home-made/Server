@@ -1,4 +1,5 @@
 const { Order, User } = require("../db/Schema");
+const SendMessage = require('../../utils/SendMessage');
 
 exports.updateOrder = (req, res) => {
   console.log("updateOrder");
@@ -127,11 +128,35 @@ exports.getCancelledOrders = (req, res) => {
 };
 
 exports.postNewOrder = (req, res) => {
+  console.log("the req.body inside postNewOrder is ", req.body)
+
   var order = new Order(req.body);
   order.save().then(order => {
     res.send(order);
   });
+
+ 
 };
+
+
+exports.getAllOrders = (req, res) => {
+  Order.find({})
+    .then(allOrders =>{
+      res.send(allOrders);
+    })
+    .catch(err => {
+      res.send("Could not find the orders");
+    })
+
+/*
+  var order = new Order(req.body);
+  order.save().then(order => {
+    res.send(order);
+  });
+
+*/  
+};
+
 
 exports.getCustomerOrders = (req, res) => {
   Order.find({$or:[{customerId: req.params.id, status:0},{customerId: req.params.id, status:1}] })
@@ -148,3 +173,23 @@ exports.getCustomerOrders = (req, res) => {
   });
 */  
 };
+
+//test route for sending nodemailer message
+//delete in final app version.
+exports.acceptOrder = (req, res) => {
+
+  SendMessage("Luke Skywalker", "jaimemendozadev@gmail.com", "Your Order Has Been Accepted!", "Your order has been accepted by the Chef you requested. Your order amount comes to $22. The chef's address has been attached to this email for your to pick up your food. Enjoy!");
+  res.send("An email confirmation has been sent to you");
+
+
+}
+
+
+/*
+OrderSchema Status Codes
+0: pending
+1: accepted
+2: completed
+3: canceled
+  
+*/
