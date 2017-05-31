@@ -7,6 +7,7 @@ exports.updateUser = (req, res) => {
     updatedUser,
     { new: true },
     (err, user) => {
+      console.log(user);
       res.send(user);
     }
   );
