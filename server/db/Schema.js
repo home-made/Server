@@ -31,7 +31,7 @@ var DishSchema = new Schema({
   allergies: [String],
   cashDonation: Number,
   isActive: Boolean,
-  quantity: Number
+  quantity: Number //Amt of a dish a chef has left in their inventory
 });
 
 var OrderSchema = new Schema({
