@@ -27,16 +27,29 @@ exports.addDishImage = (req,res) => {
   })
 }
 
+exports.getInactiveDishes = (req,res) =>{
 
+  Dish.find({chefId: req.params.chefId, isActive: false})
+  .then(inactiveDishes => {
+    res.send(inactiveDishes)
+  })
+}
+exports.getActiveDishes = (req,res) =>{
+
+  Dish.find({chefId: req.params.chefId, isActive: true})
+  .then(ActiveDishes => {
+    res.send(ActiveDishes)
+  })
+}
 exports.updateDish = (req, res) => {
   var query = { _id: req.body._id };
   Dish.findOneAndUpdate(query, req.body, { new: true })
     .then(dish => {
-      client.get('dish',(err,data) =>{
-        console.log(data)
-        res.send(data)
-      })
-      // res.send(dish);
+      // client.get('dish',(err,data) =>{
+      //   console.log(data)
+      //   res.send(data)
+      // })
+      res.send(dish);
     })
     .catch(err => {
       console.log(err);
