@@ -4,6 +4,7 @@ const SendMessage = require("../../utils/SendMessage");
 exports.updateOrder = (req, res) => {
   var query = { chefId: req.body.chefId, date: req.body.date };
   Order.findOneAndUpdate(query, {status: req.body.status}, { new: true }).then(order => {
+    console.log('updated order ',order)
     res.send(order);
   }).catch();
 };
@@ -17,7 +18,7 @@ exports.getPendingOrders = (req, res) => {
   
   Order.find({ chefId: req.params.id, status: 0 })
     .then(orders => {
-
+      console.log('pending orders ', orders)
       results.push(orders);
       
       
@@ -44,10 +45,11 @@ exports.getPendingOrders = (req, res) => {
 
 //returning [[array of order],chef object]
 exports.getUserCurrentOrder = (req, res) => {
-  console.log("getPendingOrders");
+  console.log("getCurrentOrders");
   var results = [];
   Order.find({ chefId: req.params.id, status: 0 })
     .then(orders => {
+      console.log('current order ', orders)
       results.push(orders);
       orders = orders.map(curr => {
         return { authId: curr.chefId };
@@ -71,6 +73,7 @@ exports.getAcceptedOrders = (req, res) => {
   var results = [];
   Order.find({ chefId: req.params.id, status: 1 })
     .then(orders => {
+      console.log('accepted orders ', orders)
       results.push(orders);
       orders = orders.map(curr => {
         return { authId: curr.customerId };
@@ -94,6 +97,7 @@ exports.getCompletedOrders = (req, res) => {
   var results = [];
   Order.find({ chefId: req.params.id, status: 2 })
     .then(orders => {
+      console.log('completed orders ', orders)
       results.push(orders);
       orders = orders.map(curr => {
         return { authId: curr.customerId };

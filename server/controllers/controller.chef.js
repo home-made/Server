@@ -6,8 +6,7 @@ exports.getChefDetails = (req, res) => {
   console.log("Chef controller about to fetch details for id: ", chefId);
 
   var chef = [];
-  
-  User.find({ authId: chefId, isChef: true }).then(user => {
+  User.find({ authId: chefId }).then(user => {
     console.log("SUCCESSFULLY FOUND USER");
     Dish.find({ chefId: user[0].authId }).then(dishes => {
       console.log("SUCCESSFULLY FOUND DISHES");
@@ -82,14 +81,14 @@ exports.findChefsByStyle = (req, res) => {
     });
     console.log(chefsFoundByCuisine)
     //If Mongoose doesn't find any dishes, dishes is an empty array
-    User.find({ $or: [{ authId: curr.chefId }] })
+    User.find({ $or: chefsFoundByCuisine})
       .then(users => {
-        console.log(users)
+        console.log("USERS FOUND ARE", users)
         res.send(users);
       })
       .catch(err => {
         //Don't send an error, send an empty array
-        res.send([]);
+        res.send("THERE WAS AN ERROR");
       })
       .catch(err => {
         console.log(err);
