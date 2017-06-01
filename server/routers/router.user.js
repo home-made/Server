@@ -8,5 +8,6 @@ Router.post("/user/:id", userController.createUser);
 //manage profile
 Router.put("/user/:authId", userController.updateUser);
 
+Router.get("/user/:id", userController.getUser);
 
 module.exports = Router;

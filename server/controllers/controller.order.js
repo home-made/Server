@@ -13,23 +13,31 @@ exports.updateOrder = (req, res) => {
 exports.getPendingOrders = (req, res) => {
   console.log("getPendingOrders");
   console.log(req.params.id);
+
   var results = [];
+  
   Order.find({ chefId: req.params.id, status: 0 })
     .then(orders => {
       console.log('pending orders ', orders)
       results.push(orders);
+      
+      
       orders = orders.map(curr => {
         return { authId: curr.customerId };
       });
+      
       User.find({ $or: orders })
         .then(user => {
+
           results.push(user);
           res.send(results);
         })
         .catch(err => {
           res.send({});
         });
+
     })
+    
     .catch(err => {
       res.send({});
     });

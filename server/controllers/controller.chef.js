@@ -4,6 +4,7 @@ const { User, Dish } = require("../db/Schema");
 exports.getChefDetails = (req, res) => {
   var chefId = req.params.chefId;
   console.log("Chef controller about to fetch details for id: ", chefId);
+
   var chef = [];
   User.find({ authId: chefId }).then(user => {
     console.log("SUCCESSFULLY FOUND USER");
@@ -27,6 +28,8 @@ exports.getChefDetails = (req, res) => {
       }
     });
   });
+
+  
 };
 
 exports.updateChef = (req, res) => {
