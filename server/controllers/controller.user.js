@@ -3,14 +3,19 @@ var findOneOrCreate = require('mongoose-find-one-or-create');
 
 
 exports.updateUser = (req, res) => {
+  console.log('Inside Update User');
   var updatedUser = req.body;
   User.findOneAndUpdate(
-    { authId: updatedUser.authId },
+    { authId: req.params.authId },
     updatedUser,
     { new: true },
     (err, user) => {
-      console.log(user);
-      res.send(user);
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(user);
+        res.send(user);
+      }
     }
   );
 };
