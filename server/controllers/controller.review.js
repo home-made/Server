@@ -39,6 +39,7 @@ exports.postChefReview = (req, res) => {
   User.find({ authId: id })
     .then(user => {
       user[0].chefReviews.push(req.body);
+      User.findOneAndUpdate({authId: id}, user[0]);
       res.send(user[0]);
     })
     .catch(err => {
