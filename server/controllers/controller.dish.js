@@ -38,6 +38,7 @@ exports.getActiveDishes = (req,res) =>{
 
   Dish.find({chefId: req.params.chefId, isActive: true})
   .then(ActiveDishes => {
+    console.log("Dishes inside getActiveDishes are ", ActiveDishes);
     res.send(ActiveDishes)
   })
 }
