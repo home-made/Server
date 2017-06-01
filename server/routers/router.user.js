@@ -6,7 +6,7 @@ const userController = require("../controllers/controller.user");
 Router.post("/user/:id", userController.createUser);
 
 //manage profile
-Router.put("/user/", userController.updateUser);
+Router.put("/user/:authId", userController.updateUser);
 
 
 module.exports = Router;

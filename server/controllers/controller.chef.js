@@ -72,14 +72,15 @@ exports.findChefsByStyle = (req, res) => {
     isActive: true,
     cuisineType: req.params.styleId
   }).then(dishes => {
-    
+    console.log(dishes)
     var chefsFoundByCuisine = dishes.map(curr => {
       return { authId: curr.chefId };
     });
-
+    console.log(chefsFoundByCuisine)
     //If Mongoose doesn't find any dishes, dishes is an empty array
-    User.find({ $or: chefsFoundByCuisine })
+    User.find({ $or: [{ authId: curr.chefId }] })
       .then(users => {
+        console.log(users)
         res.send(users);
       })
       .catch(err => {
