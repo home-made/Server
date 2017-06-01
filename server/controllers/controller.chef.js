@@ -81,7 +81,8 @@ exports.findChefsByStyle = (req, res) => {
     });
     console.log(chefsFoundByCuisine)
     //If Mongoose doesn't find any dishes, dishes is an empty array
-    User.find({ $or: chefsFoundByCuisine})
+    if (chefsFoundByCuisine.length !== 0) {
+      User.find({ $or: chefsFoundByCuisine})
       .then(users => {
         console.log("USERS FOUND ARE", users)
         res.send(users);
@@ -93,5 +94,9 @@ exports.findChefsByStyle = (req, res) => {
       .catch(err => {
         console.log(err);
       });
+    } else {
+      res.send([]);
+    }
+    
   });
 };
