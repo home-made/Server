@@ -20,6 +20,8 @@ exports.updateUser = (req, res) => {
   );
 };
 
+
+//route we use to login to app that either finds or creates a user
 exports.createUser = (req, res) => {
   // var user = req.body;
   console.log("INSIDE CREATE USER", req.params.id);
@@ -43,15 +45,16 @@ exports.createUser = (req, res) => {
 };
 
 exports.getUser = (req, res) => {
-  var user = req.body;
+  //var user = req.body;
+  
   var userRes = [];
+  console.log("req.params.id is ", req.params.id)
+
   User.find({ authId: req.params.id })
     .then(user => {
-      Reviews.find({ authId: order.chefId }).then(reviews => {
-        userRes.push(user);
-        userRes.push(reviews);
-        res.send(userRes);
-      });
+      console.log("User inside getUser is ", user)
+
+      res.send(user);
     })
     .catch(err => {
       console.log(err);
