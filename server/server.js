@@ -16,6 +16,11 @@ const {
 // client.set('dish', 'dish', ()=> console.log('saved'));
 
 const app = express();
+const {Server} = require('http')
+const server = Server(app)
+const io = require('socket.io')(server)
+
+
 
 app.use(parser.json());
 app.use(require("./routers/router.dish"));
@@ -25,13 +30,18 @@ app.use(require("./routers/router.chef"));
 app.use(require("./routers/router.review"));
 
 
-
+// console.log(http)
 app.use(parser.urlencoded({ extended: true }));
 
 // client.on('connect', function() {
 //     console.log('redis connected');
 // });
-
+app.get('/api/',(req,res)=>{
+  res.send({
+    key: process.env.AWS_ACCESS_KEY_ID,
+    secret: process.env.AWS_SECRET_ACCESS_KEY
+  })
+})
 app.use(parser.urlencoded({ extended: true }));
 
 app.use((err, req, res, next) => {
@@ -42,6 +52,6 @@ app.use((err, req, res, next) => {
   }
 })
 
-app.listen(3000, console.log("Listening on 3000"));
+server.listen(3000, console.log("Listening on 3000"));
 
 module.exports = app
