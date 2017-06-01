@@ -97,5 +97,38 @@
     "cashDonation": 7,
     "isActive": false,
     "quantity": 2
+  },
+    {
+    "cuisineType": "Mexican",
+    "name": "Dumplings",
+    "description": "Minced meat and chopped vegetables wrapped into a thin piece of dough skin.",
+    "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/02/39/2d/21/chinese-dumplings-with.jpg"],
+    "chefId": "google-oauth2|111548799256401715601",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Mexican",
+    "name": "Samosas",
+    "description": "Baked dish with a savoury filling,",
+    "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/0c/d6/28/29/taj-mahal-authentic-indian.jpg"],
+    "chefId": "google-oauth2|111548799256401715601",
+    "allergies": ["Pine Nuts"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Mexican",
+    "name": "Tacos",
+    "description": "Meat with tortilla",
+    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"],
+    "chefId": "google-oauth2|111548799256401715601",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
   }
 ]

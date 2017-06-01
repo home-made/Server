@@ -287,5 +287,53 @@
     "isChef": true,
     "location": { "geo_lat": 34.063561, "geo_lng": -118.404121 },
     "score": 0
-  }
+  },
+    {
+    "authId": "facebook|10209561963947713", 
+    "firstName": "Darth",
+    "lastName": "Maul",
+    "bio": "Sith Lord with a Double Lightsaber",
+    "status": "I slice Jedi and Cold Cuts for fun",
+    "phoneNumber": "233-876-0001",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4.25,
+        "orderId": 13
+      },
+      { 
+        "reviewText": "he was a horrible customer.",
+        "reviewerId": "477ifjdfo7",
+        "score": 4.25,
+        "orderId": "13"
+      }],
+    "chefReviews": [{
+        "reviewText": "chef had that bomb lit",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": 15
+      },
+      {
+        "reviewText": "chef sky was a decent cook",
+        "reviewerId": "fdscnxvj234",
+        "score": 4.25,
+        "orderId": 5
+      },
+      {
+        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": "21"
+      }],
+    "isChef": true,
+    "location": { "geo_lat": 33.9210313, "geo_lng":  -118.4183891 },
+    "score": 0
+    }
 ]
+
+
+
+
+
