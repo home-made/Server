@@ -31,7 +31,7 @@ var DishSchema = new Schema({
   allergies: [String],
   cashDonation: Number,
   isActive: Boolean,
-  quantity: Number
+  quantity: Number //Amt of a dish a chef has left in their inventory
 });
 
 var OrderSchema = new Schema({
@@ -43,40 +43,20 @@ var OrderSchema = new Schema({
   cashTotal: Number
 });
 
-var ReviewSchema = new Schema({
-  reviewText: String,
-  reviewerId: String,
-  score: Number,
-  orderId: Number
-});
-
-// var ChefReviewSchema = new Schema({
-//   reviewText: String,
-//   reviewerId: String,
-//   revieweeId: String,
-//   score: Number,
-//   orderId: Number
-// });
-
-
 UserSchema.plugin(findOneOrCreate);
 DishSchema.plugin(autoIncrement.plugin, "Dish");
 OrderSchema.plugin(autoIncrement.plugin, "Order");
-// CustomerReviewSchema.plugin(autoIncrement.plugin, "CustomerReview");
-// ChefReviewSchema.plugin(autoIncrement.plugin, "ChefReview");
+
 
 const User = connection.model("User", UserSchema);
 const Dish = connection.model("Dish", DishSchema);
 const Order = connection.model("Order", OrderSchema);
-// const CustomerReview = connection.model("CustomerReview", CustomerReviewSchema);
-// const ChefReview = connection.model("ChefReview", ChefReviewSchema);
+
 
 module.exports = {
   User: User,
   Dish: Dish,
   Order: Order,
-//   ChefReview: ChefReview,
-//   CustomerReview: CustomerReview
 };
 
 /*

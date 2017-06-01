@@ -2,21 +2,21 @@
   {
     "chefId": "7564fjasdif",
     "customerId": "axncmufid745",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 1, "cashDonation": 8}},
     "status": 0,
     "cashTotal": 15
   },
   {
     "chefId": "fdscnxvj234",
     "customerId": "858723wrte",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 1, "cashDonation": 8}},
     "status": 0,
     "cashTotal": 5
   },
   {
     "chefId": "fdscnxvj234",
     "customerId": "axncmufid745",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 2, "cashDonation": 8}},
     "status": 2,
     "cashTotal": 12
   },
@@ -24,56 +24,116 @@
   {
     "chefId": "fdscnxvj234",
     "customerId": "858723wrte",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 7, "cashDonation": 8}},
     "status": 3,
     "cashTotal": 4
   },
   {
     "chefId": "fdscnxvj234",
     "customerId": "axncmufid745",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 1, "cashDonation": 8}},
     "status": 3,
     "cashTotal": 7
   }, 
   {
     "chefId": "facebook|10209561963947713",
     "customerId": "axncmufid745",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 6, "cashDonation": 8, "dish": {
+    "cuisineType": "Mexican",
+    "name": "Tacos",
+    "description": "Meat with tortilla",
+    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"],
+    "chefId": "7564fjasdif",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  }}},
     "status": 0,
     "cashTotal": 7
   },
   {
     "chefId": "facebook|10209561963947713",
     "customerId": "axncmufid745",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 3, "cashDonation": 8, "dish": {
+    "cuisineType": "Mexican",
+    "name": "Tacos",
+    "description": "Meat with tortilla",
+    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"],
+    "chefId": "7564fjasdif",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  }}},
     "status": 0,
     "cashTotal": 7
   },
   {
     "chefId": "facebook|10209561963947713",
     "customerId": "axncmufid745",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 2, "cashDonation": 8, "dish": {
+    "cuisineType": "Mexican",
+    "name": "Tacos",
+    "description": "Meat with tortilla",
+    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"],
+    "chefId": "7564fjasdif",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  }}},
     "status": 2,
     "cashTotal": 7
   },
   {
     "chefId": "facebook|10209561963947713",
     "customerId": "axncmufid745",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 1, "cashDonation": 8, "dish": {
+    "cuisineType": "Mexican",
+    "name": "Tacos",
+    "description": "Meat with tortilla",
+    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"],
+    "chefId": "7564fjasdif",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  }}},
     "status": 2,
     "cashTotal": 7
   },
   {
     "chefId": "facebook|10209561963947713",
     "customerId": "axncmufid745",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 1, "cashDonation": 5, "dish": {
+    "cuisineType": "Mexican",
+    "name": "Tacos",
+    "description": "Meat with tortilla",
+    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"],
+    "chefId": "7564fjasdif",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  }}},
     "status": 1,
     "cashTotal": 7
   },
   {
     "chefId": "facebook|10209561963947713",
     "customerId": "axncmufid745",
-    "cart": {"308": {"amount": 0, "cashDonation": 8}},
+    "cart": {"308": {"amount": 4, "cashDonation": 8, "dish": {
+    "cuisineType": "Mexican",
+    "name": "Tacos",
+    "description": "Meat with tortilla",
+    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"],
+    "chefId": "7564fjasdif",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  }}},
     "status": 1,
     "cashTotal": 7
   }
