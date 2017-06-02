@@ -1,44 +1,35 @@
 const { Order, User } = require("../db/Schema");
-const SendMessage = require("../../utils/SendMessage");
+const SendMessage = require('../../utils/SendMessage');
 
 exports.updateOrder = (req, res) => {
-  var query = { chefId: req.body.chefId, date: req.body.date, _id: req.body._id };
-  console.log("REQ IS", req.body)
-  Order.findOneAndUpdate(query,  {status: req.body.status}, {upsert: true}).then(order => {
-    console.log('updated order ',order)
+  console.log("updateOrder");
+  var query = { chefId: req.body.chefId };
+  Order.findOneAndUpdate(query, req.body, { new: true }).then(order => {
     res.send(order);
-  }).catch(err => console.log(err));
+  });
 };
+
 
 //returning [[array of order],chef object]
 exports.getPendingOrders = (req, res) => {
   console.log("getPendingOrders");
   console.log(req.params.id);
-
   var results = [];
-  
   Order.find({ chefId: req.params.id, status: 0 })
     .then(orders => {
-      // console.log('pending orders ', orders)
       results.push(orders);
-      
-      
       orders = orders.map(curr => {
         return { authId: curr.customerId };
       });
-      
       User.find({ $or: orders })
         .then(user => {
-
           results.push(user);
           res.send(results);
         })
         .catch(err => {
           res.send({});
         });
-
     })
-    
     .catch(err => {
       res.send({});
     });
@@ -46,11 +37,10 @@ exports.getPendingOrders = (req, res) => {
 
 //returning [[array of order],chef object]
 exports.getUserCurrentOrder = (req, res) => {
-  console.log("getCurrentOrders");
+  console.log("getPendingOrders");
   var results = [];
   Order.find({ chefId: req.params.id, status: 0 })
     .then(orders => {
-      // console.log('current order ', orders)
       results.push(orders);
       orders = orders.map(curr => {
         return { authId: curr.chefId };
@@ -74,7 +64,6 @@ exports.getAcceptedOrders = (req, res) => {
   var results = [];
   Order.find({ chefId: req.params.id, status: 1 })
     .then(orders => {
-      console.log('accepted orders ', orders)
       results.push(orders);
       orders = orders.map(curr => {
         return { authId: curr.customerId };
@@ -98,7 +87,6 @@ exports.getCompletedOrders = (req, res) => {
   var results = [];
   Order.find({ chefId: req.params.id, status: 2 })
     .then(orders => {
-      // console.log('completed orders ', orders)
       results.push(orders);
       orders = orders.map(curr => {
         return { authId: curr.customerId };
@@ -141,64 +129,73 @@ exports.getCancelledOrders = (req, res) => {
 };
 
 exports.postNewOrder = (req, res) => {
-  console.log("the req.body inside postNewOrder is ", req.body);
-
+  console.log("the req.body inside postNewOrder is ", req.body)
+  io.on('connection', (socket) => {
+  console.log('a user connected')
+  socket.on('join', (data) => {
+    console.log('yrrrrrr',data)
+    socket.join(data.email)
+    socket.emit('fresh','your funny bruh')
+  })
+  io.in('user1').emit('fresh',{email: 'knock it off'})
+  })
+  io.on('disconnect', (socket) => {
+    console.log('disconnect')
+  })
   var order = new Order(req.body);
   order.save().then(order => {
     res.send(order);
   });
+
+ 
 };
+
 
 exports.getAllOrders = (req, res) => {
   Order.find({})
-    .then(allOrders => {
+    .then(allOrders =>{
       res.send(allOrders);
     })
     .catch(err => {
       res.send("Could not find the orders");
-    });
+    })
 
-  /*
+/*
   var order = new Order(req.body);
   order.save().then(order => {
     res.send(order);
   });
 
-*/
+*/  
 };
 
+
 exports.getCustomerOrders = (req, res) => {
-  Order.find({
-    $or: [
-      { customerId: req.params.id, status: 0 },
-      { customerId: req.params.id, status: 1 }
-    ]
-  })
-    .then(allOrders => {
+  Order.find({$or:[{customerId: req.params.id, status:0},{customerId: req.params.id, status:1}] })
+    .then(allOrders =>{
       res.send(allOrders);
     })
     .catch(err => {
       res.send("Could not find the orders");
-    });
-  /*
+    })
+/*
   var order = new Order(req.body);
   order.save().then(order => {
     res.send(order);
   });
-*/
+*/  
 };
 
 //test route for sending nodemailer message
 //delete in final app version.
 exports.acceptOrder = (req, res) => {
-  SendMessage(
-    "Luke Skywalker",
-    "jaimemendozadev@gmail.com",
-    "Your Order Has Been Accepted!",
-    "Your order has been accepted by the Chef you requested. Your order amount comes to $22. The chef's address has been attached to this email for your to pick up your food. Enjoy!"
-  );
+
+  SendMessage("Luke Skywalker", "jaimemendozadev@gmail.com", "Your Order Has Been Accepted!", "Your order has been accepted by the Chef you requested. Your order amount comes to $22. The chef's address has been attached to this email for your to pick up your food. Enjoy!");
   res.send("An email confirmation has been sent to you");
-};
+
+
+}
+
 
 /*
 OrderSchema Status Codes
