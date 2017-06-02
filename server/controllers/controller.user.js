@@ -1,25 +1,30 @@
 const { User, CustomerReview, ChefReview } = require("../db/Schema");
-var findOneOrCreate = require('mongoose-find-one-or-create');
-
+const findOneOrCreate = require("mongoose-find-one-or-create");
+var geocoder = require("geocoder");
 
 exports.updateUser = (req, res) => {
-  console.log('Inside Update User');
-  var updatedUser = req.body;
-  User.findOneAndUpdate(
-    { authId: req.params.authId },
-    updatedUser,
-    { new: true },
-    (err, user) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log(user);
-        res.send(user);
-      }
-    }
-  );
+  console.log("Inside Update User request is", req.body);
+  if (req.body.address) {
+    geocoder.geocode(req.body.address, (err, data) => {
+      req.body.location = { geo_lat: data.results[0].geometry.location.lat, geo_lng: data.results[0].geometry.location.lng }
+      console.log("UPDATED REQUEST", req.body);
+      var updatedUser = req.body;
+      User.findOneAndUpdate(
+        { authId: req.params.authId },
+        updatedUser,
+        { new: true },
+        (err, user) => {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log(user);
+            res.send(user);
+          }
+        }
+      );
+    });
+  }
 };
-
 
 //route we use to login to app that either finds or creates a user
 exports.createUser = (req, res) => {
@@ -38,21 +43,21 @@ exports.createUser = (req, res) => {
     },
     (err, user) => {
       res.send(user);
-      console.log('ERR in create user: ', err);
-      console.log('USER in create user: ', user);
+      console.log("ERR in create user: ", err);
+      console.log("USER in create user: ", user);
     }
   );
 };
 
 exports.getUser = (req, res) => {
   //var user = req.body;
-  
+
   var userRes = [];
-  console.log("req.params.id is ", req.params.id)
+  console.log("req.params.id is ", req.params.id);
 
   User.find({ authId: req.params.id })
     .then(user => {
-      console.log("User inside getUser is ", user)
+      console.log("User inside getUser is ", user);
 
       res.send(user);
     })
