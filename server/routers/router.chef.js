@@ -11,4 +11,5 @@ Router.get("/chefTest/", chefController.findChefsTest);
 //find chefs by style
 Router.get("/chef/style/:styleId", chefController.findChefsByStyle);
 
+Router.post("/text/", chefController.textChef);
 module.exports = Router;

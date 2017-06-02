@@ -83,6 +83,23 @@
   }}},
     "status": 1,
     "cashTotal": 99
+  },
+   {
+    "chefId": "facebook|10209561963947713",
+    "customerId": "facebook|10209561963947713",
+    "cart": {"308": {"amount": 4, "cashDonation": 8, "dish": {
+    "cuisineType": "Mexican",
+    "name": "BURRITOS",
+    "description": "Meat with tortilla",
+    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"],
+    "chefId": "facebook|10209561963947713",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  }}},
+    "status": 1,
+    "cashTotal": 99
   }
 
 ]
