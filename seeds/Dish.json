@@ -426,6 +426,279 @@
     "isActive": false,
     "quantity": 3
   },
+
+
+
+
+  {
+    "cuisineType": "Italian",
+    "name": "Gnocchi with Pesto Sauce",
+    "description": "Delicious Gnocchi",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/dYGmhRjSO--JMVgrQnzr6w/o.jpg"],
+    "chefId": "fje364nnq",
+    "allergies": [],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Italian",
+    "name": "Sea Food Pasta",
+    "description": "Fresh from the sea.",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/F0Gk3WhYmJBBa1CHu9k7oQ/o.jpg"],
+    "chefId": "fje364nnq",
+    "allergies": [],
+    "cashDonation": 18,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Italian",
+    "name": "Vegetable Korma",
+    "description": "Vegetable Korma",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/otBV9myV_sooMC14VSiLSg/o.jpg"],
+    "chefId": "fje364nnq",
+    "allergies": [],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Italian",
+    "name": "Sausage Pizza",
+    "description": "Medium sausage pizza",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/qm5jN0uK8xuPqD0_ctN0Cg/o.jpg"],
+    "chefId": "fje364nnq",
+    "allergies": [],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Italian",
+    "name": "Pesto Pasta",
+    "description": "Pesto Pasta",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/otBV9myV_sooMC14VSiLSg/o.jpg"],
+    "chefId": "fje364nnq",
+    "allergies": [],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Italian",
+    "name": "Spaghetti & Meatballs",
+    "description": "Spaghetti and meatballs, medium size.",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/p_iIeEGjQ2dxW_GXdtJoPw/o.jpg"],
+    "chefId": "fje364nnq",
+    "allergies": [],
+    "cashDonation": 11,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Japanese",
+    "name": "Tonkatsu Ramen",
+    "description": "Ramen with pork",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/SahdEgyIVfENagxRj1eilA/o.jpg"],
+    "chefId": "jyr759nnq",
+    "allergies": ["none"],
+    "cashDonation": 9,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Japanese",
+    "name": "Salmon Skin Salad",
+    "description": "Fresh salad and salmon skin.",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/oeSi8qHprZ1Ncvkk7OHt0g/o.jpg"],
+    "chefId": "jyr759nnq",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Japanese",
+    "name": "Calamari Tempura Roll",
+    "description": "The calamari tempura is to die for.",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/YCi689-pzghJCe52CLhvQw/o.jpg"],
+    "chefId": "jyr759nnq",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 7
+  },
+  {
+    "cuisineType": "Japanese",
+    "name": "Spicy Shoyu Tonkotsu Ramen",
+    "description": "Too spicy for most people",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/og4aQbDEw-0ph8vUh86Leg/o.jpg"],
+    "chefId": "jyr759nnq",
+    "allergies": ["none"],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Japanese",
+    "name": "Pot Stickers",
+    "description": "Pot stickers",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/_pSvDwJOPohiBIbqDqOQmg/o.jpg"],
+    "chefId": "jyr759nnq",
+    "allergies": ["none"],
+    "cashDonation": 7,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Japanese",
+    "name": "Spicy Tuna Roll",
+    "description": "Classic spicy tuna roll",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/dk0PBCBh22uKDAnlTBF-5A/o.jpg"],
+    "chefId": "jyr759nnq",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": false,
+    "quantity": 3
+  },
+
+
+
+{
+    "cuisineType": "Korean",
+    "name": "BBQ Ribs",
+    "description": "BBQ Spare Ribs",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/FBLszzeRaCl4lLYYlNsP6w/o.jpg"],
+    "chefId": "jyf887za3",
+    "allergies": ["none"],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Korean",
+    "name": "Seafood Pancake",
+    "description": "Seafood Pancake",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/WHrlezxs3WKgAXl0un7jVQ/o.jpg"],
+    "chefId": "jyf887za3",
+    "allergies": ["none"],
+    "cashDonation": 6,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Korean",
+    "name": "Kimchi Fried Rice",
+    "description": "Fried rice with a side of spicy kimchi",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/jWc6Ey0iIlLL29ZB6DQAxQ/o.jpg"],
+    "chefId": "jyf887za3",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Korean",
+    "name": "Spicy Soon Tofu",
+    "description": "Very spicy, you've been warned.",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/s0I1_75Xdx5Uji88ghbxSQ/o.jpg"],
+    "chefId": "jyf887za3",
+    "allergies": ["none"],
+    "cashDonation": 7,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Korean",
+    "name": "Bulgogi",
+    "description": "Classic Korean staple",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/qKTPVofT7rPhPhuzlx2POQ/o.jpg"],
+    "chefId": "jyf887za3",
+    "allergies": ["none"],
+    "cashDonation": 7,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Korean",
+    "name": "Pork Belly",
+    "description": "Pork belly",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/3CLhEXxoIJIK5KOby14a4w/o.jpg"],
+    "chefId": "jyf887za3",
+    "allergies": ["none"],
+    "cashDonation": 12,
+    "isActive": false,
+    "quantity": 3
+  },
+
+
+  {
+    "cuisineType": "Mediterranean",
+    "name": "Falafel",
+    "description": "Falafel with Tzatziki",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/8AjCYodROVbsZpluhhOjrA/o.jpg"],
+    "chefId": "ytn334xcw",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Mediterranean",
+    "name": "Grilled Sea Bass",
+    "description": "Grilled Sea Bass",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/TpB0QCacPrbSGkk7JBk-gA/o.jpg"],
+    "chefId": "ytn334xcw",
+    "allergies": ["none"],
+    "cashDonation": 9,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Mediterranean",
+    "name": "Gyro Meat Salad",
+    "description": "Gyro meat salad",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/sLjki_DpCe2zIJljXWx6Cg/o.jpg"],
+    "chefId": "ytn334xcw",
+    "allergies": ["none"],
+    "cashDonation": 9,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Mediterranean",
+    "name": "Lemon Potatoes",
+    "description": "Lemon potatoes, oven baked with olive oil, lemon juice, garlic and spices",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/x87du64rkNYKZUZUhHYX7A/o.jpg"],
+    "chefId": "ytn334xcw",
+    "allergies": ["none"],
+    "cashDonation": 7,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Mediterranean",
+    "name": "Haloumi Cheese",
+    "description": "Haloumi Cheese",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/u8rd3S9Vhhbqtca5ttuPCw/o.jpg"],
+    "chefId": "ytn334xcw",
+    "allergies": ["none"],
+    "cashDonation": 7,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Mediterranean",
+    "name": "Lamb Shank",
+    "description": "Lamb Shank",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/0wyP990JuR3C87oqR8NtPA/o.jpg"],
+    "chefId": "ytn334xcw",
+    "allergies": ["none"],
+    "cashDonation": 12,
+    "isActive": false,
+    "quantity": 3
+  },
   {
     "cuisineType": "Mexican",
     "name": "Tacos",
@@ -436,50 +709,6 @@
     "cashDonation": 5,
     "isActive": true,
     "quantity": 3
-  },
-  {
-    "cuisineType": "Italian",
-    "name": "Meat Eater Pizza",
-    "description": "Pepperoni pizza with sausage, and ham.",
-    "dishImages": ["https://pizzanova.com/wp-content/uploads/2016/06/PN_Classic_MeatSupreme_1920x1440.jpg"],
-    "chefId": "fdscnxvj234",
-    "allergies": ["none"],
-    "cashDonation": 12,
-    "isActive": false,
-    "quantity": 1
-  },
-  {
-    "cuisineType": "Japanese",
-    "name": "Spicy Tuna Rolls",
-    "description": "Spicy tuna rolled in seaweed wrap and white rice.",
-    "dishImages": ["https://i.ytimg.com/vi/zF3TOfktwd4/hqdefault.jpg"],
-    "chefId": "fjlasdf754",
-    "allergies": ["none"],
-    "cashDonation": 20,
-    "isActive": false,
-    "quantity": 4
-  },
-  {
-    "cuisineType": "American",
-    "name": "Andouille Linguice",
-    "description": "Andouille Sausage Hot Dog",
-    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Hot_dog_with_mustard.png/1200px-Hot_dog_with_mustard.png"],
-    "chefId": "7564fjasdif",
-    "allergies": ["none"],
-    "cashDonation": 7,
-    "isActive": false,
-    "quantity": 2
-  },
-  {
-    "cuisineType": "Japanese",
-    "name": "Andouille Sausage Hot Dog",
-    "description": "Andouille Sausage Hot Dog",
-    "dishImages": ["https://static1.squarespace.com/static/56875618a128e63c0ace71c0/t/5689c60be0327c02e389282b/1451869717972/combo-91.jpg?format=2500w"],
-    "chefId": "facebook|10209561963947713",
-    "allergies": ["none"],
-    "cashDonation": 7,
-    "isActive": true,
-    "quantity": 2
   },
   {
     "cuisineType": "Ethiopian",
@@ -491,49 +720,5 @@
     "cashDonation": 7,
     "isActive": true,
     "quantity": 2
-  },
-  {
-    "cuisineType": "Italian",
-    "name": "Hot Dog",
-    "description": "Andouille Sausage Hot Dog",
-    "dishImages": ["https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiR-YaPnI_UAhXIg5AKHYuzAvwQjBwIBA&url=http%3A%2F%2Fwww.seriouseats.com%2Fimages%2F2014%2F05%2F20140508-292402-hot-dog-variations.jpg&psig=AFQjCNEJvM6HhVsYwVIAjZLvfWPbgq6QKg&ust=1495945067666734"],
-    "chefId": "facebook|10209561963947713",
-    "allergies": ["none"],
-    "cashDonation": 7,
-    "isActive": false,
-    "quantity": 2
-  },
-    {
-    "cuisineType": "Mexican",
-    "name": "Dumplings",
-    "description": "Minced meat and chopped vegetables wrapped into a thin piece of dough skin.",
-    "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/02/39/2d/21/chinese-dumplings-with.jpg"],
-    "chefId": "google-oauth2|111548799256401715601",
-    "allergies": ["none"],
-    "cashDonation": 8,
-    "isActive": true,
-    "quantity": 1
-  },
-  {
-    "cuisineType": "Mexican",
-    "name": "Samosas",
-    "description": "Baked dish with a savoury filling,",
-    "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/0c/d6/28/29/taj-mahal-authentic-indian.jpg"],
-    "chefId": "google-oauth2|111548799256401715601",
-    "allergies": ["Pine Nuts"],
-    "cashDonation": 5,
-    "isActive": true,
-    "quantity": 3
-  },
-  {
-    "cuisineType": "Mexican",
-    "name": "Tacos",
-    "description": "Meat with tortilla",
-    "dishImages": ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"],
-    "chefId": "google-oauth2|111548799256401715601",
-    "allergies": ["none"],
-    "cashDonation": 5,
-    "isActive": true,
-    "quantity": 3
   }
 ]
