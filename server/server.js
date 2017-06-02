@@ -19,7 +19,13 @@ const app = express();
 const {Server} = require('http')
 const server = Server(app)
 const io = require('socket.io')(server)
-
+io.on('connection', (socket)=>{
+  console.log('a user connected')
+  socket.emit('fresh', 'hi from serveee')
+  socket.on('oder', (data)=>{
+    console.log(data)
+  })
+})
 
 
 app.use(parser.json());
@@ -54,4 +60,4 @@ app.use((err, req, res, next) => {
 
 server.listen(3000, console.log("Listening on 3000"));
 
-module.exports = app
+module.exports = io 
