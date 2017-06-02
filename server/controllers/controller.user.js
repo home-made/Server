@@ -38,7 +38,7 @@ exports.createUser = (req, res) => {
       authId: req.params.id,
       firstName: req.body.extraInfo.given_name,
       lastName: req.body.extraInfo.family_name,
-      profileUrl: req.body.extraInfo.picture_large,
+      profileUrl: req.body.extraInfo.picture_large || req.body.picture,
       isChef: false
     },
     (err, user) => {
