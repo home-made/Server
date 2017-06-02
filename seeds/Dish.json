@@ -1,24 +1,429 @@
 [
   {
-    "cuisineType": "Mexican",
-    "name": "Dumplings",
-    "description": "Minced meat and chopped vegetables wrapped into a thin piece of dough skin.",
-    "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/02/39/2d/21/chinese-dumplings-with.jpg"],
-    "chefId": "7564fjasdif",
+    "cuisineType": "American",
+    "name": "Garlic Fries",
+    "description": "Salted-garlic fries",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/qTW7Vfx-iIpjmPmBp1fLaw/o.jpg"],
+    "chefId": "facebook|10209561963947713",
+    "allergies": ["none"],
+    "cashDonation": 5,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "American",
+    "name": "Charred Broccoli",
+    "description": "Broccoli charred on the grill.",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/v4yPMBpHzgq3vhEBKQi4fg/o.jpg"],
+    "chefId": "facebook|10209561963947713",
+    "allergies": ["none"],
+    "cashDonation": 3,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "American",
+    "name": "Chicken and Succotash",
+    "description": "Chicken and Succotash",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/l8MuDDaduCYNKBlgVNDNcw/o.jpg"],
+    "chefId": "facebook|10209561963947713",
+    "allergies": ["none"],
+    "cashDonation": 15,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "American",
+    "name": "Steak and Eggs",
+    "description": "Classic steak with over easy eggs.",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/c94crz7o_nE-op_amqWYIQ/o.jpg"],
+    "chefId": "facebook|10209561963947713",
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": true,
     "quantity": 1
   },
   {
-    "cuisineType": "Mexican",
-    "name": "Samosas",
-    "description": "Baked dish with a savoury filling,",
-    "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/0c/d6/28/29/taj-mahal-authentic-indian.jpg"],
-    "chefId": "fdscnxvj234",
-    "allergies": ["Pine Nuts"],
+    "cuisineType": "American",
+    "name": "Macaroni and Cheese",
+    "description": "Baked macaroni and cheddar/provolone cheese.",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/Wb0xGXNlcL7wo75xRJyApA/o.jpg"],
+    "chefId": "facebook|10209561963947713",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "American",
+    "name": "Kale Salad",
+    "description": "Kale salad with goat cheese.",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/COUvqmkoMr4eUQoJ4IxJmA/o.jpg"],
+    "chefId": "facebook|10209561963947713",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": false,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "American",
+    "name": "Chicken Noodle Soup",
+    "description": "Classic Americana chicken noodle soup.",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/8Fgdk6-BAkimxKzypmKDIA/o.jpg"],
+    "chefId": "facebook|10209561963947713",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": false,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Chinese",
+    "name": "Dumplings",
+    "description": "Minced meat and chopped vegetables wrapped into a thin piece of dough skin.",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/dhLlSFO7K_N0VE26RcOYxQ/o.jpg"],
+    "chefId": "facebook|10155527252381494",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Chinese",
+    "name": "Beef Noodle Stew",
+    "description": "Hand-made noodle stew with delicious veggies.",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/3JhhFwHx_wd7l6wgexieVw/o.jpg"],
+    "chefId": "facebook|10155527252381494",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Korean",
+    "name": "Beef Bulgolgi",
+    "description": "Beef Bulgolgi sprinkled with sessame seeds and chives.",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/Iys8ofs5pMaKqBP8rmG1GQ/o.jpg"],
+    "chefId": "facebook|10155527252381494",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Korean",
+    "name": "Seafood Pancake",
+    "description": "Huge seafood pancake.",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/uQkgB8atY8WufPlt2-ZMYw/o.jpg"],
+    "chefId": "facebook|10155527252381494",
+    "allergies": ["none"],
+    "cashDonation": 4,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Korean",
+    "name": "Galbi Ramen Noodles",
+    "description": "Galbi Ramen Noodles.",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/cXz2T6c-9ta30_BzMGd5eg/o.jpg"],
+    "chefId": "facebook|10155527252381494",
+    "allergies": ["none"],
+    "cashDonation": 10,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Chinese",
+    "name": "Peking Duck",
+    "description": "Juicy Peking Duck.",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/ux2JC0C1Ak0qFJNBN4zpVw/o.jpg"],
+    "chefId": "facebook|10155527252381494",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": false,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Korean",
+    "name": "Grilled Mackerel",
+    "description": "Slowly grilled mackerel.",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/Xq7tokTsEpR7mOgVKGWR8w/o.jpg"],
+    "chefId": "facebook|10155527252381494",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": false,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Barbecue",
+    "name": "Brisket",
+    "description": "Delicious brisket.",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/1AMK5LO2fIIVp-TQLdjRUQ/o.jpg"],
+    "chefId": "346abc9746",
+    "allergies": ["none"],
+    "cashDonation": 7,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Barbecue",
+    "name": "Pork Ribs",
+    "description": "Th biggest rack of pork ribs you've ever eaten.",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/jFpzGKKghe6PyVYsaHZNiw/o.jpg"],
+    "chefId": "346abc9746",
+    "allergies": ["none"],
+    "cashDonation": 15,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Barbecue",
+    "name": "Pull Pork Sandwich",
+    "description": "Pork sandwich on an artisan bun",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/CQX5wGe49GOUZoQpqmD2sg/o.jpg"],
+    "chefId": "346abc9746",
+    "allergies": ["none"],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Barbecue",
+    "name": "Mixed Salad",
+    "description": "Mixed salad with avocado, corn, and cherry tomatoes.",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/UEdNL2qXbVLhxhqO0PIP1A/o.jpg"],
+    "chefId": "346abc9746",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Barbecue",
+    "name": "Peewee Potatoes",
+    "description": "Seasoned, small red potatoes",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/7VmONiACIaHuuYkIMa8AXQ/o.jpg"],
+    "chefId": "346abc9746",
+    "allergies": ["none"],
+    "cashDonation": 7,
+    "isActive": true,
+    "quantity": 1
+  },
+  {
+    "cuisineType": "Barbecue",
+    "name": "Braised Greens",
+    "description": "Braised collared greens.",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/MC60LUI_GtmkSr3yFjXlcQ/o.jpg"],
+    "chefId": "346abc9746",
+    "allergies": ["none"],
+    "cashDonation": 8,
+    "isActive": false,
+    "quantity": 1
+  },
+
+
+  {
+    "cuisineType": "Burger",
+    "name": "Paleo Burger",
+    "description": "No carb burger, only protein.",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/dXkTRxLu4ZWKWVbO-8mDLg/o.jpg"],
+    "chefId": "91d739jf6",
+    "allergies": [],
+    "cashDonation": 7,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Burger",
+    "name": "Chicken Nuggets",
+    "description": "Fried, crispy chicken nuggets",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/yUm9BBABAFcIEGPnV5vr5A/o.jpg"],
+    "chefId": "91d739jf6",
+    "allergies": [],
     "cashDonation": 5,
     "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Burger",
+    "name": "Lounge Burger",
+    "description": "Burger with blue cheese and order of onion rings",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/N8WpYEmv15g-UxMDsCHWmw/o.jpg"],
+    "chefId": "91d739jf6",
+    "allergies": [],
+    "cashDonation": 10,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Burger",
+    "name": "Turkey Burger with Fries",
+    "description": "The turkey is free-range",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/5qwCe4uxErVVItH1QrjOnw/o.jpg"],
+    "chefId": "91d739jf6",
+    "allergies": [],
+    "cashDonation": 9,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Burger",
+    "name": "Husky Cheeseburger",
+    "description": "Hamburger with Cheddar cheese and fries, it's called 'husky' for a reason.",
+    "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/0c/d6/28/29/taj-mahal-authentic-Burger.jpg"],
+    "chefId": "91d739jf6",
+    "allergies": [],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Burger",
+    "name": "Lamb Burger",
+    "description": "Australian lamb burger, only available in season",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/cLGpOFjcv2ns7sLc2YBx6g/o.jpg"],
+    "chefId": "91d739jf6",
+    "allergies": [],
+    "cashDonation": 12,
+    "isActive": false,
+    "quantity": 3
+  },
+
+
+
+
+   {
+    "cuisineType": "Chinese",
+    "name": "Green Beans",
+    "description": "Green beans.",
+    "dishImages": ["https://s3-media2.fl.yelpcdn.com/bphoto/5NnqRdqziLM7ugS75XuxAQ/o.jpg"],
+    "chefId": "85h298cn2",
+    "allergies": [],
+    "cashDonation": 4,
+    "isActive": true,
+    "quantity": 3
+  },
+   {
+    "cuisineType": "Chinese",
+    "name": "Braised Spare Ribs",
+    "description": "Braised spare ribs with sesame seeds",
+    "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/AUGgsNOksK7WmC2CKUkOlQ/o.jpg"],
+    "chefId": "85h298cn2",
+    "allergies": [],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 3
+  },
+   {
+    "cuisineType": "Chinese",
+    "name": "Beef Noodle Soup",
+    "description": "Ox tail beef soup with spicy chilis.",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/RlsAjAyUY63045ehu1RBrA/o.jpg"],
+    "chefId": "85h298cn2",
+    "allergies": [],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 3
+  },
+   {
+    "cuisineType": "Chinese",
+    "name": "Pan Fried Beef",
+    "description": "Pan fried beef with candied walnuts",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/DPzpufUYvXKTkr_6Z0UHlw/o.jpg"],
+    "chefId": "85h298cn2",
+    "allergies": [],
+    "cashDonation": 7,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Chinese",
+    "name": "Shrimp Fried Rice",
+    "description": "House made fried rice.",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/EughiGiH61GLVHiSFj9d4Q/o.jpg"],
+    "chefId": "85h298cn2",
+    "allergies": [],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 3
+  },
+   {
+    "cuisineType": "Chinese",
+    "name": "Chicken Feet",
+    "description": "Deep fried chicken feet",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/_uDzekvTvhT_1V0iECkx1w/o.jpg"],
+    "chefId": "85h298cn2",
+    "allergies": [],
+    "cashDonation": 7,
+    "isActive": false,
+    "quantity": 3
+  },
+
+
+
+  {
+    "cuisineType": "Indian",
+    "name": "Chicken Tikka Masala",
+    "description": "Chicken tikka masala",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/uj4Ze51fOEUgxiyvHKAANg/o.jpg"],
+    "chefId": "327fhy47b",
+    "allergies": [],
+    "cashDonation": 15,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Indian",
+    "name": "Chicken Saag",
+    "description": "Chicken saag.",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/49VOx5j26ZaFZMMW8agQxg/o.jpg"],
+    "chefId": "327fhy47b",
+    "allergies": [],
+    "cashDonation": 7,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Indian",
+    "name": "Shrimp Fried Rice",
+    "description": "House made fried rice.",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/VgyOTAhcdkE6NuazIooxmg/o.jpg"],
+    "chefId": "327fhy47b",
+    "allergies": [],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Indian",
+    "name": "Chickpea masala",
+    "description": "Chickpea masala.",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/EughiGiH61GLVHiSFj9d4Q/o.jpg"],
+    "chefId": "327fhy47b",
+    "allergies": [],
+    "cashDonation": 8,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Indian",
+    "name": "Vegetable Korma",
+    "description": "Vegetable Korma",
+    "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/otBV9myV_sooMC14VSiLSg/o.jpg"],
+    "chefId": "327fhy47b",
+    "allergies": [],
+    "cashDonation": 12,
+    "isActive": true,
+    "quantity": 3
+  },
+  {
+    "cuisineType": "Indian",
+    "name": "Chicken Vindaloo",
+    "description": "Chicken Vindaloo",
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/mkp8MXPI2w0Xn0j7iocIYQ/o.jpg"],
+    "chefId": "327fhy47b",
+    "allergies": [],
+    "cashDonation": 6,
+    "isActive": false,
     "quantity": 3
   },
   {

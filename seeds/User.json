@@ -290,10 +290,10 @@
   },
     {
     "authId": "facebook|10209561963947713", 
-    "firstName": "Darth",
-    "lastName": "Maul",
-    "bio": "Sith Lord with a Double Lightsaber",
-    "status": "I slice Jedi and Cold Cuts for fun",
+    "firstName": "David",
+    "lastName": "Susan",
+    "bio": "Full-Time Coder, Part-Time Chef",
+    "status": "Coding and cooking are my life.",
     "phoneNumber": "+19167652673",
     "likes": [0],
     "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
@@ -328,9 +328,226 @@
         "orderId": "21"
       }],
     "isChef": true,
-    "location": { "geo_lat": 33.9210313, "geo_lng":  -118.4183891 },
+    "location": { "geo_lat": 33.976002, "geo_lng":  -118.390891 },
+    "score": 0
+    },
+    {
+    "authId": "346abc9746", 
+    "firstName": "Mrs. Barbecue",
+    "lastName": "Chef",
+    "bio": "Awesome barbecue cook.",
+    "status": "I love meat.",
+    "phoneNumber": "+19167652673",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4.25,
+        "orderId": 13
+      },
+      { 
+        "reviewText": "he was a horrible customer.",
+        "reviewerId": "477ifjdfo7",
+        "score": 4.25,
+        "orderId": "13"
+      }],
+    "chefReviews": [{
+        "reviewText": "chef had that bomb lit",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": 15
+      },
+      {
+        "reviewText": "chef sky was a decent cook",
+        "reviewerId": "fdscnxvj234",
+        "score": 4.25,
+        "orderId": 5
+      },
+      {
+        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": "21"
+      }],
+    "isChef": true,
+    "location": { "geo_lat": 34.0092507, "geo_lng":  -118.4168597 },
+    "score": 0
+    },
+    {
+    "authId": "91d739jf6", 
+    "firstName": "Burger",
+    "lastName": "Gal",
+    "bio": "The best burger slinger in town.",
+    "status": "I dream of cows.",
+    "phoneNumber": "+19167652673",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4.25,
+        "orderId": 13
+      },
+      { 
+        "reviewText": "he was a horrible customer.",
+        "reviewerId": "477ifjdfo7",
+        "score": 4.25,
+        "orderId": "13"
+      }],
+    "chefReviews": [{
+        "reviewText": "chef had that bomb lit",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": 15
+      },
+      {
+        "reviewText": "chef sky was a decent cook",
+        "reviewerId": "fdscnxvj234",
+        "score": 4.25,
+        "orderId": 5
+      },
+      {
+        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": "21"
+      }],
+    "isChef": true,
+    "location": { "geo_lat": 33.9869091, "geo_lng":  -118.4463476 },
+    "score": 0
+    },
+    {
+    "authId": "85h298cn2", 
+    "firstName": "Chinese",
+    "lastName": "Bro",
+    "bio": "The best burger slinger in town.",
+    "status": "I dream of cows.",
+    "phoneNumber": "+19167652673",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4.25,
+        "orderId": 13
+      },
+      { 
+        "reviewText": "he was a horrible customer.",
+        "reviewerId": "477ifjdfo7",
+        "score": 4.25,
+        "orderId": "13"
+      }],
+    "chefReviews": [{
+        "reviewText": "chef had that bomb lit",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": 15
+      },
+      {
+        "reviewText": "chef sky was a decent cook",
+        "reviewerId": "fdscnxvj234",
+        "score": 4.25,
+        "orderId": 5
+      },
+      {
+        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": "21"
+      }],
+    "isChef": true,
+    "location": { "geo_lat": 33.9760763, "geo_lng":  -118.4195693 },
+    "score": 0
+    },
+    {
+    "authId": "85h298cn2", 
+    "firstName": "Chinese",
+    "lastName": "Bro",
+    "bio": "The best burger slinger in town.",
+    "status": "I dream of cows.",
+    "phoneNumber": "+19167652673",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4.25,
+        "orderId": 13
+      },
+      { 
+        "reviewText": "he was a horrible customer.",
+        "reviewerId": "477ifjdfo7",
+        "score": 4.25,
+        "orderId": "13"
+      }],
+    "chefReviews": [{
+        "reviewText": "chef had that bomb lit",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": 15
+      },
+      {
+        "reviewText": "chef sky was a decent cook",
+        "reviewerId": "fdscnxvj234",
+        "score": 4.25,
+        "orderId": 5
+      },
+      {
+        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": "21"
+      }],
+    "isChef": true,
+    "location": { "geo_lat": 33.9760763, "geo_lng":  -118.4195693 },
+    "score": 0
+    },
+    {
+    "authId": "327fhy47b", 
+    "firstName": "Mr. Indian",
+    "lastName": "Sir",
+    "bio": "Left the Punjab to start a new life as a cook.",
+    "status": "My stuff is delicious.",
+    "phoneNumber": "+19167652673",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4.25,
+        "orderId": 13
+      },
+      { 
+        "reviewText": "he was a horrible customer.",
+        "reviewerId": "477ifjdfo7",
+        "score": 4.25,
+        "orderId": "13"
+      }],
+    "chefReviews": [{
+        "reviewText": "chef had that bomb lit",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": 15
+      },
+      {
+        "reviewText": "chef sky was a decent cook",
+        "reviewerId": "fdscnxvj234",
+        "score": 4.25,
+        "orderId": 5
+      },
+      {
+        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewerId": "axncmufid745",
+        "score": 4.25,
+        "orderId": "21"
+      }],
+    "isChef": true, 
+    "location": { "geo_lat": 33.9622641, "geo_lng":  -118.4231359 },
     "score": 0
     }
+
+
 ]
 
 
