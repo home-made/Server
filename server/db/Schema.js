@@ -18,8 +18,8 @@ var UserSchema = new Schema({
   customerReviews: [],
   chefReviews: [],
   isChef: Boolean,
+  location: { geo_lat: Number, geo_lng: Number},
   address: String,
-  location: { geo_lat: Number, geo_lng: Number, address: String },
   rating: Number
 });
 

@@ -290,8 +290,8 @@
   },
     {
     "authId": "facebook|10209561963947713", 
-    "firstName": "Darth",
-    "lastName": "Maul",
+    "firstName": "David",
+    "lastName": "Susan",
     "bio": "Sith Lord with a Double Lightsaber",
     "status": "I slice Jedi and Cold Cuts for fun",
     "phoneNumber": "+19167652673",
@@ -328,7 +328,7 @@
         "orderId": "21"
       }],
     "isChef": true,
-    "location": { "geo_lat": 33.9210313, "geo_lng":  -118.4183891 },
+    "location": { "geo_lat": 33.976002, "geo_lng":  -118.390891 },
     "score": 0
     }
 ]
