@@ -6,7 +6,10 @@ exports.updateUser = (req, res) => {
   console.log("Inside Update User request is", req.body);
   if (req.body.address) {
     geocoder.geocode(req.body.address, (err, data) => {
-      req.body.location = { geo_lat: data.results[0].geometry.location.lat, geo_lng: data.results[0].geometry.location.lng }
+      req.body.location = {
+        geo_lat: data.results[0].geometry.location.lat,
+        geo_lng: data.results[0].geometry.location.lng
+      };
       console.log("UPDATED REQUEST", req.body);
       var updatedUser = req.body;
       User.findOneAndUpdate(
@@ -23,6 +26,21 @@ exports.updateUser = (req, res) => {
         }
       );
     });
+  } else {
+    var updatedUser = req.body;
+    User.findOneAndUpdate(
+      { authId: req.params.authId },
+      updatedUser,
+      { new: true },
+      (err, user) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(user);
+          res.send(user);
+        }
+      }
+    );
   }
 };
 
