@@ -1,4 +1,6 @@
 const { User, Dish } = require("../db/Schema");
+require("dotenv").load();
+
 // var client = require('redis-connection');
 
 exports.getChefDetails = (req, res) => {
@@ -28,8 +30,6 @@ exports.getChefDetails = (req, res) => {
       }
     });
   });
-
-  
 };
 
 exports.updateChef = (req, res) => {
@@ -75,28 +75,47 @@ exports.findChefsByStyle = (req, res) => {
     isActive: true,
     cuisineType: req.params.styleId
   }).then(dishes => {
-    console.log(dishes)
+    console.log(dishes);
     var chefsFoundByCuisine = dishes.map(curr => {
       return { authId: curr.chefId };
     });
-    console.log(chefsFoundByCuisine)
+    console.log(chefsFoundByCuisine);
     //If Mongoose doesn't find any dishes, dishes is an empty array
     if (chefsFoundByCuisine.length !== 0) {
-      User.find({ $or: chefsFoundByCuisine})
-      .then(users => {
-        console.log("USERS FOUND ARE", users)
-        res.send(users);
-      })
-      .catch(err => {
-        //Don't send an error, send an empty array
-        res.send("THERE WAS AN ERROR");
-      })
-      .catch(err => {
-        console.log(err);
-      });
+      User.find({ $or: chefsFoundByCuisine })
+        .then(users => {
+          console.log("USERS FOUND ARE", users);
+          res.send(users);
+        })
+        .catch(err => {
+          //Don't send an error, send an empty array
+          res.send("THERE WAS AN ERROR");
+        })
+        .catch(err => {
+          console.log(err);
+        });
     } else {
       res.send([]);
     }
-    
   });
+};
+
+exports.textChef = (req, res) => {
+  var accountSid = process.env.TWILIOID;
+  var authToken = process.env.TWILIOTOKEN;
+
+  //require the Twilio module and create a REST client
+  var client = require("twilio")(accountSid, authToken);
+  console.log("PHONE NUMBER TO TEXT:", req.body);
+  client.messages.create(
+    {
+      to: req.body.phone,
+      from: "19163475110",
+      body: "A customer will be arriving soon",
+    },
+    function(err, message) {
+      console.log(message.sid);
+    }
+  );
+  res.send("MESSAGE SENT");
 };
