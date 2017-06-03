@@ -20,7 +20,8 @@ var UserSchema = new Schema({
   isChef: Boolean,
   location: { geo_lat: Number, geo_lng: Number},
   address: String,
-  rating: Number
+  rating: Number,
+  signatureURL: String
 });
 
 var DishSchema = new Schema({
