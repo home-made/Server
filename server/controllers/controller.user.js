@@ -59,7 +59,6 @@ exports.updateUser = (req, res) => {
   );
 };
 
-
 //route we use to login to app that either finds or creates a user
 exports.createUser = (req, res) => {
   // var user = req.body;
@@ -77,21 +76,21 @@ exports.createUser = (req, res) => {
     },
     (err, user) => {
       res.send(user);
-      console.log('ERR in create user: ', err);
-      console.log('USER in create user: ', user);
+      console.log("ERR in create user: ", err);
+      console.log("USER in create user: ", user);
     }
   );
 };
 
 exports.getUser = (req, res) => {
   //var user = req.body;
-  
+
   var userRes = [];
-  console.log("req.params.id is ", req.params.id)
+  console.log("req.params.id is ", req.params.id);
 
   User.find({ authId: req.params.id })
     .then(user => {
-      console.log("User inside getUser is ", user)
+      console.log("User inside getUser is ", user);
 
       res.send(user);
     })
