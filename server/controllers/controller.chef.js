@@ -10,7 +10,7 @@ exports.getChefDetails = (req, res) => {
   var chef = [];
   User.find({ authId: chefId }).then(user => {
     console.log("SUCCESSFULLY FOUND USER");
-    Dish.find({ chefId: user[0].authId }).then(dishes => {
+    Dish.find({ chefId: user[0].authId, isActive: true }).then(dishes => {
       console.log("SUCCESSFULLY FOUND DISHES");
       chef.push(user[0]);
       chef.push(dishes);

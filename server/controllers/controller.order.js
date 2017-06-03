@@ -9,15 +9,12 @@ exports.updateOrder = (req, res) => {
   };
   Order.findOneAndUpdate(query, { status: req.body.status }, { new: true })
     .then(order => {
-      // console.log("ORDER IS", order);
       if (order.status === 1) {
         for (var dish in order.cart) {
           Dish.find({ _id: order.cart[dish].dish._id }).then(dishToUpdate => {
-            
             var updateQuery = { quantity: dishToUpdate[0].quantity - order.cart[dish].amount };
             if (updateQuery.quantity <= 0) {
               updateQuery.isActive = false;
-              console.log("SHOULD BE SWITCHED TO FALSE", updateQuery);
             }
             Dish.findOneAndUpdate(
               { _id: dishToUpdate[0]._id },
