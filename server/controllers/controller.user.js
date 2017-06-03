@@ -6,11 +6,8 @@ exports.updateUser = (req, res) => {
   console.log("Inside Update User request is", req.body);
   if (req.body.address) {
     geocoder.geocode(req.body.address, (err, data) => {
-      req.body.location = {
-        geo_lat: data.results[0].geometry.location.lat,
-        geo_lng: data.results[0].geometry.location.lng
-      };
-      console.log("UPDATED REQUEST", req.body);
+      req.body.geo_lat =  data.results[0].geometry.location.lat;
+      req.body.geo_lng = data.results[0].geometry.location.lng;
       var updatedUser = req.body;
       User.findOneAndUpdate(
         { authId: req.params.authId },

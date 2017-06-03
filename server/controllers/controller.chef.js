@@ -1,5 +1,6 @@
 const { User, Dish } = require("../db/Schema");
 require("dotenv").load();
+const geoPoint = require("geopoint");
 
 // var client = require('redis-connection');
 
@@ -55,12 +56,28 @@ exports.findChefs = (req, res) => {
     });
 };
 
-exports.findChefsTest = (req, res) => {
+exports.findChefsInRange = (req, res) => {
   //for testing map
+  console.log("the req body for findChefsInRange is ", req.body);
+  var userLocation = new geoPoint(
+    Number(req.body.lat),
+    Number(req.body.lon)
+  );
+  console.log("USER LOCATION IS", userLocation);
+  var boundingBox = userLocation.boundingCoordinates(15);
+  console.log("BOUNDING BOX IS", boundingBox)
   console.log(req.body);
   User.find({})
-    .then(user => {
-      res.send(user);
+    .then(users => {
+      users = users.filter(user => {
+        return (
+          user.location.geo_lat > boundingBox[0]._degLat &&
+          user.location.geo_lat < boundingBox[1]._degLat &&
+          user.location.geo_lng > boundingBox[0]._degLon &&
+          user.location.geo_lng < boundingBox[1]._degLon
+        );
+      });
+      res.send(users);
     })
     .catch(err => {
       res.send(err);
@@ -69,6 +86,14 @@ exports.findChefsTest = (req, res) => {
 
 exports.findChefsByStyle = (req, res) => {
   // var chefId =req.params.chefId;
+  console.log(req.headers);
+  var userLocation = new geoPoint(
+    Number(req.headers.lat),
+    Number(req.headers.lon)
+  );
+  console.log("USER LOCATION IS", userLocation);
+  var boundingBox = userLocation.boundingCoordinates(5);
+  console.log("BOUNDING BOX IS", boundingBox);
   var chefs = [];
   console.log(req.params.styleId);
   Dish.find({
@@ -82,23 +107,26 @@ exports.findChefsByStyle = (req, res) => {
     console.log(chefsFoundByCuisine);
     //If Mongoose doesn't find any dishes, dishes is an empty array
     if (chefsFoundByCuisine.length !== 0) {
-      User.find({ $or: chefsFoundByCuisine })
-        .then(users => {
-          console.log("USERS FOUND ARE", users);
-          res.send(users);
-        })
-        .catch(err => {
-          //Don't send an error, send an empty array
-          res.send("THERE WAS AN ERROR");
-        })
-        .catch(err => {
-          console.log(err);
+      User.find({ $or: chefsFoundByCuisine }).then(users => {
+        console.log("USERS IS", users);
+        users.filter(user => {
+          return (
+            user.location.geo_lat > boundingBox[0]._degLat &&
+            user.geo_lat < boundingBox[1]._degLat &&
+            user.location.geo_lng > boundingBox[0]._degLon &&
+            user.location.geo_lng < boundingBox[1]._degLon
+          );
         });
+        console.log("USERS ARE", users);
+        res.send(users);
+      });
     } else {
       res.send([]);
     }
   });
 };
+
+exports.findChefsByStyleTest = (req, res) => {};
 
 exports.textChef = (req, res) => {
   var accountSid = process.env.TWILIOID;
@@ -111,7 +139,7 @@ exports.textChef = (req, res) => {
     {
       to: req.body.phone,
       from: "19163475110",
-      body: "A customer will be arriving soon",
+      body: "A customer will be arriving soon"
     },
     function(err, message) {
       console.log(message.sid);

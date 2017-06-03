@@ -18,6 +18,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "geocoder": "^0.2.3",
+    "geopoint": "^1.0.1",
     "ioredis": "^3.0.0",
     "mongoose": "^4.10.0",
     "mongoose-auto-increment": "^5.0.1",
