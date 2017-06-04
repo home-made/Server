@@ -6,7 +6,7 @@ Router.get("/chef/:chefId", chefController.getChefDetails);
 Router.get("/chef/", chefController.findChefs);
 
 //test route for map component - remove in final version
-Router.get("/chefTest/", chefController.findChefsTest);
+Router.post("/chefTest/", chefController.findChefsInRange);
 
 //find chefs by style
 Router.get("/chef/style/:styleId", chefController.findChefsByStyle);
