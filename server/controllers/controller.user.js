@@ -24,7 +24,8 @@ exports.updateUser = (req, res) => {
           }
         }
       );
-
+    })
+  }
   console.log('Inside Update User');
   var updatedUser = req.body;
 
