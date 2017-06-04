@@ -9,8 +9,12 @@ exports.updateOrder = (req, res) => {
     res.send(order);
   }).catch(err => console.log(err));
 };
+exports.alertChef = (order,socket,io) =>{
+  console.log('create room?',order)
+  io.in(order.chefId).emit('message', 'what is going on, party people?');
 
-//returning [[array of order],chef object]
+}
+
 exports.getPendingOrders = (req, res) => {
   console.log("getPendingOrders");
   console.log(req.params.id);

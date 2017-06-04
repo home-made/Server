@@ -4,6 +4,7 @@ const path = require("path");
 const parser = require("body-parser");
 const db = require("./db/db");
 var redis = require('redis');
+var orderController = require('./controllers/controller.order')
 // var client = require('redis-connection')('subscriber'); // require & connect 
 const {
   User,
@@ -20,7 +21,26 @@ const {Server} = require('http')
 const server = Server(app)
 const io = require('socket.io')(server)
 
+io.on('connection', (socket) =>{
+  console.log('connection')
+  socket.broadcast.to(socket.id).emit('message', 'bruja');
+  socket.emit('init','im here big fella - server')
+  socket.on('disconnect', ()=>{
+    console.log('im out')
+  })
+  socket.on('newchef', (chef)=>{
+    console.log('chef joined',chef)
+    socket.join(chef.authId)
+  })
 
+  socket.on('neworder', (order)=>{
+    console.log(order)
+    socket.join(order.chefId);
+    orderController.alertChef(order,socket,io)
+  })
+
+})
+var room = "85h298cn2";
 
 app.use(parser.json());
 app.use(require("./routers/router.dish"));
@@ -30,12 +50,8 @@ app.use(require("./routers/router.chef"));
 app.use(require("./routers/router.review"));
 
 
-// console.log(http)
 app.use(parser.urlencoded({ extended: true }));
 
-// client.on('connect', function() {
-//     console.log('redis connected');
-// });
 app.get('/api/',(req,res)=>{
   res.send({
     key: process.env.AWS_ACCESS_KEY_ID,
