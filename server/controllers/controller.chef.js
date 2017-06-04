@@ -86,14 +86,6 @@ exports.findChefsInRange = (req, res) => {
 
 exports.findChefsByStyle = (req, res) => {
   // var chefId =req.params.chefId;
-  console.log(req.headers);
-  var userLocation = new geoPoint(
-    Number(req.headers.lat),
-    Number(req.headers.lon)
-  );
-  console.log("USER LOCATION IS", userLocation);
-  var boundingBox = userLocation.boundingCoordinates(5);
-  console.log("BOUNDING BOX IS", boundingBox);
   var chefs = [];
   console.log(req.params.styleId);
   Dish.find({
@@ -107,19 +99,18 @@ exports.findChefsByStyle = (req, res) => {
     console.log(chefsFoundByCuisine);
     //If Mongoose doesn't find any dishes, dishes is an empty array
     if (chefsFoundByCuisine.length !== 0) {
-      User.find({ $or: chefsFoundByCuisine }).then(users => {
-        console.log("USERS IS", users);
-        users.filter(user => {
-          return (
-            user.location.geo_lat > boundingBox[0]._degLat &&
-            user.geo_lat < boundingBox[1]._degLat &&
-            user.location.geo_lng > boundingBox[0]._degLon &&
-            user.location.geo_lng < boundingBox[1]._degLon
-          );
+      User.find({ $or: chefsFoundByCuisine })
+        .then(users => {
+          console.log("USERS FOUND ARE", users);
+          res.send(users);
+        })
+        .catch(err => {
+          //Don't send an error, send an empty array
+          res.send("THERE WAS AN ERROR");
+        })
+        .catch(err => {
+          console.log(err);
         });
-        console.log("USERS ARE", users);
-        res.send(users);
-      });
     } else {
       res.send([]);
     }
