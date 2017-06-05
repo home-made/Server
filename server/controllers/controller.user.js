@@ -11,22 +11,23 @@ exports.updateUser = (req, res) => {
       console.log("GEO DATA IS", data);
       req.body.geo_lat = data.results[0].geometry.location.lat;
       req.body.geo_lng = data.results[0].geometry.location.lng;
-      var updatedUser = req.body;
-      User.findOneAndUpdate(
-        { authId: req.params.authId },
-        updatedUser,
-        { new: true },
-        (err, user) => {
-          if (err) {
-            console.log(err);
-          } else {
-            console.log(user);
-            res.send(user);
-          }
-        }
-      );
     });
   }
+
+  var updatedUser = req.body;
+  User.findOneAndUpdate(
+    { authId: req.params.authId },
+    updatedUser,
+    { new: true },
+    (err, user) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(user);
+        res.send(user);
+      }
+    }
+  );
 };
 
 exports.addSignature = (req, res) => {

@@ -8,6 +8,8 @@ Router.post("/user/:id", userController.createUser);
 //manage profile
 Router.put("/user/:authId", userController.updateUser);
 
+Router.put("/user/sig/:authId", userController.addSignature);
+
 Router.get("/user/:id", userController.getUser);
 
 Router.put("/user/sig/:id", userController.addSignature);
