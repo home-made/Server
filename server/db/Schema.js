@@ -18,7 +18,7 @@ var UserSchema = new Schema({
   customerReviews: [],
   chefReviews: [],
   isChef: Boolean,
-  location: { geo_lat: Number, geo_lng: Number},
+  location: { geo_lat: Number, geo_lng: Number },
   address: String,
   rating: Number,
   signatureURL: String
@@ -49,16 +49,14 @@ UserSchema.plugin(findOneOrCreate);
 DishSchema.plugin(autoIncrement.plugin, "Dish");
 OrderSchema.plugin(autoIncrement.plugin, "Order");
 
-
 const User = connection.model("User", UserSchema);
 const Dish = connection.model("Dish", DishSchema);
 const Order = connection.model("Order", OrderSchema);
 
-
 module.exports = {
   User: User,
   Dish: Dish,
-  Order: Order,
+  Order: Order
 };
 
 /*
