@@ -1,7 +1,7 @@
 require("dotenv").load();
 const { User, CustomerReview, ChefReview } = require("../db/Schema");
-var findOneOrCreate = require('mongoose-find-one-or-create');
-var s3 = require('s3');
+var findOneOrCreate = require("mongoose-find-one-or-create");
+var s3 = require("s3");
 let geocoder = require("geocoder");
 
 exports.updateUser = (req, res) => {
@@ -25,11 +25,12 @@ exports.updateUser = (req, res) => {
           }
         }
       );
-    })
+    });
   }
-}
+};
 
 exports.addSignature = (req, res) => {
+  console.log("INSIDE ADD SIGNATURE");
   var updatedUser = req.body;
 
   if (req.body.pathname) {
@@ -41,48 +42,51 @@ exports.addSignature = (req, res) => {
       multipartUploadSize: 15728640,
       s3Options: {
         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-      },
-    })
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+      }
+    });
     var params = {
       localFile: req.body.pathname,
       s3Params: {
         Bucket: "homemadesignatures",
-        Key: req.params.authId + '.png',
-      },
+        Key: req.params.authId + ".png"
+      }
     };
-    
-    var url = 's3.amazonaws.com/homemadesignatures/' + params.s3Params.Key;
+
+    var url = "s3.amazonaws.com/homemadesignatures/" + params.s3Params.Key;
     updatedUser.signatureURL = url;
 
     var uploader = client.uploadFile(params);
-    uploader.on('error', function(err) {
+    uploader.on("error", function(err) {
       console.error("unable to upload:", err.stack);
     });
-    uploader.on('progress', function() {
-      console.log("progress", uploader.progressMd5Amount,
-                uploader.progressAmount, uploader.progressTotal);
+    uploader.on("progress", function() {
+      console.log(
+        "progress",
+        uploader.progressMd5Amount,
+        uploader.progressAmount,
+        uploader.progressTotal
+      );
     });
-    uploader.on('end', function() {
+    uploader.on("end", function() {
       console.log("done uploading");
+      User.findOneAndUpdate(
+        { authId: req.params.authId },
+        updatedUser,
+        { new: true },
+        (err, user) => {
+          console.log("Are we in here??????????????????????????");
+          if (err) {
+            console.log(err);
+          } else {
+            console.log(user);
+            res.send(user);
+          }
+        }
+      );
     });
   }
-
-  User.findOneAndUpdate(
-    { authId: req.params.authId },
-    updatedUser,
-    { new: true },
-    (err, user) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log(user);
-        res.send(user);
-      }
-    }
-  );
 };
-
 
 //route we use to login to app that either finds or creates a user
 exports.createUser = (req, res) => {

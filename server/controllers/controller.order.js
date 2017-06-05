@@ -192,7 +192,8 @@ exports.getCustomerOrders = (req, res) => {
   Order.find({
     $or: [
       { customerId: req.params.id, status: 0 },
-      { customerId: req.params.id, status: 1 }
+      { customerId: req.params.id, status: 1 },
+      { customerId: req.params.id, status: 2 }
     ]
   })
     .then(allOrders => {
