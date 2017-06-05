@@ -2,13 +2,14 @@ require("dotenv").load();
 const { User, CustomerReview, ChefReview } = require("../db/Schema");
 var findOneOrCreate = require('mongoose-find-one-or-create');
 var s3 = require('s3');
-
+let geocoder = require("geocoder");
 
 exports.updateUser = (req, res) => {
   console.log("Inside Update User request is", req.body);
   if (req.body.address) {
     geocoder.geocode(req.body.address, (err, data) => {
-      req.body.geo_lat =  data.results[0].geometry.location.lat;
+      console.log("GEO DATA IS", data);
+      req.body.geo_lat = data.results[0].geometry.location.lat;
       req.body.geo_lng = data.results[0].geometry.location.lng;
       var updatedUser = req.body;
       User.findOneAndUpdate(
@@ -26,7 +27,9 @@ exports.updateUser = (req, res) => {
       );
     })
   }
-  console.log('Inside Update User');
+}
+
+exports.addSignature = (req, res) => {
   var updatedUser = req.body;
 
   if (req.body.pathname) {
@@ -79,6 +82,7 @@ exports.updateUser = (req, res) => {
     }
   );
 };
+
 
 //route we use to login to app that either finds or creates a user
 exports.createUser = (req, res) => {
