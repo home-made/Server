@@ -61,7 +61,7 @@ exports.findChefsInRange = (req, res) => {
   console.log("the req body for findChefsInRange is ", req.body);
   var userLocation = new geoPoint(Number(req.body.lat), Number(req.body.lon));
   console.log("USER LOCATION IS", userLocation);
-  var boundingBox = userLocation.boundingCoordinates(15);
+  var boundingBox = userLocation.boundingCoordinates(5);
   console.log("BOUNDING BOX IS", boundingBox);
   console.log(req.body);
   User.find({})

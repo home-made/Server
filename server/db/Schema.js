@@ -65,5 +65,6 @@ OrderSchema Status Codes
 1: accepted
 2: completed
 3: canceled
+4: reviewed
   
 */

@@ -2,11 +2,12 @@ const { Order, User, Dish } = require("../db/Schema");
 const SendMessage = require("../../utils/SendMessage");
 
 exports.updateOrder = (req, res) => {
-  var query = {
-    chefId: req.body.chefId,
-    date: req.body.date,
-    _id: req.body._id
-  };
+  var query = {};
+  console.log("REQ IS", req.body); 
+   query._id = req.body._id;
+
+  console.log("QUERY IS", query);
+
   Order.findOneAndUpdate(query, { status: req.body.status }, { new: true })
     .then(order => {
       if (order.status === 1) {
@@ -30,6 +31,8 @@ exports.updateOrder = (req, res) => {
     })
     .catch(err => console.log(err));
 };
+
+
 exports.alertChef = (order, socket, io) => {
   console.log("create room?", order);
   io.in(order.chefId).emit("message", "what is going on, party people?");
