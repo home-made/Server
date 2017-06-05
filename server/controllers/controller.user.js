@@ -24,6 +24,7 @@ exports.updateUser = (req, res) => {
           }
         }
       );
+    });
 
   console.log('Inside Update User');
   var updatedUser = req.body;
@@ -78,6 +79,7 @@ exports.updateUser = (req, res) => {
     }
   );
 };
+}
 
 //route we use to login to app that either finds or creates a user
 exports.createUser = (req, res) => {
