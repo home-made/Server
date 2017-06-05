@@ -100,6 +100,7 @@ exports.getAcceptedOrders = (req, res) => {
       });
       User.find({ $or: orders })
         .then(user => {
+         console.log('customers connected to orders',user)
           results.push(user);
           res.send(results);
         })
