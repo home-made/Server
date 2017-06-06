@@ -8,7 +8,7 @@
     "allergies": ["none"],
     "cashDonation": 5,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "American",
@@ -19,7 +19,7 @@
     "allergies": ["none"],
     "cashDonation": 3,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "American",
@@ -30,7 +30,7 @@
     "allergies": ["none"],
     "cashDonation": 15,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "American",
@@ -41,7 +41,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "American",
@@ -52,7 +52,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "American",
@@ -63,7 +63,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": false,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "American",
@@ -74,7 +74,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": false,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Chinese",
@@ -85,7 +85,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Chinese",
@@ -96,7 +96,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Korean",
@@ -107,7 +107,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Korean",
@@ -118,7 +118,7 @@
     "allergies": ["none"],
     "cashDonation": 4,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Korean",
@@ -129,7 +129,7 @@
     "allergies": ["none"],
     "cashDonation": 10,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Chinese",
@@ -140,7 +140,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": false,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Korean",
@@ -151,7 +151,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": false,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Barbecue",
@@ -162,7 +162,7 @@
     "allergies": ["none"],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Barbecue",
@@ -173,7 +173,7 @@
     "allergies": ["none"],
     "cashDonation": 15,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Barbecue",
@@ -184,7 +184,7 @@
     "allergies": ["none"],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Barbecue",
@@ -195,7 +195,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Barbecue",
@@ -206,7 +206,7 @@
     "allergies": ["none"],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 1
+    "quantity": 10
   },
   {
     "cuisineType": "Barbecue",
@@ -217,7 +217,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": false,
-    "quantity": 1
+    "quantity": 10
   },
 
 
@@ -230,7 +230,7 @@
     "allergies": [],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Burger",
@@ -241,7 +241,7 @@
     "allergies": [],
     "cashDonation": 5,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Burger",
@@ -252,7 +252,7 @@
     "allergies": [],
     "cashDonation": 10,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Burger",
@@ -263,7 +263,7 @@
     "allergies": [],
     "cashDonation": 9,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Burger",
@@ -274,7 +274,7 @@
     "allergies": [],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Burger",
@@ -285,7 +285,7 @@
     "allergies": [],
     "cashDonation": 12,
     "isActive": false,
-    "quantity": 3
+    "quantity": 10
   },
 
 
@@ -300,7 +300,7 @@
     "allergies": [],
     "cashDonation": 4,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
    {
     "cuisineType": "Chinese",
@@ -311,7 +311,7 @@
     "allergies": [],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
    {
     "cuisineType": "Chinese",
@@ -322,7 +322,7 @@
     "allergies": [],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
    {
     "cuisineType": "Chinese",
@@ -333,7 +333,7 @@
     "allergies": [],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Chinese",
@@ -344,7 +344,7 @@
     "allergies": [],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
    {
     "cuisineType": "Chinese",
@@ -355,7 +355,7 @@
     "allergies": [],
     "cashDonation": 7,
     "isActive": false,
-    "quantity": 3
+    "quantity": 10
   },
 
 
@@ -369,7 +369,7 @@
     "allergies": [],
     "cashDonation": 15,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Indian",
@@ -380,7 +380,7 @@
     "allergies": [],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Indian",
@@ -391,7 +391,7 @@
     "allergies": [],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Indian",
@@ -402,7 +402,7 @@
     "allergies": [],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Indian",
@@ -413,7 +413,7 @@
     "allergies": [],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Indian",
@@ -424,7 +424,7 @@
     "allergies": [],
     "cashDonation": 6,
     "isActive": false,
-    "quantity": 3
+    "quantity": 10
   },
 
 
@@ -439,7 +439,7 @@
     "allergies": [],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Italian",
@@ -450,7 +450,7 @@
     "allergies": [],
     "cashDonation": 18,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Italian",
@@ -461,7 +461,7 @@
     "allergies": [],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Italian",
@@ -472,7 +472,7 @@
     "allergies": [],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Italian",
@@ -483,7 +483,7 @@
     "allergies": [],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Italian",
@@ -494,7 +494,7 @@
     "allergies": [],
     "cashDonation": 11,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Japanese",
@@ -505,7 +505,7 @@
     "allergies": ["none"],
     "cashDonation": 9,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Japanese",
@@ -516,7 +516,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Japanese",
@@ -538,7 +538,7 @@
     "allergies": ["none"],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Japanese",
@@ -549,7 +549,7 @@
     "allergies": ["none"],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Japanese",
@@ -560,7 +560,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": false,
-    "quantity": 3
+    "quantity": 10
   },
 
 
@@ -574,7 +574,7 @@
     "allergies": ["none"],
     "cashDonation": 12,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Korean",
@@ -585,7 +585,7 @@
     "allergies": ["none"],
     "cashDonation": 6,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Korean",
@@ -596,7 +596,7 @@
     "allergies": ["none"],
     "cashDonation": 8,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Korean",
@@ -607,7 +607,7 @@
     "allergies": ["none"],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Korean",
@@ -618,7 +618,7 @@
     "allergies": ["none"],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Korean",
@@ -629,7 +629,7 @@
     "allergies": ["none"],
     "cashDonation": 12,
     "isActive": false,
-    "quantity": 3
+    "quantity": 10
   },
 
 
@@ -642,7 +642,7 @@
     "allergies": ["none"],
     "cashDonation": 5,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Mediterranean",
@@ -653,7 +653,7 @@
     "allergies": ["none"],
     "cashDonation": 9,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Mediterranean",
@@ -664,7 +664,7 @@
     "allergies": ["none"],
     "cashDonation": 9,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Mediterranean",
@@ -675,7 +675,7 @@
     "allergies": ["none"],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Mediterranean",
@@ -686,7 +686,7 @@
     "allergies": ["none"],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Mediterranean",
@@ -697,7 +697,7 @@
     "allergies": ["none"],
     "cashDonation": 12,
     "isActive": false,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Mexican",
@@ -708,7 +708,7 @@
     "allergies": ["none"],
     "cashDonation": 5,
     "isActive": true,
-    "quantity": 3
+    "quantity": 10
   },
   {
     "cuisineType": "Ethiopian",
@@ -719,6 +719,6 @@
     "allergies": ["none"],
     "cashDonation": 7,
     "isActive": true,
-    "quantity": 2
+    "quantity": 10
   }
 ]

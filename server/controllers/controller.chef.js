@@ -11,15 +11,19 @@ exports.getChefDetails = (req, res) => {
   var chef = [];
   User.find({ authId: chefId }).then(user => {
     console.log("SUCCESSFULLY FOUND USER");
+
     Dish.find({ chefId: user[0].authId, isActive: true }).then(dishes => {
       console.log("SUCCESSFULLY FOUND DISHES");
       chef.push(user[0]);
       chef.push(dishes);
+
       var reviewsUsers = user[0].chefReviews.map(curr => {
         console.log("curr is ", curr);
         return { authId: curr.reviewerId };
       });
+      
       console.log("USER REVIEWS: ", reviewsUsers);
+      
       if (reviewsUsers.length > 0) {
         User.find({ $or: reviewsUsers }).then(reviewers => {
           console.log(reviewers);
@@ -86,25 +90,37 @@ exports.findChefsInRange = (req, res) => {
 
 exports.findChefsByStyle = (req, res) => {
   // var chefId =req.params.chefId;
-  console.log(req.headers);
+  console.log("req headers inside findChefsByStyle is ", req.headers);
+  console.log("req.params inside findChefsByStyle is ", req.params);
+
   var userLocation = new geoPoint(
     Number(req.headers.lat),
     Number(req.headers.lon)
   );
+
   console.log("USER LOCATION IS", userLocation);
+  
   var boundingBox = userLocation.boundingCoordinates(5);
+  
   console.log("BOUNDING BOX IS", boundingBox);
+  
   var chefs = [];
+  
   console.log(req.params.styleId);
+  
   Dish.find({
     isActive: true,
     cuisineType: req.params.styleId
   }).then(dishes => {
+    
     console.log(dishes);
+    
     var chefsFoundByCuisine = dishes.map(curr => {
       return { authId: curr.chefId };
     });
+    
     console.log(chefsFoundByCuisine);
+    
     //If Mongoose doesn't find any dishes, dishes is an empty array
     if (chefsFoundByCuisine.length !== 0) {
       User.find({ $or: chefsFoundByCuisine }).then(users => {
