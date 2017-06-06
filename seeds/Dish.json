@@ -222,7 +222,7 @@
 
 
   {
-    "cuisineType": "Burger",
+    "cuisineType": "Burgers",
     "name": "Paleo Burger",
     "description": "No carb burger, only protein.",
     "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/dXkTRxLu4ZWKWVbO-8mDLg/o.jpg"],
@@ -233,7 +233,7 @@
     "quantity": 10
   },
   {
-    "cuisineType": "Burger",
+    "cuisineType": "Burgers",
     "name": "Chicken Nuggets",
     "description": "Fried, crispy chicken nuggets",
     "dishImages": ["https://s3-media1.fl.yelpcdn.com/bphoto/yUm9BBABAFcIEGPnV5vr5A/o.jpg"],
@@ -244,7 +244,7 @@
     "quantity": 10
   },
   {
-    "cuisineType": "Burger",
+    "cuisineType": "Burgers",
     "name": "Lounge Burger",
     "description": "Burger with blue cheese and order of onion rings",
     "dishImages": ["https://s3-media3.fl.yelpcdn.com/bphoto/N8WpYEmv15g-UxMDsCHWmw/o.jpg"],
@@ -255,7 +255,7 @@
     "quantity": 10
   },
   {
-    "cuisineType": "Burger",
+    "cuisineType": "Burgers",
     "name": "Turkey Burger with Fries",
     "description": "The turkey is free-range",
     "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/5qwCe4uxErVVItH1QrjOnw/o.jpg"],
@@ -266,10 +266,10 @@
     "quantity": 10
   },
   {
-    "cuisineType": "Burger",
+    "cuisineType": "Burgers",
     "name": "Husky Cheeseburger",
     "description": "Hamburger with Cheddar cheese and fries, it's called 'husky' for a reason.",
-    "dishImages": ["https://media-cdn.tripadvisor.com/media/photo-s/0c/d6/28/29/taj-mahal-authentic-Burger.jpg"],
+    "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/q_pwAsQ-8UDDCZqQ-hy53Q/o.jpg"],
     "chefId": "91d739jf6",
     "allergies": [],
     "cashDonation": 12,
@@ -277,7 +277,7 @@
     "quantity": 10
   },
   {
-    "cuisineType": "Burger",
+    "cuisineType": "Burgers",
     "name": "Lamb Burger",
     "description": "Australian lamb burger, only available in season",
     "dishImages": ["https://s3-media4.fl.yelpcdn.com/bphoto/cLGpOFjcv2ns7sLc2YBx6g/o.jpg"],
