@@ -40,7 +40,6 @@ io.on('connection', (socket) =>{
   })
 
 })
-var room = "85h298cn2";
 
 app.use(parser.json());
 app.use(require("./routers/router.dish"));
@@ -50,24 +49,27 @@ app.use(require("./routers/router.chef"));
 app.use(require("./routers/router.review"));
 
 
+
 app.use(parser.urlencoded({ extended: true }));
 
 app.get('/api/',(req,res)=>{
   res.send({
     key: process.env.AWS_ACCESS_KEY_ID,
     secret: process.env.AWS_SECRET_ACCESS_KEY
-  })
-})
+  });
+});
 app.use(parser.urlencoded({ extended: true }));
 
 app.use((err, req, res, next) => {
   if (err) {
-    res.status(err.statusCode || err.status || 500).send(err.data || err.message || {});
+    res
+      .status(err.statusCode || err.status || 500)
+      .send(err.data || err.message || {});
   } else {
     next();
   }
-})
+});
 
 server.listen(3000, console.log("Listening on 3000"));
 
-module.exports = app
+module.exports = app;
