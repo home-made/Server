@@ -89,7 +89,6 @@ exports.addSignature = (req, res) => {
   //     res.send(user);
   //   });
   // }
->>>>>>> 3d938becddb2cfcaa56c3f47d61d16159b79c643
 };
 
 //route we use to login to app that either finds or creates a user
