@@ -46,6 +46,11 @@ var OrderSchema = new Schema({
   orderInstructions: String
 });
 
+var PhoneSchema = new Schema({
+  number: Number,
+  inUse: Boolean
+});
+
 UserSchema.plugin(findOneOrCreate);
 DishSchema.plugin(autoIncrement.plugin, "Dish");
 OrderSchema.plugin(autoIncrement.plugin, "Order");
