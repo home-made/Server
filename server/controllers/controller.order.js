@@ -18,6 +18,7 @@ exports.updateOrder = (req, res) => {
             };
             if (updateQuery.quantity <= 0) {
               updateQuery.isActive = false;
+              console.log("SWITCHED STATUS TO FALSE");
             }
             Dish.findOneAndUpdate({ _id: dishToUpdate[0]._id }, updateQuery, {
               new: true
@@ -165,7 +166,7 @@ exports.getCancelledOrders = (req, res) => {
 };
 
 exports.postNewOrder = (req, res) => {
-  // console.log("the req.body inside postNewOrder is ", req.body);
+  console.log("the req.body inside postNewOrder is ", req.body);
 
   var order = new Order(req.body);
   order.save().then(order => {
@@ -174,7 +175,7 @@ exports.postNewOrder = (req, res) => {
 };
 
 exports.getAllOrders = (req, res) => {
-  Order.find({})
+  Order.find({}, null, {sort: {_id: -1}})
     .then(allOrders => {
       res.send(allOrders);
     })
@@ -196,10 +197,12 @@ exports.getCustomerOrders = (req, res) => {
     $or: [
       { customerId: req.params.id, status: 0 },
       { customerId: req.params.id, status: 1 },
-      { customerId: req.params.id, status: 2 }
+      { customerId: req.params.id, status: 2 },
+      { customerId: req.params.id, status: 3 }
     ]
   })
     .then(allOrders => {
+      console.log("allOrders inside getCustomerOrders are ", allOrders)
       res.send(allOrders);
     })
     .catch(err => {

@@ -11,77 +11,101 @@
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
-        "score": 4.25,
+        "score": 4,
         "orderId": "4"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 3,
         "orderId": 1
       },
       {
         "reviewText": "chef sky was a decent cook",
         "reviewerId": "fdscnxvj234",
-        "score": 4.25,
+        "score": 1,
         "orderId": "4"
       },
       {
         "reviewText": "kitchen was a little messy. made me uneasy",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 2,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "food was fine",
+        "reviewerId": "axncmufid745",
+        "score": 2,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef was decent",
+        "reviewerId": "fdscnxvj234",
+        "score": 1,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "would probably go back",
+        "reviewerId": "axncmufid745",
+        "score": 4,
         "orderId": "4"
       }],
     "isChef": true,
-    "location": { "geo_lat": 33.9210313, "geo_lng":  -118.4183891 },
-    "score": 0
+    "location": { "geo_lat": 33.9210313, "geo_lng":  -118.4183891 }
     },
-
-  {
-    "authId": "fjlasdf754",
-    "firstName": "Leia",
-    "lastName": "Organa",
-    "bio": "Princess, Senator, General.",
-    "status": "On the lam, I cook where and when I can.",
-    "phoneNumber": "123-345-0986",
-    "likes": [0],
-    "profileUrl": "https://vignette3.wikia.nocookie.net/uncyclopedia/images/0/0a/Leia_Organa_Ep5_DVD.jpg/revision/latest?cb=20080325230520",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.9620653, "geo_lng": -118.3689844 },
-    "score": 0
-  },
-  {
-    "authId": "fdscnxvj234",
-    "firstName": "Han",
-    "lastName": "Solo",
-    "bio": "Scruffy looking scoundrel and smuggler.",
-    "status": "I'm both a great cook and a great shot.",
-    "phoneNumber": "456-234-0934",
-    "likes": [0],
-    "profileUrl": "https://vignette3.wikia.nocookie.net/starwars/images/0/01/Hansoloprofile.jpg/revision/latest/scale-to-width-down/499?cb=20100129155042",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.9911192, "geo_lng": -118.3979346 },
-    "score": 0
-  },
-
   {
     "authId": "facebook|10155527252381494",
     "firstName": "Joe",
     "lastName": "Kim",
     "bio": "My name is Jeff.",
-    "status": "🔥",
+    "status": "Always be bringing the 🔥",
     "phoneNumber": "818-181-8181",
     "likes": [0],
     "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 5,
+        "orderId": "4"
+      }],
+    "chefReviews": [{
+        "reviewText": "chef had that bomb lit",
+        "reviewerId": "axncmufid745",
+        "score": 1,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef sky was a decent cook",
+        "reviewerId": "fdscnxvj234",
+        "score": 2,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewerId": "axncmufid745",
+        "score": 3,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "food was fine",
+        "reviewerId": "axncmufid745",
+        "score": 5,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef was decent",
+        "reviewerId": "fdscnxvj234",
+        "score": 2,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "would probably go back",
+        "reviewerId": "axncmufid745",
+        "score": 3,
+        "orderId": "4"
+      }],
     "isChef": true,
-    "location": { "geo_lat": 33.9911192, "geo_lng": -118 },
-    "score": 0
+    "location": { "geo_lat": 33.9911192, "geo_lng": -118 }
   },
   {
     "authId": "axncmufid745",
@@ -100,8 +124,7 @@
       "orderId": 1
     }],
     "chefReviews" : [],
-    "location": { "geo_lat": 34.0628019, "geo_lng": -118.1236872, "address":"6060 center ln" },
-    "score": 0
+    "location": { "geo_lat": 34.0628019, "geo_lng": -118.1236872, "address":"6060 center ln" }
   },
   {
     "authId": "858723wrte",
@@ -112,182 +135,52 @@
     "phoneNumber": "129-009-2564",
     "likes": [0],
     "profileUrl": "http://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/03/14/Pictures/_3ba1ac80-0891-11e7-ba13-f6aef3964879.jpg",
-    "customerReviews" : [],
-    "chefReviews": [],
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 3,
+        "orderId": "4"
+      }],
+    "chefReviews": [{
+        "reviewText": "chef had that bomb lit",
+        "reviewerId": "axncmufid745",
+        "score": 4,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef sky was a decent cook",
+        "reviewerId": "fdscnxvj234",
+        "score": 1,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewerId": "axncmufid745",
+        "score": 2,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "food was fine",
+        "reviewerId": "axncmufid745",
+        "score": 5,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef was decent",
+        "reviewerId": "fdscnxvj234",
+        "score": 3,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "would probably go back",
+        "reviewerId": "axncmufid745",
+        "score": 1,
+        "orderId": "4"
+      }],
     "isChef": true,
-    "location": { "geo_lat": 34.0617777, "geo_lng": -118.1360685, "address":"14238 castle blvd." },
-    "score": 0
+    "location": { "geo_lat": 34.0617777, "geo_lng": -118.1360685, "address":"14238 castle blvd." }
   },
   {
-    "authId": "33.975853",
-    "firstName": "Test1",
-    "lastName": "Test1",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.975853, "geo_lng": -118.395817 },
-    "score": 0
-  },
-
-  {
-    "authId": "33.973486",
-    "firstName": "Test2",
-    "lastName": "Test2",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.973486, "geo_lng": -118.389187 },
-    "score": 0
-  },
-  {
-    "authId": "33.985354",
-    "firstName": "Test3",
-    "lastName": "Test3",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.985354, "geo_lng": -118.400924 },
-    "score": 0
-  },
-  {
-    "authId": "33.982845",
-    "firstName": "Test4",
-    "lastName": "Test4",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.982845, "geo_lng": -118.428991 },
-    "score": 0
-  },
-  {
-    "authId": "33.978201",
-    "firstName": "Test5",
-    "lastName": "Test5",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.978201, "geo_lng": -118.456886 },
-    "score": 0
-  },
-  {
-    "authId": "33.955984",
-    "firstName": "Test6",
-    "lastName": "Test6",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15http://www.yoda.com",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.955984, "geo_lng": -118.406696 },
-    "score": 0
-  },
-  {
-    "authId": "33.962676",
-    "firstName": "Test7",
-    "lastName": "Test7",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.962676, "geo_lng": -118.359318 },
-    "score": 0
-  },
-  {
-    "authId": "33.992143",
-    "firstName": "Test8",
-    "lastName": "Test8",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.992143, "geo_lng": -118.350391 },
-    "score": 0
-  },
-
-  {
-    "authId": "33.962676",
-    "firstName": "Test9",
-    "lastName": "Test9",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 33.962676, "geo_lng": -118.359318 },
-    "score": 0
-  },
-
-  {
-    "authId": "34.031559",
-    "firstName": "Test10",
-    "lastName": "Test10",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 34.031559, "geo_lng": -118.483429 },
-    "score": 0
-  },
-
-  {
-    "authId": "34.063561",
-    "firstName": "Test11",
-    "lastName": "Test11",
-    "bio": "Jedi Master, ",
-    "status": "Don't judge a Jedi Master by his height.",
-    "phoneNumber": "129-009-2564",
-    "likes": [0],
-    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
-    "customerReviews" : [],
-    "chefReviews": [],
-    "isChef": true,
-    "location": { "geo_lat": 34.063561, "geo_lng": -118.404121 },
-    "score": 0
-  },
-    {
     "authId": "facebook|10209561963947713", 
     "firstName": "David",
     "lastName": "Susan",
@@ -299,84 +192,118 @@
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
-        "score": 4.25,
+        "score": 4,
         "orderId": 13
       },
       { 
         "reviewText": "he was a horrible customer.",
         "reviewerId": "477ifjdfo7",
-        "score": 4.25,
+        "score": 4,
         "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 4,
         "orderId": 15
       },
       {
         "reviewText": "chef sky was a decent cook",
         "reviewerId": "fdscnxvj234",
-        "score": 4.25,
+        "score": 4,
         "orderId": 5
       },
       {
         "reviewText": "kitchen was a little messy. made me uneasy",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 4,
         "orderId": "21"
-      }],
-    "isChef": false,
-    "location": { "geo_lat": 33.976002, "geo_lng":  -118.390891 },
-    "score": 0
-    },
-    {
+      },
+      {
+          "reviewText": "food was fine",
+          "reviewerId": "axncmufid745",
+          "score": 5,
+          "orderId": 1
+        },
+        {
+          "reviewText": "chef was decent",
+          "reviewerId": "fdscnxvj234",
+          "score": 3,
+          "orderId": "4"
+        },
+        {
+          "reviewText": "would probably go back",
+          "reviewerId": "axncmufid745",
+          "score": 1,
+          "orderId": "4"
+        }],
+    "isChef": true,
+    "location": { "geo_lat": 33.976002, "geo_lng":  -118.390891 }
+  },
+  {
     "authId": "346abc9746", 
-    "firstName": "Mrs. Barbecue",
-    "lastName": "Chef",
+    "firstName": "Barbecue",
+    "lastName": "Cook",
     "bio": "Awesome barbecue cook.",
-    "status": "I love meat.",
+    "status": "Barbecue cooking is my life.",
     "phoneNumber": "+19167652673",
     "likes": [0],
     "profileUrl": "https://c1.staticflickr.com/6/5458/8960632923_597d53bd5f_b.jpg",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
-        "score": 4.25,
+        "score": 4,
         "orderId": 13
       },
       { 
         "reviewText": "he was a horrible customer.",
         "reviewerId": "477ifjdfo7",
-        "score": 4.25,
+        "score": 4,
         "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 2,
         "orderId": 15
       },
       {
         "reviewText": "chef sky was a decent cook",
         "reviewerId": "fdscnxvj234",
-        "score": 4.25,
+        "score": 5,
         "orderId": 5
       },
       {
         "reviewText": "kitchen was a little messy. made me uneasy",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 3,
         "orderId": "21"
-      }],
+      },
+      {
+          "reviewText": "food was fine",
+          "reviewerId": "axncmufid745",
+          "score": 2,
+          "orderId": 1
+        },
+        {
+          "reviewText": "chef was decent",
+          "reviewerId": "fdscnxvj234",
+          "score": 1,
+          "orderId": "4"
+        },
+        {
+          "reviewText": "would probably go back",
+          "reviewerId": "axncmufid745",
+          "score": 5,
+          "orderId": "4"
+        }],
     "isChef": true,
-    "location": { "geo_lat": 34.0092507, "geo_lng":  -118.4168597 },
-    "score": 0
-    },
-    {
+    "location": { "geo_lat": 34.0092507, "geo_lng":  -118.4168597 }
+  },
+  {
     "authId": "91d739jf6", 
     "firstName": "Burger",
-    "lastName": "Gal",
+    "lastName": "Cook",
     "bio": "The best burger slinger in town.",
     "status": "I dream of cows.",
     "phoneNumber": "+19167652673",
@@ -385,41 +312,58 @@
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
-        "score": 4.25,
+        "score": 4,
         "orderId": 13
       },
       { 
         "reviewText": "he was a horrible customer.",
         "reviewerId": "477ifjdfo7",
-        "score": 4.25,
+        "score": 4,
         "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 2,
         "orderId": 15
       },
       {
         "reviewText": "chef sky was a decent cook",
         "reviewerId": "fdscnxvj234",
-        "score": 4.25,
+        "score": 5,
         "orderId": 5
       },
       {
         "reviewText": "kitchen was a little messy. made me uneasy",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 1,
         "orderId": "21"
+      },
+      {
+        "reviewText": "food was fine",
+        "reviewerId": "axncmufid745",
+        "score": 3,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef was decent",
+        "reviewerId": "fdscnxvj234",
+        "score": 2,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "would probably go back",
+        "reviewerId": "axncmufid745",
+        "score": 5,
+        "orderId": "4"
       }],
     "isChef": true,
-    "location": { "geo_lat": 33.9869091, "geo_lng":  -118.4463476 },
-    "score": 0
-    },
-    {
+    "location": { "geo_lat": 33.9869091, "geo_lng":  -118.4463476 }
+  },
+  {
     "authId": "85h298cn2", 
     "firstName": "Chinese",
-    "lastName": "Doodete",
+    "lastName": "Cook",
     "bio": "You'll love my cooking, I swear.",
     "status": "Nobody beats my cooking.",
     "phoneNumber": "+19167652673",
@@ -428,41 +372,58 @@
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
-        "score": 4.25,
+        "score": 4,
         "orderId": 13
       },
       { 
         "reviewText": "he was a horrible customer.",
         "reviewerId": "477ifjdfo7",
-        "score": 4.25,
+        "score": 4,
         "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 1,
         "orderId": 15
       },
       {
         "reviewText": "chef sky was a decent cook",
         "reviewerId": "fdscnxvj234",
-        "score": 4.25,
+        "score": 4,
         "orderId": 5
       },
       {
         "reviewText": "kitchen was a little messy. made me uneasy",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 1,
         "orderId": "21"
+      },
+      {
+        "reviewText": "food was fine",
+        "reviewerId": "axncmufid745",
+        "score": 5,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef was decent",
+        "reviewerId": "fdscnxvj234",
+        "score": 4,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "would probably go back",
+        "reviewerId": "axncmufid745",
+        "score": 5,
+        "orderId": "4"
       }],
     "isChef": true,
-    "location": { "geo_lat": 33.9760763, "geo_lng":  -118.4195693 },
-    "score": 0
-    },
-    {
+    "location": { "geo_lat": 33.9760763, "geo_lng":  -118.4195693 }
+  },
+  {
     "authId": "327fhy47b", 
-    "firstName": "Mr. Indian",
-    "lastName": "Sir",
+    "firstName": "Indian",
+    "lastName": "Cook",
     "bio": "Left the Punjab to start a new life as a cook.",
     "status": "My stuff is delicious.",
     "phoneNumber": "+19167652673",
@@ -471,41 +432,58 @@
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
-        "score": 4.25,
+        "score": 4,
         "orderId": 13
       },
       { 
         "reviewText": "he was a horrible customer.",
         "reviewerId": "477ifjdfo7",
-        "score": 4.25,
+        "score": 4,
         "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 2,
         "orderId": 15
       },
       {
         "reviewText": "chef sky was a decent cook",
         "reviewerId": "fdscnxvj234",
-        "score": 4.25,
+        "score": 4,
         "orderId": 5
       },
       {
         "reviewText": "kitchen was a little messy. made me uneasy",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 1,
         "orderId": "21"
+      },
+      {
+        "reviewText": "food was fine",
+        "reviewerId": "axncmufid745",
+        "score": 5,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef was decent",
+        "reviewerId": "fdscnxvj234",
+        "score": 2,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "would probably go back",
+        "reviewerId": "axncmufid745",
+        "score": 5,
+        "orderId": "4"
       }],
     "isChef": true, 
-    "location": { "geo_lat": 33.9622641, "geo_lng":  -118.4231359 },
-    "score": 0
-    },
-    {
+    "location": { "geo_lat": 33.9622641, "geo_lng":  -118.4231359 }
+  },
+  {
     "authId": "fje364nnq", 
-    "firstName": "Super",
-    "lastName": "Mario",
+    "firstName": "Italian",
+    "lastName": "Cook",
     "bio": "Left the Punjab to start a new life as a cook.",
     "status": "My stuff is delicious.",
     "phoneNumber": "+19167652673",
@@ -514,127 +492,118 @@
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
-        "score": 4.25,
+        "score": 4,
         "orderId": 13
       },
       { 
         "reviewText": "he was a horrible customer.",
         "reviewerId": "477ifjdfo7",
-        "score": 4.25,
+        "score": 4,
         "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 1,
         "orderId": 15
       },
       {
         "reviewText": "chef sky was a decent cook",
         "reviewerId": "fdscnxvj234",
-        "score": 4.25,
+        "score": 2,
         "orderId": 5
       },
       {
         "reviewText": "kitchen was a little messy. made me uneasy",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 5,
         "orderId": "21"
+      },
+      {
+        "reviewText": "food was fine",
+        "reviewerId": "axncmufid745",
+        "score": 2,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef was decent",
+        "reviewerId": "fdscnxvj234",
+        "score": 1,
+        "orderId": "4"
+      },
+      {
+        "reviewText": "would probably go back",
+        "reviewerId": "axncmufid745",
+        "score": 5,
+        "orderId": "4"
       }],
     "isChef": true, 
-    "location": { "geo_lat": 33.9616049, "geo_lng": -118.4232766 },
-    "score": 0
-    },
-    {
+    "location": { "geo_lat": 33.9616049, "geo_lng": -118.4232766 }
+  },
+  {
     "authId": "jyr759nnq", 
-    "firstName": "Not",
-    "lastName": "Jiro",
+    "firstName": "Japanese",
+    "lastName": "Cook",
     "bio": "I'm not that Japanese Jiro Sushi Chef.",
     "status": "I make more than just sushi.",
     "phoneNumber": "+19167652673",
     "likes": [0],
-    "profileUrl": "http://content.internetvideoarchive.com/content/photos/7264/490210_091.jpg",
+    "profileUrl":   "https://www-tc.pbs.org/independentlens/wp/wp-content/uploads/2013/12/jiro-dreams-of-sushi.jpg",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
-        "score": 4.25,
+        "score": 4,
         "orderId": 13
       },
       { 
         "reviewText": "he was a horrible customer.",
         "reviewerId": "477ifjdfo7",
-        "score": 4.25,
+        "score": 4,
         "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 2,
         "orderId": 15
       },
       {
         "reviewText": "chef sky was a decent cook",
         "reviewerId": "fdscnxvj234",
-        "score": 4.25,
+        "score": 1,
         "orderId": 5
       },
       {
         "reviewText": "kitchen was a little messy. made me uneasy",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 5,
         "orderId": "21"
-      }],
-    "isChef": true, 
-    "location": { "geo_lat": 33.9583986, "geo_lng": -118.3963744 },
-    "score": 0
-    },
-    {
-    "authId": "jyf887za3", 
-    "firstName": "Miss",
-    "lastName": "Kim",
-    "bio": "High Powered Executive By Day, Cook at Night",
-    "status": "I have great taste in everything.",
-    "phoneNumber": "+19167652673",
-    "likes": [0],
-    "profileUrl": "https://c1.staticflickr.com/3/2841/34538746785_43fc4bebb2.jpg",
-    "customerReviews": [{ 
-        "reviewText": "he was a decent customer. very friendly",
-        "reviewerId": "fjlasdf754",
-        "score": 4.25,
-        "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4.25,
-        "orderId": "13"
-      }],
-    "chefReviews": [{
-        "reviewText": "chef had that bomb lit",
-        "reviewerId": "axncmufid745",
-        "score": 4.25,
-        "orderId": 15
       },
       {
-        "reviewText": "chef sky was a decent cook",
+        "reviewText": "food was fine",
+        "reviewerId": "axncmufid745",
+        "score": 3,
+        "orderId": 1
+      },
+      {
+        "reviewText": "chef was decent",
         "reviewerId": "fdscnxvj234",
-        "score": 4.25,
-        "orderId": 5
+        "score": 2,
+        "orderId": "4"
       },
       {
-        "reviewText": "kitchen was a little messy. made me uneasy",
+        "reviewText": "would probably go back",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
-        "orderId": "21"
+        "score": 5,
+        "orderId": "4"
       }],
     "isChef": true, 
-    "location": { "geo_lat": 34.0247889, "geo_lng": -118.3969595 },
-    "score": 0
-    },
-    {
+    "location": { "geo_lat": 33.9583986, "geo_lng": -118.3963744 }
+  },
+  {
     "authId": "ytn334xcw", 
-    "firstName": "Yanis",
-    "lastName": "Varoufakis",
+    "firstName": "Mediterranean",
+    "lastName": "Cook",
     "bio": "Greek Economist, Politician, Part-Time Chef",
     "status": "In cooking and economics, you break a few eggs to make something delicious.",
     "phoneNumber": "+19167652673",
@@ -643,35 +612,77 @@
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
-        "score": 4.25,
+        "score": 4,
         "orderId": 13
       },
       { 
         "reviewText": "he was a horrible customer.",
         "reviewerId": "477ifjdfo7",
-        "score": 4.25,
+        "score": 4,
         "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 2,
         "orderId": 15
       },
       {
         "reviewText": "chef sky was a decent cook",
         "reviewerId": "fdscnxvj234",
-        "score": 4.25,
+        "score": 2,
         "orderId": 5
       },
       {
         "reviewText": "kitchen was a little messy. made me uneasy",
         "reviewerId": "axncmufid745",
-        "score": 4.25,
+        "score": 3,
         "orderId": "21"
-      }],
+      },
+      {
+          "reviewText": "food was fine",
+          "reviewerId": "axncmufid745",
+          "score": 5,
+          "orderId": 1
+        },
+        {
+          "reviewText": "chef was decent",
+          "reviewerId": "fdscnxvj234",
+          "score": 5,
+          "orderId": "4"
+        },
+        {
+          "reviewText": "would probably go back",
+          "reviewerId": "axncmufid745",
+          "score": 1,
+          "orderId": "4"
+        }],
     "isChef": true, 
-    "location": { "geo_lat": 33.9523591, "geo_lng": -118.3873609 },
-    "score": 0
-    }
+    "location": { "geo_lat": 33.9523591, "geo_lng": -118.3873609 }
+  },
+  {
+    "authId": "google-oauth2|111548799256401715601", 
+    "firstName": "Jaime",
+    "lastName": "Mendoza",
+    "bio": "Coding Monkey",
+    "status": "I'm always hangry.",
+    "phoneNumber": "+19167652673",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4,
+        "orderId": 13
+      },
+      { 
+        "reviewText": "he was a horrible customer.",
+        "reviewerId": "477ifjdfo7",
+        "score": 4,
+        "orderId": "13"
+      }],
+    "chefReviews": [],
+    "isChef": false,
+    "location": { "geo_lat": 34.063561, "geo_lng":  -118.404121 }
+  }
 ]
