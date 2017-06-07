@@ -53,24 +53,12 @@ exports.addSignature = (req, res) => {
       }
     };
 
+
+
     var url = "s3.amazonaws.com/homemadesignatures/" + params.s3Params.Key;
     updatedUser.signatureURL = url;
 
-    var uploader = client.uploadFile(params);
-    uploader.on("error", function(err) {
-      console.error("unable to upload:", err.stack);
-    });
-    uploader.on("progress", function() {
-      console.log(
-        "progress",
-        uploader.progressMd5Amount,
-        uploader.progressAmount,
-        uploader.progressTotal
-      );
-    });
-    uploader.on("end", function() {
-      console.log("done uploading");
-      User.findOneAndUpdate(
+     User.findOneAndUpdate(
         { authId: req.params.authId },
         updatedUser,
         { new: true },
@@ -80,11 +68,27 @@ exports.addSignature = (req, res) => {
             console.log(err);
           } else {
             console.log(user);
-            res.send(user);
           }
         }
       );
-    });
+
+    
+    // var uploader = client.uploadFile(params);
+    // uploader.on("error", function(err) {
+    //   console.error("unable to upload:", err.stack);
+    // });
+    // uploader.on("progress", function() {
+    //   console.log(
+    //     "progress",
+    //     uploader.progressMd5Amount,
+    //     uploader.progressAmount,
+    //     uploader.progressTotal
+    //   );
+    // });
+    // uploader.on("end", function() {
+    //   console.log("done uploading");
+    //   res.send(user);
+    // });
   }
 };
 
