@@ -23,7 +23,7 @@ const io = require('socket.io')(server)
 
 io.on('connection', (socket) =>{
   console.log('connection')
-  socket.broadcast.to(socket.id).emit('message', 'bruja');
+  // socket.broadcast.to(socket.id).emit('message', 'bruja');
   socket.emit('init','im here big fella - server')
   socket.on('disconnect', ()=>{
     console.log('im out')
@@ -33,7 +33,12 @@ io.on('connection', (socket) =>{
     socket.join(chef.authId)
   })
 
-  socket.on('neworder', (order)=>{
+  socket.on('newOrderUpdate', (order)=>{
+    console.log(order)
+    socket.join(order.customerId);
+    orderController.alertCustomer(order,socket,io)
+  })
+  socket.on('newOrderRequest', (order)=>{
     console.log(order)
     socket.join(order.chefId);
     orderController.alertChef(order,socket,io)

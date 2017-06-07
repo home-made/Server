@@ -35,7 +35,11 @@ exports.updateOrder = (req, res) => {
 
 exports.alertChef = (order, socket, io) => {
   console.log("create room?", order);
-  io.in(order.chefId).emit("message", "what is going on, party people?");
+  io.in(order.chefId).emit("message", "got a new order request chef");
+};
+exports.alertCustomer = (order, socket, io) => {
+  console.log("create room?", order);
+  io.in(order.customerId).emit("message", "got a new update on a order");
 };
 
 exports.getPendingOrders = (req, res) => {
