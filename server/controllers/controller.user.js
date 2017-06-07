@@ -48,6 +48,7 @@ exports.addSignature = (req, res) => {
     }
   );
 
+
   // if (req.body.pathname) {
   //   var client = s3.createClient({
   //     maxAsyncS3: 20,
