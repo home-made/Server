@@ -45,6 +45,11 @@ var OrderSchema = new Schema({
   cashTotal: Number
 });
 
+var PhoneSchema = new Schema({
+  number: Number,
+  inUse: Boolean
+});
+
 UserSchema.plugin(findOneOrCreate);
 DishSchema.plugin(autoIncrement.plugin, "Dish");
 OrderSchema.plugin(autoIncrement.plugin, "Order");
