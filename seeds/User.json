@@ -684,5 +684,64 @@
     "chefReviews": [],
     "isChef": false,
     "location": { "geo_lat": 34.063561, "geo_lng":  -118.404121 }
+  },
+
+  {
+	  "authId" : "google-oauth2|113156531283332339776",
+	  "firstName" : "Ebrima",
+	  "lastName" : "Jobe",
+    "phoneNumber" : "3426570091",
+    "likes" : [0],
+	  "profileUrl": "https://lh6.googleusercontent.com/-lw4ppcjXAAw/AAAAAAAAAAI/AAAAAAAAAIM/-tQ_g2kfEuo/photo.jpg",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4,
+        "orderId": 13
+      },
+      { 
+        "reviewText": "he was a horrible customer.",
+        "reviewerId": "477ifjdfo7",
+        "score": 4,
+        "orderId": "13"
+      }],
+    "chefReviews": [{
+       "reviewText": "chef had that bomb lit",
+       "reviewerId": "axncmufid745",
+       "score": 5,
+       "orderId": 15
+     },
+     {
+       "reviewText": "chef sky was a decent cook",
+       "reviewerId": "fdscnxvj234",
+       "score": 5,
+       "orderId": 5
+     },
+     {
+       "reviewText": "kitchen was a little messy. made me uneasy",
+       "reviewerId": "axncmufid745",
+       "score": 5,
+       "orderId": "21"
+     },
+     {
+         "reviewText": "food was fine",
+         "reviewerId": "axncmufid745",
+         "score": 4,
+         "orderId": 1
+     },
+     {
+       "reviewText": "chef was decent",
+       "reviewerId": "fdscnxvj234",
+       "score": 5,
+       "orderId": "4"
+     },
+     {
+       "reviewText": "would probably go back",
+       "reviewerId": "axncmufid745",
+       "score": 1,
+       "orderId": "4"
+     }],
+    "isChef" : true,
+    "location": { "geo_lat": 33.9731409, "geo_lng":  -118.4484673 }
   }
 ]
