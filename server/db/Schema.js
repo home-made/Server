@@ -43,7 +43,8 @@ var OrderSchema = new Schema({
   cart: {},
   status: Number,
   date: { type: Date, default: Date.now },
-  cashTotal: Number
+  cashTotal: Number,
+  orderInstructions: String
 });
 
 var PhoneSchema = new Schema({
