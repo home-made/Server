@@ -18,6 +18,7 @@ exports.updateOrder = (req, res) => {
             };
             if (updateQuery.quantity <= 0) {
               updateQuery.isActive = false;
+              console.log("SWITCHED STATUS TO FALSE");
             }
             Dish.findOneAndUpdate({ _id: dishToUpdate[0]._id }, updateQuery, {
               new: true
@@ -178,7 +179,7 @@ exports.postNewOrder = (req, res) => {
 };
 
 exports.getAllOrders = (req, res) => {
-  Order.find({})
+  Order.find({}, null, {sort: {_id: -1}})
     .then(allOrders => {
       res.send(allOrders);
     })
