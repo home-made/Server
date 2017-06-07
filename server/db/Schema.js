@@ -21,7 +21,8 @@ var UserSchema = new Schema({
   location: { geo_lat: Number, geo_lng: Number },
   address: String,
   rating: Number,
-  signatureURL: String
+  signatureURL: String,
+  email: String
 });
 
 var DishSchema = new Schema({

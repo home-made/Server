@@ -12,4 +12,6 @@ Router.put("/sig/:authId", userController.addSignature);
 
 Router.get("/user/:id", userController.getUser);
 
+Router.put("/sig/:authId", userController.addSignature);
+
 module.exports = Router;
