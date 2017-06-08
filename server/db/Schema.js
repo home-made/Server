@@ -21,7 +21,8 @@ var UserSchema = new Schema({
   location: { geo_lat: Number, geo_lng: Number },
   address: String,
   rating: Number,
-  signatureURL: String
+  signatureURL: String,
+  email: String
 });
 
 var DishSchema = new Schema({
@@ -42,7 +43,8 @@ var OrderSchema = new Schema({
   cart: {},
   status: Number,
   date: { type: Date, default: Date.now },
-  cashTotal: Number
+  cashTotal: Number,
+  orderInstructions: String
 });
 
 var PhoneSchema = new Schema({

@@ -8,6 +8,7 @@
     "phoneNumber": "233-876-0001",
     "likes": [0],
     "profileUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9S4_U7mginYr1uw1DlFq8tMfegcxsKOfiDgvq4fGbT4CuuFlx",
+    "email": "mediaskate648@gmail.com",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
@@ -53,6 +54,41 @@
     "isChef": true,
     "location": { "geo_lat": 33.9210313, "geo_lng":  -118.4183891 }
     },
+
+  {
+    "authId": "fjlasdf754",
+    "firstName": "Leia",
+    "lastName": "Organa",
+    "bio": "Princess, Senator, General.",
+    "status": "On the lam, I cook where and when I can.",
+    "phoneNumber": "123-345-0986",
+    "likes": [0],
+    "profileUrl": "https://vignette3.wikia.nocookie.net/uncyclopedia/images/0/0a/Leia_Organa_Ep5_DVD.jpg/revision/latest?cb=20080325230520",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.9620653, "geo_lng": -118.3689844 },
+    "score": 0
+  },
+  {
+    "authId": "fdscnxvj234",
+    "firstName": "Han",
+    "lastName": "Solo",
+    "bio": "Scruffy looking scoundrel and smuggler.",
+    "status": "I'm both a great cook and a great shot.",
+    "phoneNumber": "456-234-0934",
+    "likes": [0],
+    "profileUrl": "https://vignette3.wikia.nocookie.net/starwars/images/0/01/Hansoloprofile.jpg/revision/latest/scale-to-width-down/499?cb=20100129155042",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.9911192, "geo_lng": -118.3979346 },
+    "score": 0
+  },
+
+
   {
     "authId": "facebook|10155527252381494",
     "firstName": "Joe",
@@ -62,6 +98,7 @@
     "phoneNumber": "818-181-8181",
     "likes": [0],
     "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
@@ -116,6 +153,7 @@
     "phoneNumber": "657-234-0987",
     "likes": [0],
     "profileUrl": "http://www.factfiend.com/wp-content/uploads/2014/06/maxresdefault.jpg",
+    "email": "mediaskate648@gmail.com",
     "isChef": false,
     "customerReviews" : [{
       "reviewText": "customer was lit",
@@ -135,6 +173,170 @@
     "phoneNumber": "129-009-2564",
     "likes": [0],
     "profileUrl": "http://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/03/14/Pictures/_3ba1ac80-0891-11e7-ba13-f6aef3964879.jpg",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 34.0617777, "geo_lng": -118.1360685, "address":"14238 castle blvd." },
+    "score": 0
+  },
+  {
+    "authId": "33.975853",
+    "firstName": "Test1",
+    "lastName": "Test1",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.975853, "geo_lng": -118.395817 },
+    "score": 0
+  },
+
+  {
+    "authId": "33.973486",
+    "firstName": "Test2",
+    "lastName": "Test2",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.973486, "geo_lng": -118.389187 },
+    "score": 0
+  },
+  {
+    "authId": "33.985354",
+    "firstName": "Test3",
+    "lastName": "Test3",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.985354, "geo_lng": -118.400924 },
+    "score": 0
+  },
+  {
+    "authId": "33.982845",
+    "firstName": "Test4",
+    "lastName": "Test4",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.982845, "geo_lng": -118.428991 },
+    "score": 0
+  },
+  {
+    "authId": "33.978201",
+    "firstName": "Test5",
+    "lastName": "Test5",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.978201, "geo_lng": -118.456886 },
+    "score": 0
+  },
+  {
+    "authId": "33.955984",
+    "firstName": "Test6",
+    "lastName": "Test6",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15http://www.yoda.com",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.955984, "geo_lng": -118.406696 },
+    "score": 0
+  },
+  {
+    "authId": "33.962676",
+    "firstName": "Test7",
+    "lastName": "Test7",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.962676, "geo_lng": -118.359318 },
+    "score": 0
+  },
+  {
+    "authId": "33.992143",
+    "firstName": "Test8",
+    "lastName": "Test8",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.992143, "geo_lng": -118.350391 },
+    "score": 0
+  },
+
+  {
+    "authId": "33.962676",
+    "firstName": "Test9",
+    "lastName": "Test9",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 33.962676, "geo_lng": -118.359318 },
+    "score": 0
+  },
+
+  {
+    "authId": "34.031559",
+    "firstName": "Test10",
+    "lastName": "Test10",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
@@ -181,6 +383,22 @@
     "location": { "geo_lat": 34.0617777, "geo_lng": -118.1360685, "address":"14238 castle blvd." }
   },
   {
+    "authId": "34.063561",
+    "firstName": "Test11",
+    "lastName": "Test11",
+    "bio": "Jedi Master, ",
+    "status": "Don't judge a Jedi Master by his height.",
+    "phoneNumber": "129-009-2564",
+    "likes": [0],
+    "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
+    "customerReviews" : [],
+    "chefReviews": [],
+    "isChef": true,
+    "location": { "geo_lat": 34.063561, "geo_lng": -118.404121 },
+    "score": 0
+  },
+    {
     "authId": "facebook|10209561963947713", 
     "firstName": "David",
     "lastName": "Susan",
@@ -189,6 +407,7 @@
     "phoneNumber": "+19167652673",
     "likes": [0],
     "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
+    "email": "mediaskate648@gmail.com",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
@@ -249,6 +468,7 @@
     "phoneNumber": "+19167652673",
     "likes": [0],
     "profileUrl": "https://c1.staticflickr.com/6/5458/8960632923_597d53bd5f_b.jpg",
+    "email": "mediaskate648@gmail.com",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
@@ -309,6 +529,7 @@
     "phoneNumber": "+19167652673",
     "likes": [0],
     "profileUrl": "https://c1.staticflickr.com/9/8011/7686403194_5c4e473019_b.jpg",
+    "email": "mediaskate648@gmail.com",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
@@ -369,6 +590,7 @@
     "phoneNumber": "+19167652673",
     "likes": [0],
     "profileUrl": "https://c1.staticflickr.com/3/2924/14212697602_aa4f94af6f_b.jpg",
+    "email": "mediaskate648@gmail.com",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
@@ -429,6 +651,7 @@
     "phoneNumber": "+19167652673",
     "likes": [0],
     "profileUrl": "https://c1.staticflickr.com/9/8459/8024056537_85422b6436_b.jpg",
+    "email": "mediaskate648@gmail.com",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
@@ -489,6 +712,7 @@
     "phoneNumber": "+19167652673",
     "likes": [0],
     "profileUrl": "https://c1.staticflickr.com/6/5302/5559387627_561c113ae3_b.jpg",
+    "email": "mediaskate648@gmail.com",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
@@ -549,6 +773,7 @@
     "phoneNumber": "+19167652673",
     "likes": [0],
     "profileUrl":   "https://www-tc.pbs.org/independentlens/wp/wp-content/uploads/2013/12/jiro-dreams-of-sushi.jpg",
+    "email": "mediaskate648@gmail.com",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
         "reviewerId": "fjlasdf754",
@@ -608,6 +833,8 @@
     "status": "In cooking and economics, you break a few eggs to make something delicious.",
     "phoneNumber": "+19167652673",
     "likes": [0],
+
+    "email": "mediaskate648@gmail.com",
     "profileUrl": "https://pbs.twimg.com/profile_images/3447489400/8b2a294e679e0bef245c5573564c1fe6_400x400.png",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
@@ -668,6 +895,7 @@
     "status": "I'm always hangry.",
     "phoneNumber": "+19167652673",
     "likes": [0],
+    "email": "mediaskate648@gmail.com",
     "profileUrl": "https://www.ishd.de/img/anonymous-user.png?v=1.7.15",
     "customerReviews": [{ 
         "reviewText": "he was a decent customer. very friendly",
@@ -684,5 +912,64 @@
     "chefReviews": [],
     "isChef": false,
     "location": { "geo_lat": 34.063561, "geo_lng":  -118.404121 }
+  },
+
+  {
+	  "authId" : "google-oauth2|113156531283332339776",
+	  "firstName" : "Ebrima",
+	  "lastName" : "Jobe",
+    "phoneNumber" : "3426570091",
+    "likes" : [0],
+	  "profileUrl": "https://lh6.googleusercontent.com/-lw4ppcjXAAw/AAAAAAAAAAI/AAAAAAAAAIM/-tQ_g2kfEuo/photo.jpg",
+    "customerReviews": [{ 
+        "reviewText": "he was a decent customer. very friendly",
+        "reviewerId": "fjlasdf754",
+        "score": 4,
+        "orderId": 13
+      },
+      { 
+        "reviewText": "he was a horrible customer.",
+        "reviewerId": "477ifjdfo7",
+        "score": 4,
+        "orderId": "13"
+      }],
+    "chefReviews": [{
+       "reviewText": "chef had that bomb lit",
+       "reviewerId": "axncmufid745",
+       "score": 5,
+       "orderId": 15
+     },
+     {
+       "reviewText": "chef sky was a decent cook",
+       "reviewerId": "fdscnxvj234",
+       "score": 5,
+       "orderId": 5
+     },
+     {
+       "reviewText": "kitchen was a little messy. made me uneasy",
+       "reviewerId": "axncmufid745",
+       "score": 5,
+       "orderId": "21"
+     },
+     {
+         "reviewText": "food was fine",
+         "reviewerId": "axncmufid745",
+         "score": 4,
+         "orderId": 1
+     },
+     {
+       "reviewText": "chef was decent",
+       "reviewerId": "fdscnxvj234",
+       "score": 5,
+       "orderId": "4"
+     },
+     {
+       "reviewText": "would probably go back",
+       "reviewerId": "axncmufid745",
+       "score": 1,
+       "orderId": "4"
+     }],
+    "isChef" : true,
+    "location": { "geo_lat": 33.9731409, "geo_lng":  -118.4484673 }
   }
 ]
