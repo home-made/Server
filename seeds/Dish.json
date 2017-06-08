@@ -720,5 +720,68 @@
     "cashDonation": 7,
     "isActive": true,
     "quantity": 10
+  },
+  {
+	  "name" : "Jumbo sauce",
+	  "cashDonation" : 5,
+	  "quantity" : 1,
+	  "description" : "Ketchup ",
+	  "chefId" : "facebook|10209561963947713",
+	  "isActive" : true,
+	  "allergies" : [],
+	  "dishImages" : [
+	  	"https://homemadedishes.s3.amazonaws.com/dishJumbo+sauceimage.jpg"
+	  ]
+  },
+  {
+	  "name" : "",
+	  "cashDonation" : 0,
+	  "quantity" : 0,
+	  "description" : "",
+	  "cuisineType" : "Chinese",
+	  "chefId" : "google-oauth2|113156531283332339776",
+	  "isActive" : true,
+	  "allergies" : [ ],
+	  "dishImages" : [
+	  	"https://homemadedishes.s3.amazonaws.com/dishimage.jpg"
+	  ]
+  },
+  {
+	  "name" : "Popeyes fries",
+	  "cashDonation" : 5,
+	  "quantity" : 0,
+	  "description" : "Straight from the gutta ",
+	  "cuisineType" : "Barbecue",
+	  "chefId" : "google-oauth2|113156531283332339776",
+	  "isActive" : false,
+	  "allergies" : [ ],
+	  "dishImages" : [
+	  	"https://homemadedishes.s3.amazonaws.com/dishPopeyes+friesimage.jpg"
+	  ]
+  },
+  {
+	  "name" : "",
+	  "cashDonation" : 0,
+	  "quantity" : 0,
+	  "description" : "",
+	  "chefId" : "google-oauth2|113156531283332339776",
+	  "isActive" : true,
+	  "allergies" : [ ],
+	  "dishImages" : [
+	  	"https://homemadedishes.s3.amazonaws.com/dishimage.jpg"
+	  ]
+  },
+  {
+	  "name" : "Fries",
+	  "cashDonation" : 4,
+	  "quantity" : 10,
+	  "description" : "Popeyes",
+	  "cuisineType" : "American",
+	  "chefId" : "facebook|10209561963947713",
+	  "isActive" : true,
+	  "allergies" : [ ],
+	  "dishImages" : [
+	  	"https://homemadedishes.s3.amazonaws.com/dishFriesimage.jpg"
+	  ]
   }
 ]
