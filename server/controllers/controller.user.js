@@ -115,9 +115,8 @@ exports.addSignature = (req, res) => {
 //route we use to login to app that either finds or creates a user
 exports.createUser = (req, res) => {
   // var user = req.body;
-  console.log("INSIDE CREATE USER", req.params.id);
-  // console.log(req.body);
-  console.log(req.body.extraInfo.given_name);
+  console.log("INSIDE CREATE USER ID IS", req.params.id);
+  console.log("INSIDE CREATE USER REQ BODY IS", req.body);
   User.findOneOrCreate(
     { authId: req.params.id },
     {
