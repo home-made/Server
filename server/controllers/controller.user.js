@@ -9,25 +9,48 @@ exports.updateUser = (req, res) => {
   if (req.body.address) {
     geocoder.geocode(req.body.address, (err, data) => {
       console.log("GEO DATA IS", data);
-      req.body.geo_lat = data.results[0].geometry.location.lat;
-      req.body.geo_lng = data.results[0].geometry.location.lng;
-    });
-  }
+      
+      var geo_lat = data.results[0].geometry.location.lat;
+      var geo_lng = data.results[0].geometry.location.lng;
 
-  var updatedUser = req.body;
-  User.findOneAndUpdate(
-    { authId: req.params.authId },
-    updatedUser,
-    { new: true },
-    (err, user) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log(user);
-        res.send(user);
+      console.log("the geo_lat is ", geo_lat);
+      console.log("the geo_lng is ", geo_lng);
+
+      var updatedUser = req.body;
+
+      updatedUser.location = {geo_lat, geo_lng};
+
+      User.findOneAndUpdate(
+        { authId: req.params.authId },
+        updatedUser,
+        { new: true },
+        (err, user) => {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log("The user with new geoloc is ", user);
+            res.send(user);
+          }
+        }
+      );
+    });
+  } else {
+
+    var updatedUser = req.body;
+    User.findOneAndUpdate(
+      { authId: req.params.authId },
+      updatedUser,
+      { new: true },
+      (err, user) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(user);
+          res.send(user);
+        }
       }
-    }
-  );
+    );
+  }
 };
 
 exports.addSignature = (req, res) => {
