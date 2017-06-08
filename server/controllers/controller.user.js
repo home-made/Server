@@ -118,15 +118,17 @@ exports.createUser = (req, res) => {
   console.log("INSIDE CREATE USER!!!!!!!!!")
   console.log("INSIDE CREATE USER ID IS", req.params.id);
   console.log("INSIDE CREATE USER REQ BODY IS", req.body);
+  let query = {};
+  query.authId = req.params.id;
+  if (req.body.extraInfo.given_name) { query.firstName = req.body.extraInfo.given_name };
+  if (req.body.extraInfo.family_name) { query.lastName = req.body.extraInfo.family_name };
+  if (req.body.extraInfo.picture_large) { query.profileUrl = req.body.extraInfo.picture_large || req.body.picture };
+  if (req.body.email) {query.email = req.body.email}
+  query.isChef = false;
+
   User.findOneOrCreate(
     { authId: req.params.id },
-    {
-      authId: req.params.id,
-      firstName: req.body.extraInfo.given_name,
-      lastName: req.body.extraInfo.family_name,
-      profileUrl: req.body.extraInfo.picture_large || req.body.picture,
-      isChef: false
-    },
+    query,
     (err, user) => {
       res.send(user);
       console.log("ERR in create user: ", err);
