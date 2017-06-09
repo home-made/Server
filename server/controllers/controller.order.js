@@ -78,7 +78,13 @@ exports.getPendingOrders = (req, res) => {
 exports.getUserCurrentOrder = (req, res) => {
   // console.log("getCurrentOrders");
   var results = [];
-  Order.find({ chefId: req.params.id, status: 0 })
+    let query = {status: 0};
+  if (req.params.type === "chef") {
+    query.chefId = req.params.id;
+  } else{
+    query.customerId = req.params.id;
+  }
+  Order.find(query)
     .then(orders => {
       // console.log('current order ', orders)
       results.push(orders);
@@ -102,7 +108,13 @@ exports.getUserCurrentOrder = (req, res) => {
 exports.getAcceptedOrders = (req, res) => {
   // console.log("getAcceptedOrders");
   var results = [];
-  Order.find({ chefId: req.params.id, status: 1 })
+  let query = {status: 1};
+  if (req.params.type === "chef") {
+    query.chefId = req.params.id;
+  } else{
+    query.customerId = req.params.id;
+  }
+  Order.find(query)
     .then(orders => {
       // console.log('accepted orders ', orders)
       results.push(orders);
@@ -127,7 +139,13 @@ exports.getAcceptedOrders = (req, res) => {
 exports.getCompletedOrders = (req, res) => {
   // console.log("getCompletedOrders");
   var results = [];
-  Order.find({ chefId: req.params.id, status: 2 })
+  let query = {status: 2};
+  if (req.params.type === "chef") {
+    query.chefId = req.params.id;
+  } else{
+    query.customerId = req.params.id;
+  }
+  Order.find(query)
     .then(orders => {
       // console.log('completed orders ', orders)
       results.push(orders);
