@@ -119,7 +119,8 @@ exports.createUser = (req, res) => {
   query.authId = req.params.id;
   if (req.body.extraInfo.given_name) { query.firstName = req.body.extraInfo.given_name };
   if (req.body.extraInfo.family_name) { query.lastName = req.body.extraInfo.family_name };
-  if (req.body.extraInfo.picture_large) { query.profileUrl = req.body.extraInfo.picture_large || req.body.picture };
+  if (req.body.extraInfo.picture_large) { query.profileUrl = req.body.extraInfo.picture_large}
+  if (req.body.picture) { query.profileUrl = req.body.picture };
   if (req.body.email) {query.email = req.body.email}
   query.isChef = false;
 
