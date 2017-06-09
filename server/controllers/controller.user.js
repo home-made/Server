@@ -9,7 +9,7 @@ exports.updateUser = (req, res) => {
   if (req.body.address) {
     geocoder.geocode(req.body.address, (err, data) => {
       console.log("GEO DATA IS", data);
-      
+
       var geo_lat = data.results[0].geometry.location.lat;
       var geo_lng = data.results[0].geometry.location.lng;
 
@@ -18,7 +18,7 @@ exports.updateUser = (req, res) => {
 
       var updatedUser = req.body;
 
-      updatedUser.location = {geo_lat, geo_lng};
+      updatedUser.location = { geo_lat, geo_lng };
 
       User.findOneAndUpdate(
         { authId: req.params.authId },
@@ -35,7 +35,6 @@ exports.updateUser = (req, res) => {
       );
     });
   } else {
-
     var updatedUser = req.body;
     User.findOneAndUpdate(
       { authId: req.params.authId },
@@ -117,22 +116,28 @@ exports.createUser = (req, res) => {
 
   let query = {};
   query.authId = req.params.id;
-  if (req.body.extraInfo.given_name) { query.firstName = req.body.extraInfo.given_name };
-  if (req.body.extraInfo.family_name) { query.lastName = req.body.extraInfo.family_name };
-  if (req.body.extraInfo.picture_large) { query.profileUrl = req.body.extraInfo.picture_large}
-  if (req.body.picture) { query.profileUrl = req.body.picture };
-  if (req.body.email) {query.email = req.body.email}
+  if (req.body.extraInfo.given_name) {
+    query.firstName = req.body.extraInfo.given_name;
+  }
+  if (req.body.extraInfo.family_name) {
+    query.lastName = req.body.extraInfo.family_name;
+  }
+  if (req.body.extraInfo.picture_large) {
+    query.profileUrl = req.body.extraInfo.picture_large;
+  }
+  if (req.body.picture) {
+    query.profileUrl = req.body.picture;
+  }
+  if (req.body.email) {
+    query.email = req.body.email;
+  }
   query.isChef = false;
 
-  User.findOneOrCreate(
-    { authId: req.params.id },
-    query,
-    (err, user) => {
-      res.send(user);
-      console.log("ERR in create user: ", err);
-      console.log("USER in create user: ", user);
-    }
-  );
+  User.findOneOrCreate({ authId: req.params.id }, query, (err, user) => {
+    res.send(user);
+    console.log("ERR in create user: ", err);
+    console.log("USER in create user: ", user);
+  });
 };
 
 exports.getUser = (req, res) => {
@@ -143,26 +148,45 @@ exports.getUser = (req, res) => {
 
   User.find({ authId: req.params.id })
     .then(user => {
-      console.log("User inside getUser is ", user);
+      console.log("User inside getUser FOUND USER", user);
       // var chefReviewers = user[0].chefReviews.map(curr =>{
       //   return {authId: curr.reviewId }
       // })
-      userRes.push(user)
-      var customerReviewerUsers = user[0].customerReviews.map(curr =>{
-        console.log(curr)
-        return {authId: curr.reviewerId }
-      })
-      console.log(customerReviewerUsers)
-      if(customerReviewerUsers.length>0){
-        User.find({$or: customerReviewerUsers}).then(reviewers=>{
-          console.log(reviewers);
-          userRes.push(reviewers)
-          customerReviewerUsers
-          res.send(userRes);
-        })
-      }
-      else{
-        res.send(userRes);
+      // userRes.push(user)
+      var customerReviewerUsers = user[0].customerReviews.map(curr => {
+        console.log(curr);
+        return { authId: curr.reviewerId };
+      });
+      var chefReviewerUsers = user[0].chefReviews.map(curr => {
+        console.log(curr);
+        return { authId: curr.reviewerId };
+      });
+      let allReviewers = customerReviewerUsers.concat(chefReviewerUsers);
+      console.log(
+        "CUSTOMER REVIEWER USERS ARRAY OF AUTHIDS",
+        customerReviewerUsers
+      );
+      if (allReviewers.length > 0) {
+        User.find({ $or: allReviewers }).then(reviewers => {
+          user[0].customerReviews.forEach(review => {
+            review.user = reviewers.find(curr => {
+              return curr.authId === review.reviewerId;
+            });
+          });
+          user[0].chefReviews.forEach(re => {
+            console.log("REVIEW BEFORE UPDATE", re);
+            re.user = reviewers.find(curr => {
+              return curr.authId === re.reviewerId;
+            });
+            console.log("REVIEW AFTER UPDATE", re);
+          });
+          // userRes.push(reviewers)
+          console.log("USER RIGHT BEFORE SENDING BACK", user);
+          let newUser = user
+          res.send(newUser);
+        });
+      } else {
+        res.send(user);
       }
     })
     .catch(err => {

@@ -27,7 +27,10 @@ exports.postUserReview = (req, res) => {
   User.find({ authId: id })
     .then(user => {
       user[0].customerReviews.push(req.body);
-      res.send(user[0]);
+      User.findOneAndUpdate({authId: id}, user[0])
+      .then(updatedUser =>{
+        res.send(updatedUser); 
+      })
     })
     .catch(err => {
       console.log(err);
@@ -39,8 +42,10 @@ exports.postChefReview = (req, res) => {
   User.find({ authId: id })
     .then(user => {
       user[0].chefReviews.push(req.body);
-      User.findOneAndUpdate({authId: id}, user[0]);
-      res.send(user[0]);
+      User.findOneAndUpdate({authId: id}, user[0])
+      .then(updatedUser =>{
+        res.send(updatedUser); 
+      })
     })
     .catch(err => {
       console.log(err);
