@@ -3,8 +3,8 @@ const SendMessage = require("../../utils/SendMessage");
 
 exports.updateOrder = (req, res) => {
   var query = {};
-  console.log("REQ IS", req.body); 
-   query._id = req.body._id;
+  console.log("REQ IS", req.body);
+  query._id = req.body._id;
 
   console.log("QUERY IS", query);
 
@@ -33,14 +33,13 @@ exports.updateOrder = (req, res) => {
     .catch(err => console.log(err));
 };
 
-
 exports.alertChef = (order, socket, io) => {
-  let room = 'chef'+order.chefId;
+  let room = "chef" + order.chefId;
   console.log("create room?", room);
   io.in(order.chefId).emit(room, "got a new order request chef");
 };
 exports.alertCustomer = (order, socket, io) => {
-  let room = 'customer'+order.customerId;
+  let room = "customer" + order.customerId;
   console.log("create room?", room);
   io.in(order.customerId).emit(room, "got a new update on a order");
 };
@@ -55,11 +54,16 @@ exports.getPendingOrders = (req, res) => {
     .then(orders => {
       // console.log('pending orders ', orders)
       results.push(orders);
-
-      orders = orders.map(curr => {
-        return { authId: curr.customerId };
-      });
-
+      if (req.params.type === "chef") {
+        orders = orders.map(curr => {
+          return { authId: curr.customerId };
+        });
+      } else {
+        console.log("user");
+        orders = orders.map(curr => {
+          return { authId: curr.chefId };
+        });
+      }
       User.find({ $or: orders })
         .then(user => {
           results.push(user);
@@ -78,10 +82,10 @@ exports.getPendingOrders = (req, res) => {
 exports.getUserCurrentOrder = (req, res) => {
   // console.log("getCurrentOrders");
   var results = [];
-    let query = {status: 0};
+  let query = { status: 0 };
   if (req.params.type === "chef") {
     query.chefId = req.params.id;
-  } else{
+  } else {
     query.customerId = req.params.id;
   }
   Order.find(query)
@@ -108,19 +112,26 @@ exports.getUserCurrentOrder = (req, res) => {
 exports.getAcceptedOrders = (req, res) => {
   // console.log("getAcceptedOrders");
   var results = [];
-  let query = {status: 1};
+  let query = { status: 1 };
   if (req.params.type === "chef") {
     query.chefId = req.params.id;
-  } else{
+  } else {
     query.customerId = req.params.id;
   }
   Order.find(query)
     .then(orders => {
       // console.log('accepted orders ', orders)
       results.push(orders);
-      orders = orders.map(curr => {
-        return { authId: curr.customerId };
-      });
+      if (req.params.type === "chef") {
+        orders = orders.map(curr => {
+          return { authId: curr.customerId };
+        });
+      } else {
+        console.log("user");
+        orders = orders.map(curr => {
+          return { authId: curr.chefId };
+        });
+      }
       User.find({ $or: orders })
         .then(user => {
           console.log("customers connected to orders", user);
@@ -139,19 +150,26 @@ exports.getAcceptedOrders = (req, res) => {
 exports.getCompletedOrders = (req, res) => {
   // console.log("getCompletedOrders");
   var results = [];
-  let query = {status: 2};
+  let query = { status: 2 };
   if (req.params.type === "chef") {
     query.chefId = req.params.id;
-  } else { 
+  } else {
     query.customerId = req.params.id;
   }
   Order.find(query)
     .then(orders => {
       // console.log('completed orders ', orders)
       results.push(orders);
-      orders = orders.map(curr => {
-        return { authId: curr.customerId };
-      });
+      if (req.params.type === "chef") {
+        orders = orders.map(curr => {
+          return { authId: curr.customerId };
+        });
+      } else {
+        console.log("user");
+        orders = orders.map(curr => {
+          return { authId: curr.chefId };
+        });
+      }
       User.find({ $or: orders })
         .then(user => {
           results.push(user);
@@ -199,7 +217,7 @@ exports.postNewOrder = (req, res) => {
 };
 
 exports.getAllOrders = (req, res) => {
-  Order.find({}, null, {sort: {_id: -1}})
+  Order.find({}, null, { sort: { _id: -1 } })
     .then(allOrders => {
       res.send(allOrders);
     })
@@ -226,7 +244,7 @@ exports.getCustomerOrders = (req, res) => {
     ]
   })
     .then(allOrders => {
-      console.log("allOrders inside getCustomerOrders are ", allOrders)
+      console.log("allOrders inside getCustomerOrders are ", allOrders);
       res.send(allOrders);
     })
     .catch(err => {
