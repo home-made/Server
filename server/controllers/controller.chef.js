@@ -152,9 +152,9 @@ exports.textChef = (req, res) => {
   console.log("PHONE NUMBER TO TEXT:", req.body);
   client.messages.create(
     {
-      to: req.body.phone,
+      to: "+1" + req.body.phone,
       from: "19163475110",
-      body: "A customer will be arriving soon"
+      body: "Your customer will be arriving soon"
     },
     function(err, message) {
       console.log(message);
