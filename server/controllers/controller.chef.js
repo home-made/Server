@@ -108,6 +108,7 @@ exports.findChefsByStyle = (req, res) => {
   Dish.find({
     isActive: true,
     cuisineType: req.params.styleId,
+
     quantity: {$gt: 0}
   }).then(dishes => {
     
@@ -156,7 +157,7 @@ exports.textChef = (req, res) => {
       body: "A customer will be arriving soon"
     },
     function(err, message) {
-      console.log(message.sid);
+      console.log(message);
     }
   );
   res.send("MESSAGE SENT");
