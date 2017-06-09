@@ -108,7 +108,8 @@ exports.findChefsByStyle = (req, res) => {
   Dish.find({
     isActive: true,
     cuisineType: req.params.styleId,
-    quantity: {$gt:0}
+
+    quantity: {$gt: 0}
   }).then(dishes => {
     
     console.log(dishes);
