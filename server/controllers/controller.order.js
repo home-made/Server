@@ -55,7 +55,7 @@ exports.getPendingOrders = (req, res) => {
   } else {
     query.customerId = req.params.id;
   }
-  Order.find({ chefId: req.params.id, status: 0 })
+  Order.find(query)
     .then(orders => {
       // console.log('pending orders ', orders)
       results.push(orders);
