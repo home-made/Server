@@ -236,12 +236,9 @@ exports.getAllOrders = (req, res) => {
 exports.getCustomerOrders = (req, res) => {
   Order.find({
     $or: [
-      { customerId: req.params.id, status: 0 },
-      { customerId: req.params.id, status: 1 },
-      { customerId: req.params.id, status: 2 },
-      { customerId: req.params.id, status: 3 }
+      { customerId: req.params.id },
     ]
-  })
+  }).sort({date:-1})
     .then(allOrders => {
       console.log("allOrders inside getCustomerOrders are ", allOrders);
       res.send(allOrders);
