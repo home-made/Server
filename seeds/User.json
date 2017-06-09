@@ -413,12 +413,6 @@
         "reviewerId": "fjlasdf754",
         "score": 4,
         "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4,
-        "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
@@ -474,13 +468,8 @@
         "reviewerId": "fjlasdf754",
         "score": 4,
         "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4,
-        "orderId": "13"
-      }],
+      }
+      ],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
         "reviewerId": "axncmufid745",
@@ -535,12 +524,6 @@
         "reviewerId": "fjlasdf754",
         "score": 4,
         "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4,
-        "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
@@ -596,12 +579,6 @@
         "reviewerId": "fjlasdf754",
         "score": 4,
         "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4,
-        "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
@@ -657,12 +634,6 @@
         "reviewerId": "fjlasdf754",
         "score": 4,
         "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4,
-        "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
@@ -718,12 +689,6 @@
         "reviewerId": "fjlasdf754",
         "score": 4,
         "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4,
-        "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
@@ -779,12 +744,6 @@
         "reviewerId": "fjlasdf754",
         "score": 4,
         "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4,
-        "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
@@ -841,12 +800,6 @@
         "reviewerId": "fjlasdf754",
         "score": 4,
         "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4,
-        "orderId": "13"
       }],
     "chefReviews": [{
         "reviewText": "chef had that bomb lit",
@@ -902,12 +855,6 @@
         "reviewerId": "fjlasdf754",
         "score": 4,
         "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4,
-        "orderId": "13"
       }],
     "chefReviews": [],
     "isChef": false,
@@ -926,12 +873,6 @@
         "reviewerId": "fjlasdf754",
         "score": 4,
         "orderId": 13
-      },
-      { 
-        "reviewText": "he was a horrible customer.",
-        "reviewerId": "477ifjdfo7",
-        "score": 4,
-        "orderId": "13"
       }],
     "chefReviews": [{
        "reviewText": "chef had that bomb lit",
