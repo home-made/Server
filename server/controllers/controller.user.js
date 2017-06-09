@@ -144,8 +144,26 @@ exports.getUser = (req, res) => {
   User.find({ authId: req.params.id })
     .then(user => {
       console.log("User inside getUser is ", user);
-
-      res.send(user);
+      // var chefReviewers = user[0].chefReviews.map(curr =>{
+      //   return {authId: curr.reviewId }
+      // })
+      userRes.push(user)
+      var customerReviewerUsers = user[0].customerReviews.map(curr =>{
+        console.log(curr)
+        return {authId: curr.reviewerId }
+      })
+      console.log(customerReviewerUsers)
+      if(customerReviewerUsers.length>0){
+        User.find({$or: customerReviewerUsers}).then(reviewers=>{
+          console.log(reviewers);
+          userRes.push(reviewers)
+          customerReviewerUsers
+          res.send(userRes);
+        })
+      }
+      else{
+        res.send(userRes);
+      }
     })
     .catch(err => {
       console.log(err);
