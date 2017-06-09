@@ -49,7 +49,12 @@ exports.getPendingOrders = (req, res) => {
   console.log(req.params.id);
 
   var results = [];
-
+  var query ={ status: 0 };
+    if (req.params.type === "chef") {
+    query.chefId = req.params.id;
+  } else {
+    query.customerId = req.params.id;
+  }
   Order.find({ chefId: req.params.id, status: 0 })
     .then(orders => {
       // console.log('pending orders ', orders)
@@ -82,13 +87,7 @@ exports.getPendingOrders = (req, res) => {
 exports.getUserCurrentOrder = (req, res) => {
   // console.log("getCurrentOrders");
   var results = [];
-  let query = { status: 0 };
-  if (req.params.type === "chef") {
-    query.chefId = req.params.id;
-  } else {
-    query.customerId = req.params.id;
-  }
-  Order.find(query)
+  Order.find({ chefId: req.params.id, status: 0 })
     .then(orders => {
       // console.log('current order ', orders)
       results.push(orders);
