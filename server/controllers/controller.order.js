@@ -142,7 +142,7 @@ exports.getCompletedOrders = (req, res) => {
   let query = {status: 2};
   if (req.params.type === "chef") {
     query.chefId = req.params.id;
-  } else{
+  } else { 
     query.customerId = req.params.id;
   }
   Order.find(query)

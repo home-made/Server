@@ -56,68 +56,65 @@ exports.updateUser = (req, res) => {
 exports.addSignature = (req, res) => {
   console.log("INSIDE ADD SIGNATURE");
   var updatedUser = req.body;
-
-  if (req.body.pathname) {
-    var client = s3.createClient({
-      maxAsyncS3: 20,
-      s3RetryCount: 3,
-      s3RetryDelay: 1000,
-      multipartUploadThreshold: 20971520,
-      multipartUploadSize: 15728640,
-      s3Options: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+  User.findOneAndUpdate(
+    { authId: req.params.authId },
+    updatedUser,
+    { new: true },
+    (err, user) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log(user);
+        res.send(user);
       }
-    });
-    var params = {
-      localFile: req.body.pathname,
-      s3Params: {
-        Bucket: "homemadesignatures",
-        Key: req.params.authId + ".png"
-      }
-    };
+    }
+  );
 
-    var url = "s3.amazonaws.com/homemadesignatures/" + params.s3Params.Key;
-    updatedUser.signatureURL = url;
+  // if (req.body.pathname) {
+  //   var client = s3.createClient({
+  //     maxAsyncS3: 20,
+  //     s3RetryCount: 3,
+  //     s3RetryDelay: 1000,
+  //     multipartUploadThreshold: 20971520,
+  //     multipartUploadSize: 15728640,
+  //     s3Options: {
+  //       accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  //       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+  //     }
+  //   });
+  //   var params = {
+  //     localFile: req.body.pathname,
+  //     s3Params: {
+  //       Bucket: "homemadesignatures",
+  //       Key: req.params.authId + ".png"
+  //     }
+  //   };
 
-    var uploader = client.uploadFile(params);
-    uploader.on("error", function(err) {
-      console.error("unable to upload:", err.stack);
-    });
-    uploader.on("progress", function() {
-      console.log(
-        "progress",
-        uploader.progressMd5Amount,
-        uploader.progressAmount,
-        uploader.progressTotal
-      );
-    });
-    uploader.on("end", function() {
-      console.log("done uploading");
-      User.findOneAndUpdate(
-        { authId: req.params.authId },
-        updatedUser,
-        { new: true },
-        (err, user) => {
-          console.log("Are we in here??????????????????????????");
-          if (err) {
-            console.log(err);
-          } else {
-            console.log(user);
-            res.send(user);
-          }
-        }
-      );
-    });
-  }
+  //   var url = "s3.amazonaws.com/homemadesignatures/" + params.s3Params.Key;
+  //   updatedUser.signatureURL = url;
+
+  //   var uploader = client.uploadFile(params);
+  //   uploader.on("error", function(err) {
+  //     console.error("unable to upload:", err.stack);
+  //   });
+  //   uploader.on("progress", function() {
+  //     console.log(
+  //       "progress",
+  //       uploader.progressMd5Amount,
+  //       uploader.progressAmount,
+  //       uploader.progressTotal
+  //     );
+  //   });
+  //   uploader.on("end", function() {
+  //     console.log("done uploading");
+  //   });
+  // }
 };
 
 //route we use to login to app that either finds or creates a user
 exports.createUser = (req, res) => {
   // var user = req.body;
-  console.log("INSIDE CREATE USER!!!!!!!!!")
-  console.log("INSIDE CREATE USER ID IS", req.params.id);
-  console.log("INSIDE CREATE USER REQ BODY IS", req.body);
+
   let query = {};
   query.authId = req.params.id;
   if (req.body.extraInfo.given_name) { query.firstName = req.body.extraInfo.given_name };
